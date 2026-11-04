@@ -1,0 +1,8 @@
+# Configuration Netlify du site Prestigia.
+# Le site est statique : la « construction » se limite à copier les fichiers
+# publics dans _site/, sans les fichiers internes (qui restent dans GitHub).
+# La liste des fichiers exclus est dans netlify-build.sh.
+
+[build]
+  command = "bash netlify-build.sh"
+  publish = "_site"
