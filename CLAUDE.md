@@ -5,7 +5,7 @@ Site vitrine statique (HTML/CSS/JS, sans build) de **Prestigia**, service de cha
 - Nom de marque fixe : « Prestigia » (jamais « Prestigia Concierge »).
 - Contact : info@prestigia.vip · WhatsApp / tél. +32 4 70 09 17 15 (`https://wa.me/32470091715`).
 - Aperçu local : `python3 -m http.server 8080` à la racine, puis http://localhost:8080/
-- Brief d'origine : `prestigia-brief-claude-code.md`. Il date d'avant la refonte : la cible de déploiement qu'il mentionne (Hostinger) est remplacée par Cloudflare Pages.
+- Brief d'origine : `prestigia-brief-claude-code.md`. Il date d'avant la refonte : la cible de déploiement qu'il mentionne (Hostinger) est remplacée par Netlify.
 
 ## Charte graphique
 
@@ -78,10 +78,13 @@ Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, 
 
 ## Règles de travail
 
+- **Synchronisation Git (deux personnes travaillent sur le site)** : dépôt GitHub `Prestigia777/prestigia`, publié automatiquement par Netlify depuis la branche `main`.
+  - Au début de chaque session, toujours faire `git pull` pour récupérer les dernières modifications, avant de toucher à quoi que ce soit.
+  - Après chaque modification validée, faire un commit puis un `git push` sur `main`.
 - **Ne modifier que ce qui est demandé.** Pas de refonte, de reformulation ou de « nettoyage » non sollicités.
 - **Garder les images existantes** sauf demande contraire explicite. Ne pas renommer, déplacer ni supprimer de fichiers image.
 - **Jamais d'images en base64** dans le HTML : ça a déjà tronqué des fichiers et donné des pages blanches. Toujours référencer les images par URL ou chemin.
-- **URLs propres** : slugs en minuscules, avec tirets, sans accents. Pour les nouvelles sous-pages, suivre le modèle `dossier/index.html`. Liens internes cohérents (Cloudflare Pages sert `page.html` à l'adresse `/page`).
+- **URLs propres** : slugs en minuscules, avec tirets, sans accents. Pour les nouvelles sous-pages, suivre le modèle `dossier/index.html`. Liens internes cohérents (Netlify sert `page.html` à l'adresse `/page`).
 - **SEO** sur chaque page : `<title>` et `<meta name="description">` uniques, un seul `<h1>`, hiérarchie Hn logique, `alt` descriptifs, `lang="fr"`, balise canonique, balises Open Graph.
 - Toute modification de la nav ou du footer s'applique à **toutes** les pages : elles sont dupliquées dans chaque fichier HTML.
 - Méthode de travail préférée : itérative et visuelle. On montre le rendu et on corrige à partir des retours ou des captures.
@@ -101,4 +104,4 @@ Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, 
 - [ ] Créer la page `404.html` aux couleurs du site.
 - [ ] Créer la page de politique de confidentialité et la lier depuis le footer de toutes les pages.
 - [ ] Remplacer les liens des réseaux sociaux par les vrais comptes : ils pointent aujourd'hui vers les pages d'accueil génériques de Facebook, Instagram, TikTok et X.
-- [ ] Publier sur **Cloudflare Pages** : exclure du déploiement `Prestigia.vip_code_soucre.html`, `prestigia-brief-claude-code.md`, `CLAUDE.md`, `.claude/`, `_templates/`, `_archive/`, les `.DS_Store` et les images sources non utilisées. Ensuite, brancher le domaine `prestigia.vip` et vérifier que la clé Google Maps (restreinte à ce domaine) fonctionne.
+- [ ] Publier sur **Netlify** : exclure du déploiement `Prestigia.vip_code_soucre.html`, `prestigia-brief-claude-code.md`, `CLAUDE.md`, `.claude/`, `_templates/`, `_archive/`, les `.DS_Store` et les images sources non utilisées. Ensuite, brancher le domaine `prestigia.vip` et vérifier que la clé Google Maps (restreinte à ce domaine) fonctionne.
