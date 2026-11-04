@@ -1,0 +1,43 @@
+<!--
+  GABARIT — Bloc « Sur mesure » à deux formules (pages tours-touristiques/<ville>/)
+  (nom de fichier historique : bloc-cle-en-main.html)
+  Styles : styles.css, section « Bloc « Visite clé en main » » (classes .turnkey*). Rien à ajouter dans la page.
+  Référence en ligne : tours-touristiques/gand/index.html
+
+  Offre (voir CLAUDE.md, « Offre des tours ») : formule A « Transport privé » (le client gère ses billets) ou
+  formule B « Visite clé en main » (billets et créneaux réservés et réglés par Prestigia). Ne jamais écrire
+  que les billets sont toujours inclus ; le chauffeur n'est pas guide ; repas jamais inclus.
+
+  À remplacer (1 élément) :
+    {{SLUG}}      ville du lien devis (?service=tour&ville=…) : gand, bruges, bruxelles, anvers, autres-villes,
+                  tourisme-de-memoire — liste TOUR_VILLES dans le script en bas de devis.html, à compléter pour une
+                  nouvelle ville. Page à plusieurs destinations : ajouter &amp;destination=<slug> (ex. dinant).
+                  Optionnel : &amp;formule=transport ou &amp;formule=cle-en-main présélectionne la formule du devis.
+
+  Placement : dans la même <section> que la carte-itinéraire, juste après le </div> de .itin : c'est le SEUL
+  encart sous la carte (marge haute de 48 px déjà dans le CSS). Le seul titre du bloc est le H3 : ne pas en ajouter
+  (les noms des formules sont des <p>, pas des titres).
+  Chemin du lien : ../../devis.html depuis tours-touristiques/<ville>/index.html.
+  Les width/height/stroke écrits sur chaque <svg> sont volontaires : ils gardent les icônes à 28 px
+  même si la feuille de style est en cache ou absente (cause du bug « grand espace noir »).
+-->
+      <!-- BLOC SUR MESURE (2 formules) — gabarit : _templates/bloc-cle-en-main.html -->
+      <div class="turnkey" data-reveal>
+        <div class="eyebrow">Sur mesure</div>
+        <h3>Vous choisissez, nous organisons</h3>
+        <div class="turnkey-formulas">
+          <div class="turnkey-formula">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#c8a46a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16v-3l2-5h14l2 5v3z"/><path d="M3 13h18"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+            <p class="turnkey-formula-name">Transport privé</p>
+            <p>Chauffeur et véhicule premium, dépose et reprise aux points convenus. Vous gérez vos billets.</p>
+          </div>
+          <div class="turnkey-formula">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#c8a46a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4v2h18v-2a2 2 0 0 1 0-4a2 2 0 0 0 0-4V6H3z"/><path d="M15 6v2M15 11v2M15 16v2"/></svg>
+            <p class="turnkey-formula-name">Visite clé en main</p>
+            <p>Transport privé, plus billets d'entrée et créneaux réservés par nos soins. Seuls vos repas et vos dépenses personnelles restent à votre charge.</p>
+          </div>
+        </div>
+        <p class="turnkey-option">Dans les deux cas : itinéraire modifiable, livret de visite remis à chaque client, guide professionnel en option sur devis.</p>
+        <a href="../../devis.html?service=tour&amp;ville={{SLUG}}" class="btn">Demander ce tour</a>
+        <p class="turnkey-fine">Tarif forfaitaire sur devis, selon le nombre de personnes et la formule choisie.</p>
+      </div>

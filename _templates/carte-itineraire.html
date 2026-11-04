@@ -1,0 +1,73 @@
+<!--
+  GABARIT — Carte-itinéraire SCHÉMATIQUE à positions fixes (pages tours-touristiques/<ville>/)
+  Styles : styles.css, section « Carte-itinéraire » (classes .itin*). Survol croisé carte <-> légende jusqu'à 8 étapes.
+  Référence en ligne : tours-touristiques/gand/index.html
+
+  Règles (voir CLAUDE.md) :
+    - viewBox 0 0 680 580, aucune coordonnée GPS : positions schématiques fixes ;
+    - point 1 en bas à gauche, le tracé monte le long du côté gauche, traverse le haut, redescend à droite
+      et finit en bas à droite ; le dernier point n'est JAMAIS relié au premier ;
+    - un seul chemin en pointillés or (dasharray 1 6) passant par les centres dans l'ordre, un chevron par tronçon ;
+    - boussole discrète en bas au centre ; pas de voiture, ni « dépose », « reprise » ou « en voiture » ;
+    - en bas : « Itinéraire indicatif, adaptable à votre programme » et « Schéma illustratif, hors échelle »
+      sur un léger fond sombre (contraste ≥ 4,5:1) ;
+    - noms en capitales, 1 ou 2 lignes, sans chevaucher le tracé, un point ou un autre nom ;
+      à 375 px ils font 11 px (la carte passe en pleine largeur sous 480 px).
+
+  Chaque étape se définit par (unités du viewBox) :
+    numéro (= emplacement) · nom (1 ou 2 lignes) · position du point (x, y) · ancre du nom
+    ("end" = à gauche du point, x du nom = x − 24 ; "middle" = centré au-dessus ou en dessous)
+    · y de chaque ligne du nom (2 lignes espacées de 18).
+  Le squelette (7 emplacements, tracé, 6 chevrons, boussole, texte du bas) est COMMUN à toutes les villes.
+  Pour une ville, on ajoute dans VILLES de _templates/carte-itineraire.py : nom de la ville, photo (celle de sa card
+  sur tours-touristiques.html) et 7 étapes (nom, légende, étiquette en capitales, lignes séparées par " / ").
+  Placement des étiquettes : emplacements 1 à 4 et 6 à gauche (x = cx − 24), 1 ligne à cy+5 ou 2 lignes à cy−5 / cy+13 ;
+  emplacement 5 au-dessus, centré, dernière ligne à y=70 ; emplacement 7 en dessous, centré, 1re ligne à y=492.
+  Si une étiquette déborde du cadre (à 1440 px ou à 375 px, où elle fait 11 px), la couper autrement.
+  Puis : python3 _templates/carte-itineraire.py <ville>  → coller la sortie ci-dessous.
+  Le script écrit aussi la légende de droite et l'aria-label du SVG.
+
+  Une étape générée ressemble à ceci :
+    <g class="itin-pt" data-stop="1">
+      <circle class="itin-hit" cx="150" cy="470" r="28"/>
+      <circle class="itin-dot" cx="150" cy="470" r="16"/>
+      <text class="itin-n" x="150" y="470">1</text>
+      <text class="itin-label itin-label--l1" x="126" y="463" text-anchor="end">PETIT</text>
+      <text class="itin-label" x="126" y="481" text-anchor="end">BÉGUINAGE</text>
+    </g>
+  Vérifier à 1440 px et à 375 px qu'aucun nom ne touche le tracé, un point ou un autre nom.
+-->
+      <!-- CARTE-ITINÉRAIRE — gabarit : _templates/carte-itineraire.html (généré par _templates/carte-itineraire.py) -->
+      <div class="section-head">
+        <div class="eyebrow">{{EYEBROW}}</div>
+        <h2>{{TITRE_H2}}</h2>
+        <hr class="gold-line">
+      </div>
+
+      <div class="itin" data-reveal>
+        <!-- coller ici la sortie de : python3 _templates/carte-itineraire.py -->
+      </div>
+
+      <!-- ensuite : bloc à deux formules (_templates/bloc-cle-en-main.html), seul encart sous la carte. -->
+
+<!--
+  JSON-LD : ajouter ce nœud dans le "@graph" du <script type="application/ld+json"> de la page.
+  Règles (CLAUDE.md) : aucun prix, aucun billet obligatoire, aucune mention de voiture ni de dépose.
+  "geo" est facultatif (vraies coordonnées OpenStreetMap si on les a ; la carte n'en utilise pas).
+    {
+      "@type": "TouristTrip",
+      "name": "{{TITRE_H2}} — itinéraire privé avec chauffeur",
+      "description": "… Transport privé ou visite clé en main (billets et réservations par nos soins en option). Itinéraire modifiable sur demande.",
+      "url": "https://prestigia.vip/tours-touristiques/{{SLUG}}",
+      "inLanguage": "fr",
+      "provider": { "@type": "Organization", "name": "Prestigia", "url": "https://prestigia.vip/", "email": "info@prestigia.vip", "telephone": "+32470091715" },
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": N,
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "TouristAttraction", "name": "…", "description": "…" } }
+        ]
+      }
+    }
+-->

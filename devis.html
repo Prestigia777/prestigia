@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devis Chauffeur Privé | PRESTIGIA</title>
+<meta name="description" content="Demandez votre devis pour un transfert privé, une mise à disposition ou un service sur-mesure avec Prestigia à Bruxelles. Réponse rapide, prix fixe.">
+<meta property="og:title" content="Devis Chauffeur Privé | PRESTIGIA">
+<meta property="og:description" content="Demandez votre devis Prestigia — transfert, mise à disposition ou service sur-mesure, en Belgique et en Europe.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prestigia.vip/devis.html">
+<link rel="icon" href="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg">
+<link rel="preconnect" href="https://assets.zyrosite.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---------- DEVIS FORM ---------- */
+  .form-band{padding:170px 0 110px}
+  .form-head{max-width:640px;margin-bottom:56px}
+  .form-head .eyebrow{margin-bottom:16px}
+  .form-head h1{font-family:var(--font-title);font-weight:500;font-size:clamp(30px,4.4vw,46px);color:var(--white);line-height:1.15;margin-bottom:16px}
+  .form-head p{font-size:15px;color:var(--muted);max-width:520px}
+  .quote-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:start}
+  .quote-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:44px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+  .form-field{display:flex;flex-direction:column;gap:8px}
+  .form-field.full{grid-column:1 / -1}
+  .form-field label{font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-2)}
+  .form-field input,.form-field select,.form-field textarea{
+    background:#050505;
+    border:1px solid var(--border);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:13.5px;
+    padding:13px 14px;
+    border-radius:var(--radius);
+    outline:none;
+    transition:border-color .2s ease;
+  }
+  .form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold)}
+  .form-field textarea{resize:vertical;min-height:90px}
+  .quote-form .btn{width:100%;justify-content:center;margin-top:8px;border:none;cursor:pointer;font-family:inherit}
+  .form-note{font-size:11.5px;color:var(--muted-2);margin-top:14px;line-height:1.6}
+  .quote-side{display:flex;flex-direction:column;gap:20px}
+  .side-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+  .side-card h2{font-family:var(--font-title);font-weight:500;font-size:18px;color:var(--white);margin-bottom:12px}
+  .side-card p{font-size:13.5px;color:var(--muted);line-height:1.75;margin-bottom:14px}
+  .side-card a.contact-line{display:block;font-size:14px;color:var(--gold);margin-bottom:6px}
+  /* mode « tour » (devis.html?service=tour&ville=…) */
+  .quote-form [hidden]{display:none!important}
+  .tour-recap{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;margin-bottom:26px;padding:16px 20px;border:1px solid rgba(var(--gold-rgb),.45);border-radius:var(--radius);background:rgba(var(--gold-rgb),.06)}
+  .tour-recap p{font-size:13.5px;line-height:1.6;color:#d4cec2}
+  .tour-recap strong{font-weight:500;color:#e8e4dc}
+  .tour-recap-edit{background:none;border:none;padding:0;font-family:inherit;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);cursor:pointer;text-underline-offset:4px}
+  .tour-recap-edit:hover,.tour-recap-edit:focus-visible{text-decoration:underline}
+  .form-check label{display:flex;align-items:center;gap:12px;font-size:13.5px;letter-spacing:0;text-transform:none;color:var(--ink);cursor:pointer}
+  .form-check input{width:18px;height:18px;accent-color:var(--gold);flex:none}
+  .form-radios{border:none;margin:0;padding:0;min-width:0}
+  .form-radios legend{padding:0;margin-bottom:12px;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-2)}
+  .form-radios label + label{margin-top:12px}
+  @media(max-width:960px){
+    .quote-layout{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+  }
+  @media(max-width:680px){
+    .form-band{padding:130px 0 76px}
+    .quote-form{padding:28px}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <img src="logo-prestigia-white.png" alt="Prestigia — chauffeur privé et limousine de luxe à Bruxelles">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <a href="chauffeur-prive-bruxelles.html">Chauffeur privé <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="transfert-aeroport-and-gare.html">Transfert aéroport &amp; gare</a>
+          <a href="voyages-ville-a-ville.html">Voyages ville à ville</a>
+          <a href="international.html">International</a>
+          <a href="mise-a-disposition.html">Mise à disposition</a>
+          <a href="tours-touristiques.html">Tours touristiques</a>
+          <a href="evenements.html">Événements</a>
+          <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="flotte.html">Flotte</a>
+        </div>
+      </li>
+      <li>
+        <a href="services.html">Services <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="location-de-vehicules.html">Location de véhicules</a>
+          <a href="esthetique-automobile.html">Esthétique Automobile</a>
+          <a href="service-sur-mesure.html">Service sur-mesure</a>
+        </div>
+      </li>
+      <li><a href="devis.html">Devis</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-select">
+        <button type="button">FR <span class="caret"></span></button>
+        <div class="dropdown">
+          <a href="#" class="active">Français (FR)</a>
+          <a href="#">English (GB)</a>
+          <a href="#">Español (ES)</a>
+          <a href="#">Nederlands (NL)</a>
+        </div>
+      </div>
+      <a href="devis.html" class="btn">Réserver</a>
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Fermer le menu">&times;</button>
+  <a href="index.html">Accueil</a>
+  <div class="m-group-title">Chauffeur privé</div>
+  <div class="sub">
+    <a href="transfert-aeroport-and-gare.html">Transfert aéroport &amp; gare</a>
+    <a href="voyages-ville-a-ville.html">Voyages ville à ville</a>
+    <a href="international.html">International</a>
+    <a href="mise-a-disposition.html">Mise à disposition</a>
+    <a href="tours-touristiques.html">Tours touristiques</a>
+    <a href="evenements.html">Événements</a>
+    <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="flotte.html">Flotte</a>
+  </div>
+  <div class="m-group-title">Services</div>
+  <div class="sub">
+    <a href="location-de-vehicules.html">Location de véhicules</a>
+    <a href="esthetique-automobile.html">Esthétique Automobile</a>
+    <a href="service-sur-mesure.html">Service sur-mesure</a>
+  </div>
+  <a href="devis.html">Devis</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-lang">
+    <a href="#" class="active">FR</a>
+    <a href="#">EN</a>
+    <a href="#">ES</a>
+    <a href="#">NL</a>
+  </div>
+</div>
+
+<main>
+  <section class="form-band">
+    <div class="wrap">
+      <div class="form-head">
+        <div class="eyebrow">Recevoir un devis</div>
+        <h1>Décrivez votre trajet</h1>
+        <p>Renseignez les détails de votre déplacement — nous revenons vers vous rapidement avec un prix fixe et une proposition adaptée.</p>
+      </div>
+
+      <div class="quote-layout">
+        <!-- ⚠️ Formulaire statique (pas de serveur) : à la validation, un e-mail pré-rempli s'ouvre vers info@prestigia.vip.
+             Les champs "Départ" et "Arrivée" sont prévus pour Google Maps Places Autocomplete (clé API existante,
+             restreinte à prestigia.vip, mentionnée dans le brief) — non branchée ici faute de clé fournie. -->
+        <form class="quote-form" id="quoteForm">
+          <!-- Mode tour : affiché seulement avec devis.html?service=tour&ville=… (script en bas de page) -->
+          <div class="tour-recap" id="tourRecap" hidden>
+            <p>Votre demande : <strong id="tourRecapText"></strong></p>
+            <button type="button" class="tour-recap-edit" id="tourRecapEdit">Modifier</button>
+          </div>
+          <div class="form-row" id="tourVilleRow" hidden>
+            <div class="form-field full">
+              <label for="q-ville">Ville du tour</label>
+              <select id="q-ville" name="ville"></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="q-name">Nom complet</label>
+              <input type="text" id="q-name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="q-phone">Téléphone</label>
+              <input type="tel" id="q-phone" name="phone" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="q-email">Email</label>
+              <input type="email" id="q-email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="q-from">Départ</label>
+              <input type="text" id="q-from" name="from" placeholder="Adresse, aéroport, gare…" required>
+            </div>
+            <div class="form-field">
+              <label for="q-to">Arrivée</label>
+              <input type="text" id="q-to" name="to" placeholder="Adresse, aéroport, gare…" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="q-date">Date</label>
+              <input type="date" id="q-date" name="date" required>
+            </div>
+            <div class="form-field">
+              <label for="q-time">Heure</label>
+              <input type="time" id="q-time" name="time" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="q-passengers">Passagers</label>
+              <input type="number" id="q-passengers" name="passengers" min="1" max="20" value="1">
+            </div>
+            <div class="form-field">
+              <label for="q-service">Type de service</label>
+              <select id="q-service" name="service">
+                <option>Transfert aéroport &amp; gare</option>
+                <option>Voyage ville à ville</option>
+                <option>International</option>
+                <option>Mise à disposition</option>
+                <option>Événement</option>
+                <option>Espace Entreprises</option>
+                <option>Service sur-mesure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row" id="tourFormuleRow" hidden>
+            <fieldset class="form-field full form-check form-radios">
+              <legend>Formule</legend>
+              <label><input type="radio" name="formule" value="transport"> Transport privé seul</label>
+              <label><input type="radio" name="formule" value="cle-en-main"> Visite clé en main (Prestigia achète les billets et réserve les créneaux)</label>
+              <label><input type="radio" name="formule" value="conseil"> Je ne sais pas encore, conseillez-moi</label>
+            </fieldset>
+          </div>
+          <div class="form-row" id="tourGuideRow" hidden>
+            <div class="form-field full form-check">
+              <label for="q-guide"><input type="checkbox" id="q-guide" name="guide"> Je souhaite un guide professionnel</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="q-message">Précisions (optionnel)</label>
+              <textarea id="q-message" name="message" placeholder="Bagages, sièges enfant, langue souhaitée…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn">Envoyer ma demande</button>
+          <p class="form-note">En envoyant ce formulaire, votre messagerie s'ouvre avec un e-mail pré-rempli à destination de info@prestigia.vip. Nous répondons généralement sous quelques heures.</p>
+        </form>
+
+        <div class="quote-side">
+          <div class="side-card">
+            <h2>Besoin d'une réponse immédiate ?</h2>
+            <p>Contactez-nous directement par WhatsApp ou téléphone.</p>
+            <a href="https://wa.me/32470091715" class="contact-line">+32 4 70 09 17 15</a>
+            <a href="mailto:info@prestigia.vip" class="contact-line">info@prestigia.vip</a>
+          </div>
+          <div class="side-card">
+            <h2>Prix fixe garanti</h2>
+            <p>Le prix convenu au devis ne change pas, quel que soit le trafic ou l'attente à l'aéroport.</p>
+          </div>
+          <div class="side-card">
+            <h2>Disponibilité 24h/7j</h2>
+            <p>Vols de nuit, départs matinaux, imprévus de dernière minute — nous nous adaptons à votre agenda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg" alt="Prestigia — chauffeur privé et limousine à Bruxelles">
+        <p>Chauffeur privé et limousine premium à Bruxelles, opérant en Europe. Service sur-mesure pour une clientèle exigeante.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <a href="chauffeur-prive-bruxelles.html">Chauffeur privé</a>
+        <a href="services.html">Services</a>
+        <a href="evenements.html">Événements</a>
+        <a href="devis.html">Devis</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Nous contacter</h3>
+        <div>
+          <span style="margin-bottom:2px">Email</span>
+          <a href="mailto:info@prestigia.vip">info@prestigia.vip</a>
+        </div>
+        <div style="margin-top:10px">
+          <span style="margin-bottom:2px">WhatsApp / Téléphone</span>
+          <a href="https://wa.me/32470091715">+32 4 70 09 17 15</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Suivez-nous</h3>
+        <div class="social-row">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.39H7.08v-3.46h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.24 2.68.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.88v2.24h3.33l-.53 3.46h-2.8v8.39C19.61 23.02 24 18.06 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 5.85a6.15 6.15 0 1 0 0 12.3 6.15 6.15 0 0 0 0-12.3Zm0 10.15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.84-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0ZM23.92 7.05c-.09-1.92-.53-3.62-1.94-5.03C20.57.6 18.87.16 16.95.07 14.97-.04 9.03-.04 7.05.07 5.13.16 3.43.6 2.02 2.02.6 3.43.16 5.13.08 7.05-.04 9.03-.04 14.97.08 16.95c.09 1.92.53 3.62 1.94 5.03 1.41 1.41 3.1 1.85 5.03 1.95 1.98.11 7.92.11 9.9 0 1.92-.09 3.62-.53 5.03-1.95 1.4-1.4 1.84-3.1 1.94-5.03.11-1.98.11-7.92 0-9.9ZM21.36 19.07c-.42 1.05-1.23 1.86-2.28 2.28-1.58.63-5.32.48-7.08.48s-5.5.14-7.08-.48c-1.05-.42-1.86-1.23-2.28-2.28-.63-1.58-.48-5.32-.48-7.07S2.02 6.5 2.64 4.93c.42-1.05 1.23-1.86 2.28-2.28C6.5 2.02 10.24 2.16 12 2.16s5.5-.14 7.08.49c1.05.42 1.86 1.23 2.28 2.28.63 1.58.48 5.32.48 7.07s.15 5.49-.48 7.07Z"/></svg>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M22.5 9.84a7.5 7.5 0 0 1-5.76-2.16v8.38a6.68 6.68 0 1 1-6.68-6.68c.19 0 .38.01.57.03v3.2a3.5 3.5 0 1 0 2.44 3.34V0h3.63a4.66 4.66 0 0 0 4.24 4.55c.19.02.38.03.56.03v5.26Z"/></svg>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.25 2.25h6.83l4.72 6.23 5.44-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Prestigia. Tous droits réservés.</span>
+      <span>Bruxelles, Belgique</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Mode « tour » : devis.html?service=tour&ville=gand[&destination=dinant][&formule=transport|cle-en-main|conseil]
+  // (ancien lien devis.html?tour=gand encore accepté). Sans paramètre, rien ne change.
+  var TOUR_VILLES = {
+    gand: 'Gand',
+    bruges: 'Bruges',
+    bruxelles: 'Bruxelles',
+    anvers: 'Anvers',
+    'autres-villes': 'Autres villes de Belgique',
+    'tourisme-de-memoire': 'Tourisme de mémoire'
+  };
+  var TOUR_SERVICE = 'Tour touristique';
+  var TOUR_FORMULES = {
+    transport: 'Transport privé seul',
+    'cle-en-main': 'Visite clé en main',
+    conseil: 'Formule à conseiller'
+  };
+  var tourMode = (function(){
+    var p = new URLSearchParams(window.location.search);
+    var ville = p.get('ville') || p.get('tour');
+    if (p.get('service') !== 'tour' && !p.get('tour')) return null;
+    var dest = p.get('destination');
+    var destLabel = dest ? dest.replace(/-/g, ' ').replace(/^./, function(c){ return c.toUpperCase(); }) : '';
+
+    var f = document.getElementById('quoteForm');
+    var recap = document.getElementById('tourRecap');
+    var recapText = document.getElementById('tourRecapText');
+    var villeRow = document.getElementById('tourVilleRow');
+    var villeSel = document.getElementById('q-ville');
+    var guideRow = document.getElementById('tourGuideRow');
+    var formuleRow = document.getElementById('tourFormuleRow');
+    var formules = f.querySelectorAll('input[name="formule"]');
+    var formule0 = p.get('formule');
+    [].forEach.call(formules, function(r){ if (r.value === formule0) r.checked = true; });
+    function formuleChoisie(){ var r = f.querySelector('input[name="formule"]:checked'); return r ? r.value : ''; }
+    function formuleLabel(){ return TOUR_FORMULES[formuleChoisie()] || 'Formule non précisée'; }
+    var field = function(el){ return el.closest('.form-field'); };
+    var label = function(el){ return f.querySelector('label[for="' + el.id + '"]'); };
+
+    // option « Tour touristique » ajoutée au menu, villes du tour
+    f.service.add(new Option(TOUR_SERVICE, TOUR_SERVICE));
+    Object.keys(TOUR_VILLES).forEach(function(k){ villeSel.add(new Option(TOUR_VILLES[k], k)); });
+    if (TOUR_VILLES[ville]) villeSel.value = ville;
+
+    // champs adaptés au tour : libellés remplacés, champs sans objet masqués
+    var swaps = [
+      { el: f.from, label: 'Lieu de prise en charge', placeholder: 'Hôtel ou adresse', full: true },
+      { el: f.date, label: 'Date souhaitée', full: true },
+      { el: f.passengers, label: 'Nombre de personnes', full: true },
+      { el: f.message, label: 'Votre projet, vos envies', placeholder: 'Dites-nous ce que vous aimeriez voir ou faire' }
+    ];
+    var hiddenInTour = [f.to, f.time];
+    swaps.forEach(function(s){ s.label0 = label(s.el).textContent; s.placeholder0 = s.el.placeholder; });
+
+    function villeLabel(){ return TOUR_VILLES[villeSel.value] + (destLabel ? ' · ' + destLabel : ''); }
+    function updateRecap(){ recapText.textContent = 'tour privé · ' + villeLabel(); }
+    function setTour(on){
+      swaps.forEach(function(s){
+        label(s.el).textContent = on ? s.label : s.label0;
+        if (s.placeholder) s.el.placeholder = on ? s.placeholder : s.placeholder0;
+        if (s.full) field(s.el).classList.toggle('full', on);
+      });
+      hiddenInTour.forEach(function(el){
+        field(el).hidden = on;
+        if (on) el.removeAttribute('required'); else el.setAttribute('required', '');
+      });
+      guideRow.hidden = !on;
+      formuleRow.hidden = !on;
+      if (on) formules[0].setAttribute('required', ''); else formules[0].removeAttribute('required');
+      recap.hidden = !on;
+      if (!on) villeRow.hidden = true;
+      field(f.service).hidden = on && villeRow.hidden;
+    }
+
+    f.service.value = TOUR_SERVICE;
+    setTour(true);
+    updateRecap();
+    // ville absente ou inconnue : on ouvre directement le choix
+    if (!TOUR_VILLES[ville]) { villeSel.selectedIndex = 0; updateRecap(); openChoice(); }
+
+    function openChoice(){ villeRow.hidden = false; field(f.service).hidden = false; villeSel.focus(); }
+    document.getElementById('tourRecapEdit').addEventListener('click', openChoice);
+    villeSel.addEventListener('change', function(){ destLabel = ''; updateRecap(); });
+    f.service.addEventListener('change', function(){
+      var on = f.service.value === TOUR_SERVICE;
+      setTour(on);
+      if (on) { villeRow.hidden = false; field(f.service).hidden = false; }
+    });
+
+    return {
+      active: function(){ return f.service.value === TOUR_SERVICE; },
+      subject: function(){ return 'Demande de tour privé — ' + villeLabel() + ' — ' + formuleLabel(); },
+      body: function(){
+        return 'Service : Tour touristique privé\n' +
+          'Ville : ' + TOUR_VILLES[villeSel.value] + '\n' +
+          (destLabel ? 'Destination : ' + destLabel + '\n' : '') +
+          'Formule : ' + formuleLabel() + '\n' +
+          'Guide professionnel : ' + (f.guide.checked ? 'Oui' : 'Non') + '\n' +
+          'Date souhaitée : ' + f.date.value + '\n' +
+          'Nombre de personnes : ' + f.passengers.value + '\n' +
+          'Lieu de prise en charge : ' + f.from.value + '\n' +
+          'Votre projet, vos envies : ' + f.message.value + '\n' +
+          '\n' +
+          'Nom : ' + f.name.value + '\n' +
+          'Téléphone : ' + f.phone.value + '\n' +
+          'Email : ' + f.email.value;
+      }
+    };
+  })();
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    if (tourMode && tourMode.active()) {
+      window.location.href = 'mailto:info@prestigia.vip?subject=' + encodeURIComponent(tourMode.subject()) + '&body=' + encodeURIComponent(tourMode.body());
+      return;
+    }
+    var subject = 'Demande de devis — ' + f.service.value;
+    var body =
+      'Nom : ' + f.name.value + '\n' +
+      'Téléphone : ' + f.phone.value + '\n' +
+      'Email : ' + f.email.value + '\n' +
+      'Départ : ' + f.from.value + '\n' +
+      'Arrivée : ' + f.to.value + '\n' +
+      'Date : ' + f.date.value + '\n' +
+      'Heure : ' + f.time.value + '\n' +
+      'Passagers : ' + f.passengers.value + '\n' +
+      'Service : ' + f.service.value + '\n' +
+      'Précisions : ' + f.message.value;
+    window.location.href = 'mailto:info@prestigia.vip?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+
+</body>
+</html>
