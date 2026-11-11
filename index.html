@@ -11,22 +11,23 @@
 <meta property="og:url" content="https://prestigia.vip/">
 <meta property="og:image" content="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg">
 <link rel="icon" href="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg">
-<link rel="preconnect" href="https://assets.zyrosite.com">
-<link rel="preload" as="image" fetchpriority="high" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preload" as="image" fetchpriority="high" href="https://images.pexels.com/photos/17455633/pexels-photo-17455633.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org/","@type":"WebSite","name":"Prestigia","url":"https://prestigia.vip","description":"Chauffeur privé et limousine premium à Bruxelles, opérant en Europe.","inLanguage":"fr-BE"}
 </script>
-<link rel="stylesheet" href="styles.css?v=20261111-flotte-10">
+<link rel="stylesheet" href="styles.css?v=20261111-showroom">
+<link rel="stylesheet" href="showroom.css?v=20261111-search">
 </head>
-<body>
+<body class="showroom">
 
 <header id="siteHeader">
   <div class="wrap nav">
     <a href="#accueil" class="logo">
-      <img src="logo-prestigia-white.png" alt="Prestigia — chauffeur privé et limousine de luxe à Bruxelles">
+      <img src="logo-prestigia-dark.png" alt="Prestigia — chauffeur privé et limousine de luxe à Bruxelles">
     </a>
 
     <ul class="nav-links">
@@ -57,14 +58,10 @@
     </ul>
 
     <div class="nav-right">
-      <div class="lang-select">
-        <button type="button">FR <span class="caret"></span></button>
-        <div class="dropdown">
-          <a href="#" class="active">Français (FR)</a>
-          <a href="#">English (GB)</a>
-          <a href="#">Español (ES)</a>
-          <a href="#">Nederlands (NL)</a>
-        </div>
+      <div class="lang-pills" aria-label="Langue">
+        <a href="#" class="active" aria-current="true" lang="fr">FR</a>
+        <a href="#" lang="nl">NL</a>
+        <a href="#" lang="en">EN</a>
       </div>
       <a href="devis.html" class="btn">Réserver</a>
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
@@ -98,9 +95,8 @@
   <a href="contact.html">Contact</a>
   <div class="mobile-lang">
     <a href="#" class="active">FR</a>
-    <a href="#">EN</a>
-    <a href="#">ES</a>
     <a href="#">NL</a>
+    <a href="#">EN</a>
   </div>
 </div>
 
@@ -108,28 +104,49 @@
 
   <!-- HERO -->
   <section class="hero" id="accueil">
-    <img
-      class="hero-media"
-      src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg"
-      srcset="
-        https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg 768w,
-        https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg 1440w,
-        https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg 1920w,
-        https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=2800,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg 2800w"
-      sizes="100vw"
-      alt="Chauffeur privé Prestigia au volant d'un véhicule de luxe à Bruxelles"
-      fetchpriority="high"
-      loading="eager"
-      decoding="async">
-    <div class="hero-overlay"></div>
-    <div class="wrap hero-inner">
-      <h1 class="eyebrow">Chauffeur privé et service sur-mesure à Bruxelles</h1>
-      <p class="brand-title">Prestigia.</p>
-      <div class="tagline">Limousine &amp; Luxury services</div>
-      <p class="lead">Service de limousine, transferts aéroport et chauffeur à disposition en Belgique — pour une clientèle exigeante en&nbsp;Europe.</p>
-      <a href="devis.html" class="btn">Recevoir un devis</a>
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="hero-text">
+          <h1 class="eyebrow">Chauffeur privé et service sur-mesure à Bruxelles</h1>
+          <p class="hero-hook"><span class="hero-word" style="--i:0">L'excellence</span> <span class="hero-word" style="--i:1">en</span> <span class="hero-word" style="--i:2">mouvement</span></p>
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="brand-title">Prestigia</p>
+          <div class="tagline">Limousine &amp; Luxury services</div>
+          <p class="lead">Service de limousine, transferts aéroport et chauffeur à disposition en Belgique — pour une clientèle exigeante en&nbsp;Europe.</p>
+          <form class="hero-book hero-search" action="services.html" method="get" role="search" autocomplete="off">
+            <label class="visually-hidden" for="heroSearch">Rechercher sur le site</label>
+            <input type="search" id="heroSearch" placeholder="Que recherchez-vous ? Aéroport, mariage, Bruges…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="heroSearchList">
+            <button type="submit" class="btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Rechercher</button>
+            <div class="hero-search-panel" hidden>
+              <ul class="hero-search-list" id="heroSearchList" role="listbox" aria-label="Suggestions"></ul>
+              <div class="hero-search-empty" hidden>
+                <p>Aucun résultat, demandez-nous directement</p>
+                <div class="hero-search-empty-links">
+                  <a href="devis.html">Demander un devis</a>
+                  <a href="https://wa.me/32470091715" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-slides">
+            <img class="hero-slide is-active" src="https://images.pexels.com/photos/17455633/pexels-photo-17455633.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Mercedes Classe V noire portière ouverte en ville — Van de la flotte Prestigia" fetchpriority="high">
+            <img class="hero-slide" src="https://images.pexels.com/photos/20810323/pexels-photo-20810323.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Berline noire Prestigia dans une rue pavée d'un quartier historique européen" loading="lazy">
+            <img class="hero-slide" src="https://images.pexels.com/photos/28201544/pexels-photo-28201544.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Mercedes Classe S noire devant une façade classique — First Class Prestigia" loading="lazy">
+            <img class="hero-slide" src="https://images.pexels.com/photos/19871521/pexels-photo-19871521.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Minibus noir Mercedes Sprinter Prestigia pour le transport de groupes" loading="lazy">
+            <img class="hero-slide" src="https://images.pexels.com/photos/20849161/pexels-photo-20849161.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Sièges en cuir à bord d'un autocar Prestigia" loading="lazy">
+          </div>
+          <div class="hero-dots" role="group" aria-label="Choisir le véhicule affiché">
+            <button type="button" class="hero-dot is-active" aria-label="Van" aria-current="true"></button>
+            <button type="button" class="hero-dot" aria-label="Berline"></button>
+            <button type="button" class="hero-dot" aria-label="First Class"></button>
+            <button type="button" class="hero-dot" aria-label="Minibus"></button>
+            <button type="button" class="hero-dot" aria-label="Autocar"></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="scroll-cue"><div class="line"></div>Découvrir</div>
   </section>
 
   <!-- SERVICES -->
@@ -141,52 +158,53 @@
         <hr class="gold-line">
       </div>
 
-      <div class="services-alt">
-        <div class="content-grid service-block" data-reveal>
-          <div class="content-grid-media">
-            <img src="https://images.pexels.com/photos/1719490/pexels-photo-1719490.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Panneau d'arrivées dans un terminal d'aéroport — transfert privé Prestigia" loading="lazy">
-          </div>
-          <div class="content-grid-text">
-            <div class="eyebrow">Ponctualité garantie</div>
+      <div class="bento">
+        <div class="bento-pair" data-reveal>
+          <article class="bento-card bento-text">
+            <span class="bento-num" aria-hidden="true">01</span>
+            <div class="bento-kicker">Ponctualité garantie</div>
             <h3>Transferts aéroport &amp; gare</h3>
             <p>Prise en charge dans les aéroports et gares de Belgique et d'Europe, avec accueil personnalisé, suivi de vol en temps réel et prix fixe garanti — pour commencer ou terminer votre voyage sans stress.</p>
-            <a href="transfert-aeroport-and-gare.html" class="btn">Réserver</a>
+            <a href="transfert-aeroport-and-gare.html" class="btn">En savoir plus</a>
+          </article>
+          <div class="bento-card bento-photo">
+            <img src="https://images.pexels.com/photos/1719490/pexels-photo-1719490.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Panneau d'arrivées dans un terminal d'aéroport — transfert privé Prestigia" loading="lazy">
           </div>
         </div>
-
-        <div class="content-grid reverse service-block" data-reveal>
-          <div class="content-grid-media">
-            <img src="mad.photo.JPG" style="height:400px;object-position:center 55%" alt="Flotte Prestigia et chauffeurs en tenue prêts pour une journée de mise à disposition" loading="lazy">
-          </div>
-          <div class="content-grid-text">
-            <div class="eyebrow">À votre rythme</div>
+        <div class="bento-pair bento-pair--rev" data-reveal>
+          <article class="bento-card bento-text">
+            <span class="bento-num" aria-hidden="true">02</span>
+            <div class="bento-kicker">À votre rythme</div>
             <h3>Mise à disposition</h3>
             <p>Un chauffeur et un véhicule pour toute la durée de votre journée — shopping, rendez-vous professionnels, visites en famille, plusieurs arrêts sans contrainte d'horaire.</p>
-            <a href="mise-a-disposition.html" class="btn">Planifier</a>
+            <a href="mise-a-disposition.html" class="btn">En savoir plus</a>
+          </article>
+          <div class="bento-card bento-photo">
+            <img src="mad.photo.JPG" alt="Flotte Prestigia et chauffeurs en tenue prêts pour une journée de mise à disposition" loading="lazy">
           </div>
         </div>
-
-        <div class="content-grid service-block" data-reveal>
-          <div class="content-grid-media">
-            <img src="Tourstouristiques.jpg" style="height:520px;object-position:center 42%" alt="Canal illuminé au coucher du soleil à Bruges — tour touristique en chauffeur privé Prestigia" loading="lazy">
-          </div>
-          <div class="content-grid-text">
-            <div class="eyebrow">La Belgique autrement</div>
+        <div class="bento-pair" data-reveal>
+          <article class="bento-card bento-text">
+            <span class="bento-num" aria-hidden="true">03</span>
+            <div class="bento-kicker">La Belgique autrement</div>
             <h3>Tours touristiques</h3>
             <p>Découvrez les lieux incontournables de Belgique — Bruxelles, Bruges, Gand, Anvers — conduit par un chauffeur privé qui connaît la région, avec dépose et reprise aux points convenus (guide professionnel en option).</p>
-            <a href="tours-touristiques.html" class="btn">Explorer</a>
+            <a href="tours-touristiques.html" class="btn">En savoir plus</a>
+          </article>
+          <div class="bento-card bento-photo">
+            <img src="Tourstouristiques.jpg" alt="Canal illuminé au coucher du soleil à Bruges — tour touristique en chauffeur privé Prestigia" loading="lazy">
           </div>
         </div>
-
-        <div class="content-grid reverse service-block" data-reveal>
-          <div class="content-grid-media">
-            <img src="events.jpg" style="height:520px;object-position:center 40%" alt="Dîner de gala d'entreprise avec écrans de présentation — chauffeur privé Prestigia pour vos événements" loading="lazy">
-          </div>
-          <div class="content-grid-text">
-            <div class="eyebrow">Vivez l'exception</div>
+        <div class="bento-pair bento-pair--rev" data-reveal>
+          <article class="bento-card bento-text">
+            <span class="bento-num" aria-hidden="true">04</span>
+            <div class="bento-kicker">Vivez l'exception</div>
             <h3>Événements</h3>
             <p>Réunions corporate, rendez-vous diplomatiques, congrès, expositions, galas, festivals, sport, mariages, anniversaires et autres — un transfert privé pensé pour chaque grand rendez-vous, en Belgique et en Europe.</p>
-            <a href="evenements.html" class="btn">Découvrir</a>
+            <a href="evenements.html" class="btn">En savoir plus</a>
+          </article>
+          <div class="bento-card bento-photo">
+            <img src="events.jpg" alt="Dîner de gala d'entreprise avec écrans de présentation — chauffeur privé Prestigia pour vos événements" loading="lazy">
           </div>
         </div>
       </div>
@@ -620,7 +638,9 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261111-flotte-10"></script>
+<script src="js/search-index.js?v=20261111-search-2"></script>
+<script src="js/hero-search.js?v=20261111-search-3"></script>
+<script src="script.js?v=20261111-showroom-3"></script>
 
 </body>
 </html>

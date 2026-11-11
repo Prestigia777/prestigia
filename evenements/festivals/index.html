@@ -16,8 +16,9 @@
 <link rel="preconnect" href="https://images.pexels.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css?v=20261111-showroom">
+<link rel="stylesheet" href="../../showroom.css?v=20261111-showroom-2">
 
 <!-- Données structurées : fil d'Ariane + festivals (dates indicatives — à mettre à jour chaque année) -->
 <script type="application/ld+json">
@@ -81,12 +82,12 @@
 }
 </script>
 </head>
-<body>
+<body class="showroom">
 
 <header id="siteHeader">
   <div class="wrap nav">
     <a href="../../index.html" class="logo">
-      <img src="../../logo-prestigia-white.png" alt="Prestigia — chauffeur privé et limousine de luxe à Bruxelles">
+      <img src="../../logo-prestigia-dark.png" alt="Prestigia — chauffeur privé et limousine de luxe à Bruxelles">
     </a>
 
     <ul class="nav-links">
@@ -117,14 +118,10 @@
     </ul>
 
     <div class="nav-right">
-      <div class="lang-select">
-        <button type="button">FR <span class="caret"></span></button>
-        <div class="dropdown">
-          <a href="#" class="active">Français (FR)</a>
-          <a href="#">English (GB)</a>
-          <a href="#">Español (ES)</a>
-          <a href="#">Nederlands (NL)</a>
-        </div>
+      <div class="lang-pills" aria-label="Langue">
+        <a href="#" class="active" aria-current="true" lang="fr">FR</a>
+        <a href="#" lang="nl">NL</a>
+        <a href="#" lang="en">EN</a>
       </div>
       <a href="../../devis.html" class="btn">Réserver</a>
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
@@ -158,9 +155,8 @@
   <a href="../../contact.html">Contact</a>
   <div class="mobile-lang">
     <a href="#" class="active">FR</a>
-    <a href="#">EN</a>
-    <a href="#">ES</a>
     <a href="#">NL</a>
+    <a href="#">EN</a>
   </div>
 </div>
 
@@ -339,7 +335,7 @@
   </div>
 </footer>
 
-<script src="../../script.js"></script>
+<script src="../../script.js?v=20261111-showroom"></script>
 
 </body>
 </html>

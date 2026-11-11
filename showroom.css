@@ -1,0 +1,816 @@
+/* =====================================================================
+   PRESTIGIA — charte « showroom automobile premium » (branche charte-showroom)
+   Chargée uniquement par index.html, APRÈS styles.css : elle ne touche
+   pas aux autres pages (qui gardent le noir et or).
+   Tout est préfixé par body.showroom.
+   ===================================================================== */
+
+.showroom{
+  /* Palette */
+  --bg:#F5F5F5;              /* fond général gris très clair */
+  --surface:#FFFFFF;         /* fond principal des sections */
+  --card-light:#EDEDED;      /* cartes grises claires */
+  --card-light-hover:#E4E4E4;
+  --text:#111111;            /* titres et texte principal */
+  --text-muted:#6B6B6B;      /* sous-titres, descriptions (5,3:1 sur blanc, 4,9:1 sur #F5F5F5) */
+  --text-muted-card:#5E5E5E; /* même rôle dans les cartes grises (5,5:1 ; #6B6B6B n'y ferait que 4,2:1 au survol) */
+  --line:#E0E0E0;
+  --dark:#0D0D0D;            /* blocs photo sombres, pied de page */
+  --accent:#A4161A;          /* rouge profond PRESTIGIA : boutons et éléments interactifs uniquement */
+  --accent-rgb:164,22,26;
+  --accent-dark:#660708;
+  --accent-light:#D62828;
+  --accent-gradient:linear-gradient(135deg, #D62828 0%, #A4161A 45%, #660708 100%);
+  --radius-xl:28px;
+  --radius-lg:20px;
+
+  /* Variables de styles.css, remappées sur la nouvelle palette */
+  --black:var(--bg);
+  --white:var(--text);
+  --ink:var(--text);
+  --muted:var(--text-muted);
+  --muted-2:var(--text-muted);
+  --gold:var(--accent);
+  --gold-rgb:var(--accent-rgb);
+  --card:var(--card-light);
+  --card-2:var(--card-light-hover);
+  --border:var(--line);
+  --radius:12px;
+  --font-title:'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background:var(--bg);
+  color:var(--text-muted);
+  font-weight:400;
+}
+.showroom p{line-height:1.6}
+
+/* Zones sombres (photos, pied de page) : texte clair */
+.showroom :is(.photo-overlay, .fleet-card, .dest-overlay, .event-card-overlay, .event-featured-media, footer){
+  --white:#FFFFFF;
+  --ink:#FFFFFF;
+  --muted:#B3B3B3;
+  --muted-2:#B3B3B3;
+  --text:#FFFFFF;
+  --text-muted:#B3B3B3;
+  --border:rgba(255,255,255,0.14);
+}
+
+.visually-hidden{position:absolute !important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Typographie ---------- */
+.showroom :is(h1, h2, h3){letter-spacing:-0.02em}
+.showroom .section-head{margin-bottom:56px}
+.showroom .section-head h2{
+  font-family:var(--font-title);
+  font-weight:300;
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.1;
+  color:var(--text);
+  margin-top:18px;
+}
+.showroom .gold-line{display:none}
+/* Petits labels de section : pilule grise centrée */
+.showroom .section-head .eyebrow{
+  display:inline-block;
+  padding:7px 16px;
+  border-radius:999px;
+  background:var(--card-light);
+  color:var(--text-muted-card);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:0.02em;
+  text-transform:none;
+}
+.showroom .eyebrow{color:var(--text-muted);letter-spacing:0.12em;font-weight:600}
+
+/* ---------- Boutons primaires : pilule rouge ---------- */
+.showroom .btn{
+  border-radius:999px;
+  background:var(--accent-gradient);
+  border:none;
+  color:#FFFFFF;
+  font-family:var(--font-body);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.01em;
+  text-transform:none;
+  padding:14px 28px;
+  box-shadow:0 6px 18px rgba(var(--accent-rgb),0.25);
+  transition:filter .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.showroom .btn:hover{
+  background:var(--accent-gradient);
+  color:#FFFFFF;
+  filter:brightness(1.12);
+  box-shadow:0 8px 24px rgba(var(--accent-rgb),0.32);
+}
+.showroom .btn:focus-visible{outline:2px solid var(--accent-light);outline-offset:3px}
+
+/* ---------- Sections : alternance blanc / gris très clair ---------- */
+.showroom main > section.section{background:var(--surface)}
+.showroom main > section.section:nth-of-type(odd){background:var(--bg)}
+.showroom .section{padding:96px 0}
+
+/* ---------- En-tête : barre claire flottante ---------- */
+.showroom header,
+.showroom header.scrolled{
+  top:14px;
+  left:50%;right:auto;
+  transform:translateX(-50%);
+  width:calc(100% - 28px);
+  max-width:1240px;
+  padding:0;
+  background:rgba(255,255,255,0.86);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  border:1px solid var(--line);
+  border-radius:999px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.06);
+}
+.showroom header .nav{padding:10px 12px 10px 26px;max-width:none}
+.showroom .logo img,
+.showroom header.scrolled .logo img{height:46px}
+.showroom .nav-links{gap:30px}
+.showroom .nav-links > li > a{
+  font-size:13.5px;
+  font-weight:500;
+  letter-spacing:0;
+  text-transform:none;
+  color:#333333;
+}
+.showroom .nav-links > li > a:hover{color:var(--accent)}
+.showroom .dropdown{
+  background:#FFFFFF;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+  padding:10px;
+  margin-top:10px;
+}
+.showroom .dropdown a{border-left:none;border-radius:10px;color:#444444;font-size:13.5px;padding:10px 14px}
+.showroom .dropdown a:hover{background:var(--bg);color:var(--accent)}
+.showroom .nav-right{gap:10px}
+.showroom .lang-pills{display:flex;gap:6px}
+.showroom .lang-pills a{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:600;color:#333333;
+  border:1px solid var(--line);background:#FFFFFF;
+  transition:border-color .2s ease, color .2s ease, background .2s ease;
+}
+.showroom .lang-pills a:hover{border-color:var(--accent);color:var(--accent)}
+.showroom .lang-pills a.active{background:var(--text);border-color:var(--text);color:#FFFFFF}
+.showroom header .btn{padding:12px 24px}
+.showroom .burger span{background:var(--text)}
+
+/* Menu mobile */
+.showroom .mobile-nav{background:#FFFFFF}
+.showroom .mobile-nav-close{color:var(--text)}
+.showroom .mobile-nav a{color:var(--text);border-bottom-color:var(--line)}
+.showroom .mobile-nav .sub a{color:var(--text-muted)}
+.showroom .mobile-nav .m-group-title{color:var(--text-muted);letter-spacing:0.12em}
+.showroom .mobile-lang a{border-radius:50%;width:42px;height:42px;padding:0;display:flex;align-items:center;justify-content:center;border-color:var(--line);color:#333333}
+.showroom .mobile-lang a.active{background:var(--text);border-color:var(--text);color:#FFFFFF}
+
+/* ---------- Hero : grande carte arrondie ---------- */
+.showroom .hero{
+  min-height:0;
+  display:block;
+  overflow:visible;
+  padding:104px 0 40px;
+  background:var(--bg);
+}
+.showroom .hero-card{
+  border-radius:var(--radius-xl);
+  background:linear-gradient(180deg, #FFFFFF 0%, #DADADA 100%);
+  padding:64px 48px 32px;
+  text-align:center;
+  overflow:hidden;
+}
+.showroom .hero-text{max-width:760px;margin:0 auto}
+.showroom .hero .eyebrow{
+  display:inline-block;
+  padding:7px 16px;border-radius:999px;
+  background:rgba(255,255,255,0.9);border:1px solid var(--line);
+  color:var(--text-muted);
+  font-size:12px;font-weight:500;letter-spacing:0.02em;text-transform:none;
+  margin:0 0 22px;
+}
+.showroom .hero .brand-title{
+  font-family:var(--font-title);
+  font-weight:300;
+  font-size:clamp(2.5rem, 6vw, 4.5rem);
+  line-height:1;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#111111;                 /* gris très foncé sur la partie claire du dégradé (contraste ≥ 13:1) */
+  margin:0 0 14px;
+  text-shadow:none;
+}
+.showroom .hero .tagline{
+  font-size:12px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--text-muted);margin-bottom:22px;
+}
+.showroom .hero .lead{
+  font-size:16px;color:var(--text-muted);max-width:560px;margin:0 auto 30px;text-shadow:none;
+}
+/* Champ de réservation en pilule blanche, bouton rouge intégré */
+.showroom .hero-book{
+  display:flex;align-items:center;gap:8px;
+  max-width:600px;margin:0 auto;
+  padding:6px 6px 6px 24px;
+  background:#FFFFFF;
+  border:1px solid var(--line);
+  border-radius:999px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+.showroom .hero-book input{
+  flex:1;min-width:0;
+  border:none;outline:none;background:transparent;
+  font:400 14.5px/1.4 var(--font-body);color:var(--text);
+  padding:10px 0;
+}
+.showroom .hero-book input::placeholder{color:#7A7A7A}
+.showroom .hero-book:focus-within{border-color:#BDBDBD;box-shadow:0 10px 30px rgba(0,0,0,0.08), 0 0 0 3px rgba(var(--accent-rgb),0.12)}
+.showroom .hero-book .btn{flex:none;padding:13px 24px}
+
+/* Visuel : photo de la flotte, sombre et contrastée, reflets rouges */
+.showroom .hero-visual{position:relative;margin-top:44px}
+.showroom .hero-slides{
+  position:relative;
+  aspect-ratio:21/9;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:var(--dark);
+}
+.showroom .hero-slide{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;
+  filter:contrast(1.12) brightness(0.82) saturate(0.85);
+  opacity:0;transition:opacity .9s ease;
+}
+.showroom .hero-slide.is-active{opacity:1}
+.showroom .hero-slides::after,
+.showroom .bento-photo::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 55% at 85% 100%, rgba(214,40,40,0.32) 0%, rgba(214,40,40,0) 70%),
+    linear-gradient(180deg, rgba(13,13,13,0) 55%, rgba(13,13,13,0.45) 100%);
+  mix-blend-mode:normal;
+}
+.showroom .hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.showroom .hero-dot{
+  width:9px;height:9px;padding:0;border-radius:999px;border:none;cursor:pointer;
+  background:#BDBDBD;
+  transition:width .3s ease, background .3s ease;
+}
+.showroom .hero-dot:hover{background:#8F8F8F}
+.showroom .hero-dot.is-active{width:26px;background:var(--accent)}
+.showroom .hero-dot:focus-visible{outline:2px solid var(--accent-light);outline-offset:3px}
+
+/* ---------- Services : bento grid ---------- */
+.showroom .bento{display:flex;flex-direction:column;gap:20px}
+.showroom .bento-pair{display:grid;grid-template-columns:1fr 2fr;gap:20px}
+.showroom .bento-pair--rev{grid-template-columns:2fr 1fr}
+.showroom .bento-pair--rev .bento-photo{order:-1}
+.showroom .bento-card{border-radius:var(--radius-lg);overflow:hidden;min-height:320px}
+.showroom .bento-text{
+  background:var(--card-light);
+  padding:32px;
+  display:flex;flex-direction:column;align-items:flex-start;
+  transition:background .25s ease;
+}
+.showroom .bento-text:hover{background:var(--card-light-hover)}
+.showroom .bento-num{
+  width:40px;height:40px;border-radius:50%;
+  background:#FFFFFF;color:var(--text);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:600;
+  margin-bottom:24px;
+}
+.showroom .bento-kicker{font-size:12px;font-weight:500;color:var(--text-muted-card);margin-bottom:8px}
+.showroom .bento-text h3{font-family:var(--font-title);font-weight:400;font-size:26px;line-height:1.2;color:var(--text);margin-bottom:12px}
+.showroom .bento-text p{font-size:14px;color:var(--text-muted-card);margin-bottom:24px}
+.showroom .bento-text .btn{margin-top:auto}
+.showroom .bento-photo{position:relative;background:var(--dark)}
+.showroom .bento-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:contrast(1.12) brightness(0.8) saturate(0.8);
+  transition:transform .6s ease;
+}
+.showroom .bento-pair:hover .bento-photo img{transform:scale(1.04)}
+.showroom .dest-cta{border-top:none;padding-top:0;margin-top:40px}
+.showroom .dest-cta p{color:var(--text-muted)}
+
+/* ---------- Notre flotte (carrousel) ---------- */
+.showroom .fleet-card a{border-radius:var(--radius-lg)}
+.showroom .fleet-card img{filter:contrast(1.1) brightness(0.85) saturate(0.85)}
+.showroom .fleet-card-name{font-family:var(--font-title);font-weight:400;color:#FFFFFF}
+.showroom .fleet-card-meta{color:#D9D9D9}
+.showroom .fleet-carousel-btn{
+  background:#FFFFFF;border:1px solid var(--line);color:var(--text);
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+.showroom .fleet-carousel-btn:hover,
+.showroom .fleet-carousel-btn:focus-visible{background:var(--accent-gradient);border-color:transparent;color:#FFFFFF}
+.showroom .fleet-card a:focus-visible{outline-color:var(--accent-light)}
+
+/* ---------- Une exigence d'excellence ---------- */
+.showroom .photo-card{border-radius:var(--radius-lg)}
+.showroom .photo-card img{filter:contrast(1.1) brightness(0.78) saturate(0.85)}
+.showroom .photo-overlay .eyebrow{color:#D9D9D9}
+.showroom .photo-overlay h3{font-family:var(--font-title);font-weight:400;color:#FFFFFF}
+.showroom .photo-overlay p{color:#D9D9D9}
+.showroom .mission-card{background:var(--card-light);border:none;border-radius:var(--radius-lg)}
+.showroom .mission-card .eyebrow{color:var(--text-muted-card)}
+.showroom .mission-card h3{font-family:var(--font-title);font-weight:300;font-size:34px;color:var(--text)}
+.showroom .mission-card p{color:var(--text-muted-card)}
+.showroom .commitments{border-color:var(--line)}
+.showroom .commitment svg{color:var(--text)}
+.showroom .commitment h3{font-weight:600;color:var(--text);letter-spacing:-0.01em}
+.showroom .commitment p{color:var(--text-muted)}
+
+/* ---------- Destinations ---------- */
+.showroom .dest-card{border-radius:var(--radius-lg)}
+.showroom .dest-card img{filter:contrast(1.1) brightness(0.82) saturate(0.85)}
+.showroom .dest-city{font-family:var(--font-title);font-weight:400;color:#FFFFFF}
+.showroom .dest-country{color:#D9D9D9}
+.showroom .dest-arrow{border-color:rgba(255,255,255,0.6)}
+.showroom .dest-card--cta{background:var(--card-light);border:none}
+.showroom .dest-card--cta:hover{background:var(--card-light-hover)}
+.showroom .dest-card--cta .cta-icon{border-color:var(--accent);color:var(--accent);background:#FFFFFF}
+.showroom .dest-card--cta:hover .cta-icon{background:var(--accent-gradient);border-color:transparent;color:#FFFFFF}
+.showroom .dest-card--cta .cta-title{font-family:var(--font-title);color:var(--text)}
+.showroom .dest-card--cta .cta-sub{color:var(--text-muted-card)}
+
+/* ---------- Événements ---------- */
+.showroom .event-featured{border-radius:var(--radius-lg);overflow:hidden}
+.showroom .event-featured-content{background:var(--card-light)}
+.showroom .event-featured-content h3{font-family:var(--font-title);font-weight:300;color:var(--text)}
+.showroom .event-featured-content h3 em{color:var(--text)}
+.showroom .event-featured-content p{color:var(--text-muted-card)}
+.showroom .event-featured-content .eyebrow{color:var(--text-muted-card)}
+.showroom .event-meta{border-color:#D6D6D6}
+.showroom .event-meta .label{color:var(--text-muted-card)}
+.showroom .event-meta .value{color:var(--text)}
+.showroom .event-featured-media img,
+.showroom .event-card img{filter:contrast(1.1) brightness(0.8) saturate(0.85)}
+.showroom .event-card{border-radius:var(--radius-lg)}
+.showroom .event-card h3{font-family:var(--font-title);font-weight:400;color:#FFFFFF}
+.showroom .event-card-date{color:#D9D9D9}
+.showroom .events-secondary{scrollbar-color:#BDBDBD transparent}
+
+/* ---------- Avis ---------- */
+.showroom :is(.badge-card, .review-card){background:var(--card-light);border:none;border-radius:var(--radius-lg)}
+.showroom .badge-name, .showroom .badge-count{color:var(--text-muted-card)}
+.showroom .badge-rating{color:var(--text)}
+.showroom :is(.badge-stars, .review-stars){color:var(--text)}
+.showroom .review-text{color:var(--text-muted-card)}
+.showroom .review-footer{border-top-color:#D6D6D6}
+.showroom .review-avatar{background:#FFFFFF;color:var(--text)}
+.showroom .review-name{color:var(--text)}
+.showroom .review-role{color:var(--text-muted-card)}
+
+/* ---------- L'essentiel en un coup d'œil ---------- */
+.showroom .essentials-band{background:var(--surface);border-color:var(--line)}
+.showroom .essentials-label{
+  font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:0.02em;text-transform:none;
+  display:table;margin:0 auto 32px;padding:7px 16px;border-radius:999px;
+  background:var(--card-light);color:var(--text-muted-card);
+}
+.showroom .essential-item svg{color:var(--text)}
+.showroom .essential-item span{color:var(--text)}
+
+/* ---------- Pied de page sombre ---------- */
+.showroom footer{background:var(--dark);border-top:none;color:#B3B3B3}
+.showroom .footer-brand p{color:#B3B3B3}
+.showroom .footer-col h3{color:#FFFFFF;letter-spacing:0.12em}
+.showroom .footer-col a, .showroom .footer-col span{color:#B3B3B3}
+.showroom .footer-col a:hover{color:#FFFFFF}
+.showroom footer .social-row a{border-color:rgba(255,255,255,0.2);color:#B3B3B3}
+.showroom footer .social-row a:hover{border-color:#FFFFFF;color:#FFFFFF}
+/* Réseaux sociaux sur fond clair (carte « Suivez-nous » de la page contact) */
+.showroom main .social-row a{background:#FFFFFF;border-color:var(--line);color:var(--text)}
+.showroom main .social-row a:hover{border-color:var(--accent);color:var(--accent)}
+.showroom .footer-bottom{border-top-color:rgba(255,255,255,0.12)}
+.showroom .footer-bottom, .showroom .footer-bottom a{color:#9A9A9A}
+.showroom .footer-bottom a:hover{color:#FFFFFF}
+
+/* ---------- Responsive ---------- */
+@media(max-width:960px){
+  .showroom header .nav{padding:8px 10px 8px 20px}
+  .showroom .lang-pills{display:none}
+  .showroom .bento-pair,
+  .showroom .bento-pair--rev{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .showroom .section{padding:72px 0}
+  .showroom header, .showroom header.scrolled{top:10px;width:calc(100% - 20px)}
+  .showroom .logo img, .showroom header.scrolled .logo img{height:38px}
+  .showroom header .btn{padding:10px 18px}
+  .showroom .hero{padding-top:88px}
+  .showroom .hero-card{padding:40px 18px 22px;border-radius:22px}
+  .showroom .hero .lead{font-size:15px}
+  /* champ + bouton empilés, toujours en pilules */
+  .showroom .hero-book{flex-direction:column;align-items:stretch;border-radius:26px;padding:8px}
+  .showroom .hero-book input{padding:12px 16px;text-align:center}
+  .showroom .hero-book .btn{justify-content:center}
+  .showroom .hero-visual{margin-top:32px}
+  .showroom .hero-slides{aspect-ratio:4/3}
+  .showroom .bento-pair,
+  .showroom .bento-pair--rev{grid-template-columns:1fr}
+  .showroom .bento-pair .bento-photo{order:-1;min-height:220px}
+  .showroom .bento-card{min-height:0}
+  .showroom .bento-text{padding:26px 22px}
+  .showroom .mission-card h3{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  .showroom .hero-slide{transition:none}
+}
+
+/* Sections qui collaient à la précédente (padding-top:0 écrit dans le HTML) : avec l'alternance des fonds, elles retrouvent leur marge */
+.showroom main > section.section[style*="padding-top:0"]{padding-top:96px !important}
+@media(max-width:680px){
+  .showroom main > section.section[style*="padding-top:0"]{padding-top:72px !important}
+}
+
+/* =====================================================================
+   PAGES INTÉRIEURES
+   ===================================================================== */
+
+/* ---------- Héros des pages : grande carte photo arrondie, sombre ---------- */
+.showroom .page-hero{
+  width:calc(100% - 28px);
+  max-width:1240px;
+  margin:100px auto 0;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  min-height:0;
+}
+.showroom .page-hero:not(.page-hero--black){
+  --white:#FFFFFF; --ink:#FFFFFF; --muted:#D9D9D9; --muted-2:#D9D9D9;
+}
+.showroom .page-hero-media{filter:contrast(1.1) brightness(0.85) saturate(0.85)}
+.showroom .page-hero-inner{padding:84px 0 56px}
+.showroom .page-hero .wrap{padding:0 48px}
+.showroom .page-hero .eyebrow{
+  display:inline-block;padding:7px 16px;border-radius:999px;
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  color:#FFFFFF;font-size:12px;font-weight:500;letter-spacing:0.02em;text-transform:none;
+}
+.showroom .page-hero h1{
+  font-family:var(--font-title);font-weight:300;letter-spacing:-0.02em;
+  font-size:clamp(2.2rem, 4.6vw, 3.6rem);line-height:1.08;color:#FFFFFF;
+}
+.showroom .page-hero p.lead{color:#E6E6E6;font-weight:400}
+.showroom .page-hero .breadcrumb{font-size:12px;letter-spacing:0;text-transform:none;color:#D9D9D9;text-shadow:none}
+.showroom .page-hero .breadcrumb a{color:#D9D9D9}
+.showroom .page-hero .breadcrumb a:hover{color:#FFFFFF}
+.showroom .page-hero .breadcrumb .sep{color:#BFBFBF}
+.showroom .page-hero .breadcrumb .current{color:#FFFFFF}
+/* Variante sans photo : carte claire en dégradé, comme le héros de l'accueil */
+.showroom .page-hero--black{background:linear-gradient(180deg, #FFFFFF 0%, #DADADA 100%);border-bottom:none}
+.showroom .page-hero--black .eyebrow{background:rgba(255,255,255,0.9);border-color:var(--line);color:var(--text-muted);backdrop-filter:none}
+.showroom .page-hero--black h1,
+.showroom .page-hero--black .brand-title{color:#111111;font-weight:300}
+.showroom .page-hero--black .tagline, .showroom .page-hero--black p.lead{color:var(--text-muted)}
+
+/* ---------- Blocs texte + photo : façon bento (carte grise + carte photo) ---------- */
+.showroom .content-grid{gap:20px;align-items:stretch}
+.showroom .content-grid-text{
+  background:var(--card-light);
+  border-radius:var(--radius-lg);
+  padding:44px;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+}
+.showroom .content-grid-text :is(p, li){color:var(--text-muted-card)}
+.showroom .content-grid h2{font-family:var(--font-title);font-weight:300;font-size:clamp(28px,3.2vw,40px);line-height:1.12;color:var(--text)}
+.showroom .content-grid h3{font-family:var(--font-title);font-weight:400;font-size:clamp(24px,2.6vw,30px);line-height:1.2;color:var(--text)}
+.showroom .content-grid .eyebrow{color:var(--text-muted-card)}
+.showroom .content-grid ul li{border-top-color:#D6D6D6;color:var(--text)}
+.showroom .content-grid ul li::before{background:var(--text)}
+.showroom .content-grid-media{border-radius:var(--radius-lg);overflow:hidden;background:var(--dark);min-height:320px}
+.showroom .content-grid-media img{
+  width:100%;height:100% !important;min-height:320px;border-radius:0;object-fit:cover;
+  filter:contrast(1.1) brightness(0.85) saturate(0.85);
+}
+.showroom .services-alt{display:flex;flex-direction:column;gap:20px}
+.showroom .services-alt .service-block{margin:0}
+.showroom .fleet-model{color:var(--text-muted-card)}
+.showroom .fleet-spec{color:var(--text-muted-card)}
+.showroom .fleet-spec svg{color:var(--text)}
+.showroom .fleet-amenities{border-bottom-color:#D6D6D6}
+.showroom .fleet-amenities .fleet-spec{color:var(--text)}
+.showroom .maintenance-item svg{color:var(--text)}
+.showroom .maintenance-item h4{font-family:var(--font-title);font-weight:600;color:var(--text)}
+.showroom .maintenance-item p{color:var(--text-muted-card)}
+
+/* ---------- Chiffres clés : cartes grises ---------- */
+.showroom .stats-row{gap:20px}
+.showroom .stat{background:var(--card-light);border:none;border-radius:var(--radius-lg);padding:32px 24px}
+.showroom .stat-num{font-weight:300;color:var(--text);letter-spacing:-0.02em}
+.showroom .stat-lbl{color:var(--text-muted-card);letter-spacing:0.08em}
+
+/* ---------- Grilles d'atouts : bento de cartes grises ---------- */
+.showroom .pillars-grid{gap:20px;background:none;border:none}
+.showroom .pillar{background:var(--card-light);border-radius:var(--radius-lg);padding:36px 32px}
+.showroom .pillar:hover{background:var(--card-light-hover)}
+.showroom .pillar svg{color:var(--text)}
+.showroom .pillar h3{font-family:var(--font-title);font-weight:600;letter-spacing:-0.01em;color:var(--text)}
+.showroom .pillar p{color:var(--text-muted-card)}
+.showroom .pillar-link{color:var(--accent);font-weight:600;letter-spacing:0.02em;text-transform:none;font-size:13px}
+
+/* ---------- Cartes liens (villes, services, catégories) ---------- */
+.showroom .link-cards-grid{gap:20px}
+.showroom .related-categories-grid{gap:20px}
+.showroom .related-category-card{background:var(--card-light);border:none;border-radius:var(--radius-lg);padding:30px}
+.showroom .related-category-card:hover{background:var(--card-light-hover);border-color:transparent}
+.showroom .related-category-card h3{font-family:var(--font-title);font-weight:400;font-size:20px;color:var(--text)}
+.showroom .related-category-card span{color:var(--accent);font-weight:600;letter-spacing:0.02em;text-transform:none;font-size:13px}
+.showroom .services-marquee-track .dest-card,
+.showroom .fleet-marquee-card{border-radius:var(--radius-lg)}
+.showroom .fleet-marquee-card img{filter:contrast(1.1) brightness(0.78) saturate(0.85)}
+.showroom .fleet-marquee-content{--white:#FFFFFF;--ink:#FFFFFF;--muted:#D9D9D9}
+.showroom .fleet-marquee-content h3{font-family:var(--font-title);font-weight:400;color:#FFFFFF}
+.showroom .fleet-marquee-content .fleet-spec{color:#D9D9D9}
+.showroom .fleet-marquee-content .fleet-spec svg{color:#FFFFFF}
+
+/* ---------- Bandeau d'appel à l'action : grande carte sombre ---------- */
+.showroom .cta-band{
+  width:calc(100% - 28px);max-width:1240px;margin:0 auto 96px;
+  background:var(--dark);border:none;border-radius:var(--radius-xl);
+  padding:80px 24px;
+  --white:#FFFFFF;--ink:#FFFFFF;--muted:#B3B3B3;
+}
+.showroom .cta-band h2{font-family:var(--font-title);font-weight:300;font-size:clamp(28px,3.6vw,44px);letter-spacing:-0.02em;color:#FFFFFF}
+.showroom .cta-band p{color:#B3B3B3}
+.showroom .cta-band .eyebrow{color:#B3B3B3}
+/* Bouton secondaire : pilule en contour */
+.showroom .btn-ghost,
+.showroom .btn.btn-ghost{
+  background:transparent;box-shadow:none;filter:none;
+  border:1px solid #111111;color:#111111;
+}
+.showroom .btn-ghost:hover,
+.showroom .btn.btn-ghost:hover{background:#111111;color:#FFFFFF;filter:none;box-shadow:none}
+.showroom :is(.cta-band, .page-hero:not(.page-hero--black), footer) .btn-ghost{border-color:rgba(255,255,255,0.6);color:#FFFFFF}
+.showroom :is(.cta-band, .page-hero:not(.page-hero--black), footer) .btn-ghost:hover{background:#FFFFFF;border-color:#FFFFFF;color:#111111}
+
+/* ---------- Fil d'Ariane hors héros ---------- */
+.showroom .breadcrumb{text-transform:none;letter-spacing:0;font-size:12px}
+.showroom .breadcrumb a:hover{color:var(--accent)}
+.showroom .breadcrumb .current{color:var(--text)}
+
+/* ---------- Événements (listes, marchés, attractions, régions) ---------- */
+.showroom .simple-events{border-top-color:var(--line)}
+.showroom .simple-event{border-bottom-color:var(--line)}
+.showroom .simple-event-date{font-family:var(--font-title);font-weight:500;color:var(--text)}
+.showroom .simple-event-main h3{font-family:var(--font-title);font-weight:400;color:var(--text)}
+.showroom .simple-event-loc{color:var(--text-muted)}
+.showroom .events-note{color:var(--text-muted)}
+.showroom .events-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.showroom .market-grid{gap:20px;background:none;border:none}
+.showroom .market-item{background:var(--card-light);border-radius:16px}
+.showroom .market-item:hover{background:var(--card-light-hover)}
+.showroom .market-item h3{font-family:var(--font-title);font-weight:500;color:var(--text)}
+.showroom .market-item span{color:var(--text-muted-card)}
+.showroom .market-item small{color:var(--text-muted-card)}
+.showroom .city-heading{font-family:var(--font-title);font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--text)}
+.showroom .attraction-item{border-top-color:var(--line)}
+.showroom .attraction-item h3{font-family:var(--font-title);font-weight:500;color:var(--text)}
+.showroom .attraction-item:hover h3{color:var(--accent)}
+.showroom .attraction-item span{color:var(--text-muted)}
+.showroom .region-banner{border-radius:var(--radius-lg)}
+.showroom .region-banner img{filter:contrast(1.1) brightness(0.6) saturate(0.85)}
+.showroom .region-banner-caption h3{font-family:var(--font-title);font-weight:300;color:#FFFFFF}
+
+/* ---------- Tours : carte-itinéraire et bloc « Sur mesure » ---------- */
+.showroom .itin-map{border-radius:var(--radius-lg);border:none;overflow:hidden;--gold:#D62828;--gold-rgb:214,40,40}
+.showroom .itin-stop{border-left-color:var(--line);border-radius:0 12px 12px 0}
+.showroom .itin-stop-n{border-color:var(--text);color:var(--text);font-family:var(--font-body);font-weight:500}
+.showroom .itin-stop-name{font-family:var(--font-title);font-weight:400;color:var(--text)}
+.showroom .itin-stop-cap{color:var(--text-muted)}
+.showroom .turnkey{background:var(--card-light);border:none;border-radius:var(--radius-xl);padding:56px}
+.showroom .turnkey .eyebrow{
+  display:inline-block;padding:7px 16px;border-radius:999px;background:#FFFFFF;
+  color:var(--text-muted-card);font-size:12px;font-weight:500;letter-spacing:0.02em;text-transform:none;
+}
+.showroom .turnkey h3{font-family:var(--font-title);font-weight:300;color:var(--text)}
+.showroom .turnkey-text{color:var(--text-muted-card)}
+.showroom .turnkey-formulas{border-top-color:#D6D6D6}
+.showroom .turnkey-formula + .turnkey-formula{border-left-color:#D6D6D6}
+.showroom .turnkey svg{stroke:var(--text) !important}
+.showroom .turnkey-formula-name{font-family:var(--font-title);font-weight:400;color:var(--text)}
+.showroom .turnkey-formula p:not(.turnkey-formula-name){color:var(--text-muted-card);font-weight:400}
+.showroom .turnkey-option{color:var(--text-muted-card)}
+.showroom .turnkey-fine{color:var(--text-muted-card)}
+.showroom .turnkey--inline{padding:24px 32px;border-radius:999px}
+.showroom .turnkey--inline p{color:var(--text)}
+.showroom .turnkey--inline a{color:var(--accent);font-weight:600;letter-spacing:0.02em;text-transform:none;font-size:13.5px}
+
+/* ---------- Contact, devis, mentions légales ---------- */
+.showroom :is(.contact-band, .form-band, .legal-band){padding:150px 0 96px}
+.showroom :is(.contact-head, .form-head, .legal-head) h1{font-family:var(--font-title);font-weight:300;letter-spacing:-0.02em;font-size:clamp(2.2rem, 4.6vw, 3.6rem);line-height:1.08;color:var(--text)}
+.showroom :is(.contact-head, .form-head, .legal-head) .eyebrow{
+  display:inline-block;padding:7px 16px;border-radius:999px;background:var(--card-light);
+  color:var(--text-muted-card);font-size:12px;font-weight:500;letter-spacing:0.02em;text-transform:none;
+}
+.showroom :is(.contact-head, .form-head) p{color:var(--text-muted)}
+.showroom .contact-cards{gap:20px}
+.showroom :is(.contact-card, .side-card){background:var(--card-light);border:none;border-radius:var(--radius-lg);padding:30px}
+.showroom :is(.contact-card, .side-card) h2{font-family:var(--font-title);font-weight:500;color:var(--text)}
+.showroom :is(.contact-card, .side-card) p{color:var(--text-muted-card)}
+.showroom :is(.contact-card, .side-card) a.contact-line{color:var(--accent);font-weight:600}
+.showroom :is(.contact-card, .side-card) a.contact-line:hover{color:var(--accent-dark)}
+.showroom .map-frame{border:none;border-radius:var(--radius-lg)}
+.showroom .map-frame iframe{filter:grayscale(0.4) contrast(1.02)}
+.showroom .quote-form{background:var(--card-light);border:none;border-radius:var(--radius-xl);padding:44px}
+.showroom .form-field label,
+.showroom .form-radios legend{font-size:12px;font-weight:600;letter-spacing:0.02em;text-transform:none;color:var(--text)}
+.showroom .form-field :is(input, select, textarea){
+  background:#FFFFFF;border:1px solid var(--line);color:var(--text);
+  border-radius:14px;padding:14px 16px;font-size:14px;
+}
+.showroom .form-field :is(input, select, textarea):focus{border-color:#9E9E9E;box-shadow:0 0 0 3px rgba(var(--accent-rgb),0.12)}
+.showroom .form-field ::placeholder{color:#7A7A7A}
+.showroom .form-check label{color:var(--text)}
+.showroom .form-check input{accent-color:var(--accent)}
+.showroom .form-note{color:var(--text-muted-card)}
+.showroom .quote-form .btn{width:100%;justify-content:center}
+.showroom .tour-recap{background:#FFFFFF;border:1px solid var(--line);border-radius:14px}
+.showroom .tour-recap p{color:var(--text-muted-card)}
+.showroom .tour-recap strong{color:var(--text)}
+.showroom .tour-recap-edit{color:var(--accent);letter-spacing:0.02em;text-transform:none;font-size:13px;font-weight:600}
+.showroom .legal-content h2{font-family:var(--font-title);font-weight:400;color:var(--text)}
+.showroom .legal-content p{color:var(--text-muted)}
+.showroom .legal-content a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.showroom .legal-placeholder{color:var(--text-muted)}
+
+/* ---------- Responsive des pages intérieures ---------- */
+@media(max-width:960px){
+  .showroom .content-grid-text{padding:34px}
+}
+@media(max-width:680px){
+  .showroom .page-hero{width:calc(100% - 20px);margin-top:84px;border-radius:22px}
+  .showroom .page-hero .wrap{padding:0 22px}
+  .showroom .page-hero-inner{padding:56px 0 40px}
+  .showroom .content-grid-text{padding:28px 22px}
+  .showroom .content-grid-media, .showroom .content-grid-media img{min-height:240px}
+  .showroom .cta-band{width:calc(100% - 20px);padding:56px 20px;margin-bottom:72px;border-radius:22px}
+  .showroom .turnkey{padding:36px 22px;border-radius:22px}
+  .showroom .turnkey--inline{border-radius:22px}
+  .showroom :is(.contact-band, .form-band, .legal-band){padding:120px 0 72px}
+  .showroom .quote-form{padding:26px 20px;border-radius:22px}
+}
+
+/* Carte-itinéraire : numéros blancs (le rouge sur fond sombre et le texte foncé sur pastille rouge seraient peu lisibles) */
+.showroom .itin-n{fill:#FFFFFF}
+.showroom .itin:has([data-stop="1"]:hover) .itin-stop[data-stop="1"] .itin-stop-n,
+.showroom .itin:has([data-stop="2"]:hover) .itin-stop[data-stop="2"] .itin-stop-n,
+.showroom .itin:has([data-stop="3"]:hover) .itin-stop[data-stop="3"] .itin-stop-n,
+.showroom .itin:has([data-stop="4"]:hover) .itin-stop[data-stop="4"] .itin-stop-n,
+.showroom .itin:has([data-stop="5"]:hover) .itin-stop[data-stop="5"] .itin-stop-n,
+.showroom .itin:has([data-stop="6"]:hover) .itin-stop[data-stop="6"] .itin-stop-n,
+.showroom .itin:has([data-stop="7"]:hover) .itin-stop[data-stop="7"] .itin-stop-n,
+.showroom .itin:has([data-stop="8"]:hover) .itin-stop[data-stop="8"] .itin-stop-n{color:#FFFFFF;border-color:var(--accent)}
+.showroom .itin:has([data-stop="1"]:hover) .itin-pt[data-stop="1"] .itin-n,
+.showroom .itin:has([data-stop="2"]:hover) .itin-pt[data-stop="2"] .itin-n,
+.showroom .itin:has([data-stop="3"]:hover) .itin-pt[data-stop="3"] .itin-n,
+.showroom .itin:has([data-stop="4"]:hover) .itin-pt[data-stop="4"] .itin-n,
+.showroom .itin:has([data-stop="5"]:hover) .itin-pt[data-stop="5"] .itin-n,
+.showroom .itin:has([data-stop="6"]:hover) .itin-pt[data-stop="6"] .itin-n,
+.showroom .itin:has([data-stop="7"]:hover) .itin-pt[data-stop="7"] .itin-n,
+.showroom .itin:has([data-stop="8"]:hover) .itin-pt[data-stop="8"] .itin-n{fill:#FFFFFF}
+.showroom .itin:has([data-stop="1"]:hover) .itin-stop[data-stop="1"],
+.showroom .itin:has([data-stop="2"]:hover) .itin-stop[data-stop="2"],
+.showroom .itin:has([data-stop="3"]:hover) .itin-stop[data-stop="3"],
+.showroom .itin:has([data-stop="4"]:hover) .itin-stop[data-stop="4"],
+.showroom .itin:has([data-stop="5"]:hover) .itin-stop[data-stop="5"],
+.showroom .itin:has([data-stop="6"]:hover) .itin-stop[data-stop="6"],
+.showroom .itin:has([data-stop="7"]:hover) .itin-stop[data-stop="7"],
+.showroom .itin:has([data-stop="8"]:hover) .itin-stop[data-stop="8"]{background:rgba(var(--accent-rgb),0.06);border-left-color:var(--accent)}
+
+/* Photo des blocs texte + photo : elle suit la hauteur de la carte texte (une photo en portrait n'étire plus le bloc) */
+.showroom .content-grid-media{position:relative}
+.showroom .content-grid-media img{position:absolute;inset:0;min-height:0}
+/* Bloc texte seul, volontairement étroit : centré */
+.showroom .content-grid[style*="grid-template-columns:1fr"]{margin-left:auto;margin-right:auto}
+
+/* =====================================================================
+   ACCUEIL — hero enrichi : photo de fond voilée + accroche + signature
+   ===================================================================== */
+/* Photo de fond (photo existante du site : chauffeur de nuit devant un aéroport), floutée et voilée de clair */
+.showroom .hero-card{
+  position:relative;
+  isolation:isolate;
+  background:#F5F5F5;
+}
+.showroom .hero-card::before{
+  content:'';position:absolute;inset:-40px;z-index:-2;
+  background:url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,quality=80,fit=crop/AR01jOEGPpI5k0KP/whatsapp-image-2026-03-07-at-18.00.28-ZdMFD6sVjMdl16dB.jpeg") center 35% / cover no-repeat;
+  filter:blur(2px);
+  transform:translate3d(0, var(--hero-parallax, 0px), 0) scale(1.06);
+  will-change:transform;
+}
+.showroom .hero-card::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.80) 55%, rgba(245,245,245,.95) 100%);
+}
+/* Textes du hero : gris plus foncé, lisible même sur la partie la plus sombre de la photo voilée
+   (fond le plus sombre possible ≈ #CCCCCC : #4A4A4A y fait 5,5:1) */
+.showroom .hero .tagline,
+.showroom .hero .lead{color:#4A4A4A}
+
+/* Accroche */
+.showroom .hero-hook{
+  font-family:var(--font-title);
+  font-weight:300;
+  font-size:clamp(2.2rem, 5vw, 4rem);
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  color:#111111;
+  margin:0;
+}
+.showroom .hero-word{display:inline-block}
+/* Fine ligne rouge entre l'accroche et la signature */
+.showroom .hero-rule{
+  display:block;width:40px;height:2px;margin:22px auto 20px;
+  border-radius:2px;background:var(--accent-gradient);
+}
+/* PRESTIGIA : signature de marque, plus petite, très espacée, dégradé gris foncé → rouge */
+.showroom .hero .brand-title{
+  font-weight:400;
+  font-size:clamp(1.5rem, 2.6vw, 2rem);   /* ≥ 24 px : grand texte au sens WCAG */
+  letter-spacing:0.35em;
+  display:inline-block;                   /* le dégradé suit la largeur du mot, pas celle de la carte */
+  margin:0 0 10px;
+  padding-left:0.35em;                    /* compense l'espacement après la dernière lettre */
+  background:linear-gradient(90deg, #111111 0%, #111111 60%, #A4161A 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+.showroom .hero .tagline{letter-spacing:0.3em;margin-bottom:24px}
+
+/* Entrée : les mots de l'accroche apparaissent un par un (fondu vers le haut, 80 ms d'écart) */
+@keyframes heroWordIn{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:none}
+}
+.showroom .hero-word{
+  opacity:0;
+  animation:heroWordIn .7s cubic-bezier(.2,.7,.2,1) forwards;
+  animation-delay:calc(120ms + var(--i, 0) * 80ms);
+}
+@media(prefers-reduced-motion:reduce){
+  .showroom .hero-word{opacity:1;animation:none}
+  .showroom .hero-card::before{transform:scale(1.06)}
+}
+@media(max-width:680px){
+  .showroom .hero-rule{margin:18px auto 16px}
+  .showroom .hero .brand-title{font-size:1.4rem;letter-spacing:0.3em;padding-left:0.3em}
+}
+
+/* =====================================================================
+   ACCUEIL — champ de recherche du hero et suggestions
+   ===================================================================== */
+.showroom .hero-text{position:relative;z-index:3}
+.showroom .hero-search{position:relative}
+.showroom .hero-search input::-webkit-search-cancel-button{cursor:pointer}
+.showroom .hero-search .btn{gap:8px}
+.showroom .hero-search .btn svg{flex:none}
+.showroom .hero-search-panel{
+  position:absolute;left:0;right:0;top:calc(100% + 10px);z-index:10;
+  background:#FFFFFF;border:1px solid var(--line);border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+  padding:8px;text-align:left;
+}
+.showroom .hero-search-panel[hidden]{display:none}
+.showroom .hero-search-list{list-style:none;margin:0;padding:0}
+.showroom .hero-search-option{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 14px;border-radius:14px;cursor:pointer;
+  font-size:14.5px;font-weight:500;color:var(--text);
+}
+.showroom .hero-search-option.is-active{background:var(--bg)}
+.showroom .hero-search-ico{
+  width:34px;height:34px;flex:none;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--card-light);color:var(--text);
+}
+.showroom .hero-search-option.is-active .hero-search-ico{background:var(--accent-gradient);color:#FFFFFF}
+.showroom .hero-search-empty{padding:14px 14px 12px}
+.showroom .hero-search-empty p{font-size:14.5px;color:var(--text);margin-bottom:12px}
+.showroom .hero-search-empty-links{display:flex;gap:10px;flex-wrap:wrap}
+.showroom .hero-search-empty-links a{
+  display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;
+  font-size:13px;font-weight:600;border:1px solid var(--line);color:var(--accent);
+}
+.showroom .hero-search-empty-links a:hover{border-color:var(--accent)}
+@media(max-width:680px){
+  .showroom .hero-search-panel{border-radius:18px}
+  .showroom .hero-search-option{font-size:14px;padding:10px 10px}
+}
