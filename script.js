@@ -261,5 +261,14 @@
   track.addEventListener('touchstart', function(){ paused = true; stop(); }, {passive:true});
   track.addEventListener('touchend', function(){ paused = false; setTimeout(start, 3000); }, {passive:true});
   document.addEventListener('visibilitychange', start);
+
+  // Cartes entièrement visibles = nettes ; cartes coupées sur les bords = atténuées
+  if('IntersectionObserver' in window){
+    var seen = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.target.classList.toggle('is-active', e.intersectionRatio >= 0.9); });
+    }, {root:track, threshold:[0, 0.5, 0.9, 1]});
+    Array.prototype.forEach.call(track.children, function(card){ seen.observe(card); });
+    root.classList.add('is-ready');
+  }
   start();
 })();

@@ -987,16 +987,30 @@
   }
 
   /* ===== Accueil : carrousel « Notre flotte » ===== */
-  .fleet-carousel{position:relative;--fleet-gap:24px}
+  /* Cartes voisines visibles : --fleet-full cartes entières + --fleet-peek de carte de chaque côté
+     (ordinateur 3 + 2×0,2 = 3,4 ; tablette 2 + 2×0,15 = 2,3 ; mobile 1 + 2×0,1 = 1,2).
+     Largeurs calculées sur la largeur du carrousel (unités cqw). */
+  .fleet-carousel{
+    position:relative;container-type:inline-size;
+    --fleet-gap:24px;--fleet-full:3;--fleet-peek:0.2;
+    --fleet-w:calc((100cqw - (var(--fleet-full) + 1) * var(--fleet-gap)) / (var(--fleet-full) + 2 * var(--fleet-peek)));
+    --fleet-pad:calc(var(--fleet-w) * var(--fleet-peek) + var(--fleet-gap));
+  }
   .fleet-carousel-track{
     display:flex;gap:var(--fleet-gap);list-style:none;margin:0;padding:0;
     overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
     overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
     scrollbar-width:none;
+    padding-inline:var(--fleet-pad);scroll-padding-inline:var(--fleet-pad);
+    /* fondu vers le noir du fond sur les bords gauche et droit */
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 calc(var(--fleet-pad) * 0.65), #000 calc(100% - var(--fleet-pad) * 0.65), transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 calc(var(--fleet-pad) * 0.65), #000 calc(100% - var(--fleet-pad) * 0.65), transparent 100%);
   }
   .fleet-carousel-track::-webkit-scrollbar{display:none}
   /* 3 cartes visibles sur ordinateur */
-  .fleet-card{flex:0 0 calc((100% - 2 * var(--fleet-gap)) / 3);scroll-snap-align:start;min-width:0}
+  .fleet-card{flex:0 0 var(--fleet-w);scroll-snap-align:start;min-width:0;transition:opacity .5s ease, transform .5s ease}
+  /* Cartes partiellement visibles : atténuées (la classe is-active est posée par script.js) */
+  .fleet-carousel.is-ready .fleet-card:not(.is-active){opacity:.5;transform:scale(.95)}
   .fleet-card a{display:block;position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--card)}
   .fleet-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
   .fleet-card a::after{
@@ -1018,17 +1032,16 @@
   }
   .fleet-carousel-btn:hover, .fleet-carousel-btn:focus-visible{background:var(--gold);border-color:var(--gold);color:#111}
   .fleet-carousel-nav .fleet-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
-  .fleet-carousel-nav .fleet-carousel-btn[data-dir="-1"]{left:-23px}
-  .fleet-carousel-nav .fleet-carousel-btn[data-dir="1"]{right:-23px}
+  .fleet-carousel-nav .fleet-carousel-btn[data-dir="-1"]{left:4px}
+  .fleet-carousel-nav .fleet-carousel-btn[data-dir="1"]{right:4px}
 
   /* Tablette : 2 cartes */
   @media(max-width:960px){
-    .fleet-card{flex-basis:calc((100% - var(--fleet-gap)) / 2)}
+    .fleet-carousel{--fleet-full:2;--fleet-peek:0.15}
   }
   /* Mobile : 1,2 carte, pour montrer qu'il y a une suite ; flèches sous le carrousel */
   @media(max-width:600px){
-    .fleet-carousel{--fleet-gap:14px}
-    .fleet-card{flex-basis:calc((100% - var(--fleet-gap)) / 1.2)}
+    .fleet-carousel{--fleet-gap:14px;--fleet-full:1;--fleet-peek:0.1}
     .fleet-card-body{left:18px;right:18px;bottom:16px}
     .fleet-card-name{font-size:21px}
     .fleet-card-meta{font-size:11.5px}
@@ -1037,5 +1050,5 @@
   }
   @media(prefers-reduced-motion:reduce){
     .fleet-carousel-track{scroll-behavior:auto}
-    .fleet-card img{transition:none}
+    .fleet-card img, .fleet-card{transition:none}
   }
