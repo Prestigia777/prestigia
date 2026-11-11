@@ -270,5 +270,13 @@
     Array.prototype.forEach.call(track.children, function(card){ seen.observe(card); });
     root.classList.add('is-ready');
   }
+
+  // Un glissement (souris ou doigt) sur la piste ne doit pas ouvrir la carte sous le pointeur
+  var downX = null, dragged = false;
+  track.addEventListener('pointerdown', function(e){ downX = e.clientX; dragged = false; });
+  track.addEventListener('pointermove', function(e){ if(downX !== null && Math.abs(e.clientX - downX) > 8) dragged = true; });
+  track.addEventListener('pointerup', function(){ downX = null; });
+  track.addEventListener('pointercancel', function(){ downX = null; });   // le navigateur a pris la main pour faire défiler : pas de clic
+  track.addEventListener('click', function(e){ if(dragged){ e.preventDefault(); e.stopPropagation(); dragged = false; } }, true);
   start();
 })();
