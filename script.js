@@ -222,3 +222,44 @@
     homeFeaturedTitle.textContent = featured.title;
     homeFeaturedMeta.textContent = featured.location + ' · ' + featured.periodLabel;
   }
+
+// Accueil : carrousel « Notre flotte » (flèches, défilement automatique lent, pause au survol)
+(function(){
+  var root = document.querySelector('.fleet-carousel');
+  if(!root) return;
+  var track = root.querySelector('.fleet-carousel-track');
+  var DELAY = 4500;   // une carte toutes les 4,5 s
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timer = null, paused = false;
+
+  function step(){
+    var card = track.firstElementChild;
+    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+  }
+  function go(dir){
+    var max = track.scrollWidth - track.clientWidth;
+    if(dir > 0 && track.scrollLeft >= max - 4) track.scrollTo({left:0, behavior:'smooth'});
+    else if(dir < 0 && track.scrollLeft <= 4) track.scrollTo({left:max, behavior:'smooth'});
+    else track.scrollBy({left:dir * step(), behavior:'smooth'});
+  }
+  function stop(){ clearInterval(timer); timer = null; }
+  function start(){
+    stop();
+    if(reduce || paused || document.hidden) return;
+    timer = setInterval(function(){ go(1); }, DELAY);
+  }
+
+  root.querySelectorAll('.fleet-carousel-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ go(+btn.getAttribute('data-dir')); start(); });
+  });
+  // Pause au survol, quand on navigue au clavier dedans, et pendant un glissement au doigt
+  root.addEventListener('mouseenter', function(){ paused = true; stop(); });
+  root.addEventListener('mouseleave', function(){ paused = false; start(); });
+  root.addEventListener('focusin', function(){ paused = true; stop(); });
+  root.addEventListener('focusout', function(){ paused = false; start(); });
+  track.addEventListener('touchstart', function(){ paused = true; stop(); }, {passive:true});
+  track.addEventListener('touchend', function(){ paused = false; setTimeout(start, 3000); }, {passive:true});
+  document.addEventListener('visibilitychange', start);
+  start();
+})();

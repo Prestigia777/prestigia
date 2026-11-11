@@ -985,3 +985,57 @@
     .itin-note + .itin-note{transform:translateY(6px)}
     .itin-note-bg{height:50px}
   }
+
+  /* ===== Accueil : carrousel « Notre flotte » ===== */
+  .fleet-carousel{position:relative;--fleet-gap:24px}
+  .fleet-carousel-track{
+    display:flex;gap:var(--fleet-gap);list-style:none;margin:0;padding:0;
+    overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+    overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .fleet-carousel-track::-webkit-scrollbar{display:none}
+  /* 3 cartes visibles sur ordinateur */
+  .fleet-card{flex:0 0 calc((100% - 2 * var(--fleet-gap)) / 3);scroll-snap-align:start;min-width:0}
+  .fleet-card a{display:block;position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--card)}
+  .fleet-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .fleet-card a::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(0deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 32%, rgba(0,0,0,0) 62%);
+  }
+  .fleet-card a:hover img, .fleet-card a:focus-visible img{transform:scale(1.06)}
+  .fleet-card a:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+  .fleet-card-body{position:absolute;left:24px;right:24px;bottom:20px;z-index:1;display:flex;flex-direction:column;gap:6px}
+  .fleet-card-name{font-family:var(--font-title);font-weight:500;font-size:24px;line-height:1.2;color:var(--white)}
+  .fleet-card-meta{font-size:12px;letter-spacing:0.04em;color:var(--ink)}
+
+  /* Flèches : sur les côtés (ordinateur), sous les cartes (mobile) */
+  .fleet-carousel-btn{
+    width:46px;height:46px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,0.75);border:1px solid rgba(var(--gold-rgb),0.6);color:var(--gold);
+    cursor:pointer;transition:background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .fleet-carousel-btn:hover, .fleet-carousel-btn:focus-visible{background:var(--gold);border-color:var(--gold);color:#111}
+  .fleet-carousel-nav .fleet-carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+  .fleet-carousel-nav .fleet-carousel-btn[data-dir="-1"]{left:-23px}
+  .fleet-carousel-nav .fleet-carousel-btn[data-dir="1"]{right:-23px}
+
+  /* Tablette : 2 cartes */
+  @media(max-width:960px){
+    .fleet-card{flex-basis:calc((100% - var(--fleet-gap)) / 2)}
+  }
+  /* Mobile : 1,2 carte, pour montrer qu'il y a une suite ; flèches sous le carrousel */
+  @media(max-width:600px){
+    .fleet-carousel{--fleet-gap:14px}
+    .fleet-card{flex-basis:calc((100% - var(--fleet-gap)) / 1.2)}
+    .fleet-card-body{left:18px;right:18px;bottom:16px}
+    .fleet-card-name{font-size:21px}
+    .fleet-card-meta{font-size:11.5px}
+    .fleet-carousel-nav{display:flex;justify-content:center;gap:14px;margin-top:22px}
+    .fleet-carousel-nav .fleet-carousel-btn{position:static;transform:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .fleet-carousel-track{scroll-behavior:auto}
+    .fleet-card img{transition:none}
+  }
