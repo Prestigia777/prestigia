@@ -391,6 +391,8 @@
 
   /* ---------- ESSENTIALS BAND ---------- */
   .essentials-band{padding:44px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  /* En bas de l'accueil, juste avant le pied de page : le filet du footer sert de séparation (pas de double trait) */
+  .essentials-band--end{padding:56px 0 64px;border-bottom:none}
   .essentials-label{font-family:var(--font-title);font-size:13px;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:32px}
   .essentials-row{display:flex;justify-content:space-between;gap:16px}
   .essential-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;flex:1}
