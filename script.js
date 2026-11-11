@@ -223,7 +223,10 @@
     homeFeaturedMeta.textContent = featured.location + ' · ' + featured.periodLabel;
   }
 
-// Accueil : carrousel « Notre flotte » (flèches, défilement automatique lent, pause au survol)
+// Accueil : carrousel « Notre flotte » en boucle infinie (flèches, défilement automatique lent, pause au survol)
+// Principe : la piste contient [copies des 5 cartes] [5 vraies cartes] [copies des 5 cartes].
+// On montre les vraies cartes ; quand le défilement s'arrête sur une copie, on se replace sans animation
+// sur la vraie carte identique (même image à l'écran, donc aucun saut visible).
 (function(){
   var root = document.querySelector('.fleet-carousel');
   if(!root) return;
@@ -232,17 +235,73 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var timer = null, paused = false;
 
-  function step(){
-    var card = track.firstElementChild;
-    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-    return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+  // --- Copies au début et à la fin (cachées aux lecteurs d'écran, hors tabulation, mais cliquables) ---
+  var real = Array.prototype.slice.call(track.children);
+  var N = real.length;
+  if(N < 2) return;
+  function makeClone(card){
+    var c = card.cloneNode(true);
+    c.classList.add('is-clone');
+    c.setAttribute('aria-hidden', 'true');
+    c.querySelectorAll('a, button, [tabindex]').forEach(function(el){ el.setAttribute('tabindex', '-1'); });
+    return c;
   }
+  var before = document.createDocumentFragment(), after = document.createDocumentFragment();
+  real.forEach(function(card){ before.appendChild(makeClone(card)); after.appendChild(makeClone(card)); });
+  track.insertBefore(before, track.firstChild);
+  track.appendChild(after);
+  var cards = track.children;          // 3 × N cartes : copies [0, N[, vraies [N, 2N[, copies [2N, 3N[
+
+  // Position de défilement qui cale la carte i au début de la zone visible
+  function pos(i){ return cards[i].offsetLeft - cards[0].offsetLeft; }
+  function period(){ return pos(N) - pos(0); }
+  function currentIndex(){
+    var s = track.scrollLeft, best = 0, d = Infinity;
+    for(var i = 0; i < cards.length; i++){ var k = Math.abs(pos(i) - s); if(k < d){ d = k; best = i; } }
+    return best;
+  }
+  function jump(left){                 // repositionnement instantané (sans animation)
+    root.classList.add('is-jumping');  // pas de fondu sur les cartes pendant le saut
+    track.style.scrollBehavior = 'auto';
+    track.scrollLeft = left;
+    track.style.scrollBehavior = '';
+    refreshActive();
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.remove('is-jumping'); }); });
+  }
+  // Cartes entièrement visibles = nettes ; cartes coupées sur les bords = atténuées (calcul sur la mise en page)
+  function refreshActive(){
+    var view = track.clientWidth, s = track.scrollLeft, pad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+    for(var i = 0; i < cards.length; i++){
+      var x = pos(i) + pad - s, w = cards[i].offsetWidth;
+      var seenW = Math.min(x + w, view) - Math.max(x, 0);
+      cards[i].classList.toggle('is-active', seenW / w >= 0.9);
+    }
+  }
+  // Si on est arrêté sur une copie, se replacer sur la vraie carte identique
+  function normalize(){
+    var i = currentIndex();
+    if(i < N) jump(track.scrollLeft + period());
+    else if(i >= 2 * N) jump(track.scrollLeft - period());
+  }
+
+  var target = null;                   // carte visée pendant une animation (clics rapides)
   function go(dir){
-    var max = track.scrollWidth - track.clientWidth;
-    if(dir > 0 && track.scrollLeft >= max - 4) track.scrollTo({left:0, behavior:'smooth'});
-    else if(dir < 0 && track.scrollLeft <= 4) track.scrollTo({left:max, behavior:'smooth'});
-    else track.scrollBy({left:dir * step(), behavior:'smooth'});
+    if(target === null){ normalize(); target = currentIndex(); }
+    target = Math.max(0, Math.min(cards.length - 1, target + dir));
+    track.scrollTo({left: pos(target), behavior: 'smooth'});
   }
+
+  // Fin de défilement (flèches, automatique, doigt, trackpad) : on se recale
+  var settle = null, touching = false;
+  track.addEventListener('scroll', function(){
+    clearTimeout(settle);
+    settle = setTimeout(function(){
+      if(touching) return;
+      target = null;
+      normalize();
+    }, 160);
+  }, {passive:true});
+
   function stop(){ clearInterval(timer); timer = null; }
   function start(){
     stop();
@@ -258,18 +317,32 @@
   root.addEventListener('mouseleave', function(){ paused = false; start(); });
   root.addEventListener('focusin', function(){ paused = true; stop(); });
   root.addEventListener('focusout', function(){ paused = false; start(); });
-  track.addEventListener('touchstart', function(){ paused = true; stop(); }, {passive:true});
-  track.addEventListener('touchend', function(){ paused = false; setTimeout(start, 3000); }, {passive:true});
+  track.addEventListener('touchstart', function(){ touching = true; target = null; paused = true; stop(); }, {passive:true});
+  track.addEventListener('touchend', function(){
+    touching = false; paused = false;
+    track.dispatchEvent(new Event('scroll'));   // relance le recalage si le défilement est déjà fini
+    setTimeout(start, 3000);
+  }, {passive:true});
   document.addEventListener('visibilitychange', start);
+  // Redimensionnement : garder la même carte calée
+  var resizeTimer = null;
+  window.addEventListener('resize', function(){
+    var i = currentIndex();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function(){ jump(pos(i)); normalize(); refreshActive(); }, 120);
+  });
 
-  // Cartes entièrement visibles = nettes ; cartes coupées sur les bords = atténuées
-  if('IntersectionObserver' in window){
-    var seen = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ e.target.classList.toggle('is-active', e.intersectionRatio >= 0.9); });
-    }, {root:track, threshold:[0, 0.5, 0.9, 1]});
-    Array.prototype.forEach.call(track.children, function(card){ seen.observe(card); });
-    root.classList.add('is-ready');
-  }
+  // Départ calé sur la première vraie carte (Berline)
+  jump(pos(N));
+
+  // Mise à jour nette / atténuée pendant le défilement (une fois par image)
+  var raf = null;
+  track.addEventListener('scroll', function(){
+    if(raf) return;
+    raf = requestAnimationFrame(function(){ raf = null; refreshActive(); });
+  }, {passive:true});
+  refreshActive();
+  root.classList.add('is-ready');
 
   // Un glissement (souris ou doigt) sur la piste ne doit pas ouvrir la carte sous le pointeur
   var downX = null, dragged = false;

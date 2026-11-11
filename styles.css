@@ -1008,9 +1008,12 @@
   }
   .fleet-carousel-track::-webkit-scrollbar{display:none}
   /* 3 cartes visibles sur ordinateur */
-  .fleet-card{flex:0 0 var(--fleet-w);scroll-snap-align:start;min-width:0;transition:opacity .5s ease, transform .5s ease}
+  .fleet-card{flex:0 0 var(--fleet-w);scroll-snap-align:start;min-width:0}
   /* Cartes partiellement visibles : atténuées (la classe is-active est posée par script.js) */
-  .fleet-carousel.is-ready .fleet-card:not(.is-active){opacity:.5;transform:scale(.95)}
+  /* (l'effet porte sur le lien, pas sur l'emplacement de la carte : le calage du défilement reste exact) */
+  .fleet-card > a{transition:opacity .5s ease, transform .5s ease}
+  .fleet-carousel.is-ready .fleet-card:not(.is-active) > a{opacity:.5;transform:scale(.95)}
+  .fleet-carousel.is-jumping .fleet-card > a{transition:none}
   .fleet-card a{display:block;position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--card)}
   .fleet-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
   .fleet-card a::after{
@@ -1050,7 +1053,7 @@
   }
   @media(prefers-reduced-motion:reduce){
     .fleet-carousel-track{scroll-behavior:auto}
-    .fleet-card img, .fleet-card{transition:none}
+    .fleet-card img, .fleet-card > a{transition:none}
   }
 
   /* ===== Page flotte : arrivée sur un véhicule depuis le carrousel de l'accueil ===== */
