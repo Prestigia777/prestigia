@@ -20,7 +20,7 @@
 {"@context":"https://schema.org/","@type":"WebSite","name":"Prestigia","url":"https://prestigia.vip","description":"Chauffeur privé et limousine premium à Bruxelles, opérant en Europe.","inLanguage":"fr-BE"}
 </script>
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261112-progress">
+<link rel="stylesheet" href="showroom.css?v=20261112-cadrage">
 </head>
 <body class="showroom">
 
@@ -106,6 +106,11 @@
   <section class="hero" id="accueil">
     <div class="wrap">
       <div class="hero-card">
+        <!-- Photo de fond : cadrage calculé selon la taille de la carte (script.js), voir .hero-photo dans showroom.css -->
+        <picture class="hero-photo" aria-hidden="true">
+          <source srcset="images/hero-classe-s-2400.webp" type="image/webp">
+          <img src="images/hero-classe-s-2400.jpg" alt="" width="2400" height="3000" fetchpriority="high" decoding="async">
+        </picture>
         <div class="hero-text">
           <h1 class="eyebrow">Chauffeur privé et service sur-mesure à Bruxelles</h1>
           <p class="hero-hook"><span class="hero-word" style="--i:0">L'excellence</span> <span class="hero-word" style="--i:1">en</span> <span class="hero-word" style="--i:2">mouvement</span></p>
@@ -625,7 +630,7 @@
 <script src="js/search-index.js?v=20261111-search-2"></script>
 <script src="js/hero-search.js?v=20261111-search-3"></script>
 <script src="js/scroll-progress.js?v=20261112-progress"></script>
-<script src="script.js?v=20261112-classe-s"></script>
+<script src="script.js?v=20261112-cadrage"></script>
 
 </body>
 </html>

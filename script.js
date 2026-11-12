@@ -370,3 +370,39 @@
   window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
   update();
 })();
+
+// Accueil : cadrage de la photo du hero (Classe S) selon la taille réelle de la carte
+// La hauteur de la carte suit celle de l'écran : un pourcentage fixe ferait monter ou descendre la voiture.
+// On calcule donc le décalage pour que le bas de la voiture arrive vers 97 % de la hauteur de la carte.
+(function(){
+  var card = document.querySelector('.hero-card');
+  var img = card && card.querySelector('.hero-photo img');
+  if(!img) return;
+  var CAR_BOTTOM = 0.712;   // bas de la voiture (pneus et bouclier), en fraction de la hauteur de la photo
+  var TARGET = 0.97;        // position souhaitée du bas de la voiture, en fraction de la hauteur de la carte
+  function fit(){
+    var iw = img.naturalWidth || 2400, ih = img.naturalHeight || 3000;
+    var bw = img.clientWidth, bh = img.clientHeight;
+    if(!bw || !bh) return;
+    var s = Math.max(bw / iw, bh / ih);       // échelle de object-fit: cover
+    var rh = ih * s, slack = rh - bh;          // hauteur affichée et marge de recadrage verticale
+    var boxTop = img.offsetTop + img.parentNode.offsetTop;
+    if(slack < 2){
+      // Photo calée sur la hauteur (mobile, tablette) : on agrandit l'image juste assez,
+      // ancrée en haut, pour que le bas de la voiture arrive aussi vers 97 % de la carte.
+      var boxH = img.parentNode.clientHeight;
+      var k = (TARGET * card.clientHeight - boxTop) / (CAR_BOTTOM * boxH);
+      img.style.height = (Math.max(1, k) * 100).toFixed(2) + '%';
+      img.style.objectPosition = '50% 0%';
+      return;
+    }
+    img.style.height = '';   // -40 px : l'image déborde en haut (offsetTop ignore le décalage du parallax)
+    var offset = CAR_BOTTOM * rh - (TARGET * card.clientHeight - boxTop);
+    var p = Math.min(1, Math.max(0, offset / slack));
+    img.style.objectPosition = '50% ' + (p * 100).toFixed(2) + '%';
+  }
+  var t = null;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(fit, 80); });
+  if(img.complete) fit(); else img.addEventListener('load', fit);
+  fit();
+})();

@@ -680,16 +680,22 @@
   min-height:calc(100vh - 120px);           /* ≈ un écran : la voiture se voit en entier sous la recherche */
   min-height:calc(100svh - 120px);
 }
-.showroom .hero-card::before{
-  content:'';position:absolute;inset:-40px 0;z-index:-2;
-  background-image:url("images/hero-classe-s-2400.jpg");
-  background-image:image-set(url("images/hero-classe-s-2400.webp") type("image/webp"), url("images/hero-classe-s-2400.jpg") type("image/jpeg"));
-  background-size:cover;
-  background-position:center 45%;         /* bas de la voiture vers 85-94 % de la hauteur : moins de pavés */
-  background-repeat:no-repeat;
+/* Photo en vraie balise <picture> : object-fit cover, cadrage vertical calculé en JS (script.js)
+   pour que le bas de la voiture arrive vers 97 % de la hauteur de la carte, quelle que soit la taille d'écran.
+   Valeurs CSS ci-dessous = cadrage de secours si le script ne tourne pas. */
+.showroom .hero-photo{
+  position:absolute;left:0;right:0;top:-40px;bottom:-40px;z-index:-2;   /* 40 px de marge pour le parallax */
+  display:block;
   transform:translate3d(0, var(--hero-parallax, 0px), 0);
   will-change:transform;
 }
+.showroom .hero-photo img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;
+  object-position:50% 60%;
+}
+@media(min-width:1281px){ .showroom .hero-photo img{object-position:50% 40%} }
+@media(min-width:1441px) and (min-height:1000px){ .showroom .hero-photo img{object-position:50% 22%} }
 /* Voile clair : opaque en haut, nettement allégé au centre pour laisser voir la Classe S
    (la lisibilité du texte est assurée par des voiles locaux derrière chaque ligne, plus bas) */
 .showroom .hero-card::after{
@@ -699,7 +705,7 @@
 /* Tablette et mobile : la photo est calée sur la hauteur de la carte, le cadrage vertical n'agit pas.
    Elle est légèrement agrandie et ancrée en haut pour que le bas de la voiture arrive vers 85 % */
 @media(max-width:900px){
-  .showroom .hero-card::before{background-size:auto 115%;background-position:center 0%}
+  .showroom .hero-photo img{height:115%;object-position:50% 0%}
 }
 /* Textes du hero : gris plus foncé, lisible même sur la partie la plus sombre de la photo voilée
    (fond le plus sombre possible ≈ #CCCCCC : #4A4A4A y fait 5,5:1) */
@@ -767,7 +773,7 @@
 }
 @media(prefers-reduced-motion:reduce){
   .showroom .hero-word{opacity:1;animation:none}
-  .showroom .hero-card::before{transform:none}
+  .showroom .hero-photo{transform:none}
 }
 @media(max-width:680px){
   .showroom .hero-rule{margin:18px auto 16px}
