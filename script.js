@@ -354,41 +354,6 @@
   start();
 })();
 
-// Accueil (charte showroom) : photos de la flotte qui tournent dans le hero, points de pagination
-(function(){
-  var box = document.querySelector('.hero-visual');
-  if(!box) return;
-  var slides = box.querySelectorAll('.hero-slide');
-  var dots = box.querySelectorAll('.hero-dot');
-  if(slides.length < 2) return;
-  var DELAY = 5000, current = 0, timer = null;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function show(i){
-    current = (i + slides.length) % slides.length;
-    for(var k = 0; k < slides.length; k++){
-      slides[k].classList.toggle('is-active', k === current);
-      if(dots[k]){
-        dots[k].classList.toggle('is-active', k === current);
-        if(k === current) dots[k].setAttribute('aria-current', 'true'); else dots[k].removeAttribute('aria-current');
-      }
-    }
-  }
-  function stop(){ clearInterval(timer); timer = null; }
-  function start(){
-    stop();
-    if(reduce || document.hidden) return;
-    timer = setInterval(function(){ show(current + 1); }, DELAY);
-  }
-  Array.prototype.forEach.call(dots, function(dot, i){
-    dot.addEventListener('click', function(){ show(i); start(); });
-  });
-  box.addEventListener('mouseenter', stop);
-  box.addEventListener('mouseleave', start);
-  document.addEventListener('visibilitychange', start);
-  start();
-})();
-
 // Accueil (charte showroom) : léger parallax de la photo de fond du hero
 (function(){
   var card = document.querySelector('.hero-card');
