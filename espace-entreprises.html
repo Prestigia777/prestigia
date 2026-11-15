@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-pro2">
 </head>
 <body class="showroom">
 
@@ -37,6 +37,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -78,6 +79,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -97,6 +99,9 @@
 
 <main>
 
+  <!-- PREMIER ÉCRAN : bannière + première section (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
     <img class="page-hero-media" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1600,fit=crop/AR01jOEGPpI5k0KP/img_0041-FEbpsAIbC3OQOXvq.jpeg" alt="Véhicule Prestigia utilisé pour un déplacement professionnel" loading="eager" fetchpriority="high">
@@ -109,7 +114,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="section">
+  <section class="section section--tight">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Pensé pour les entreprises</div>
@@ -135,6 +140,49 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band pro-contact" id="contact-pro">
+    <div class="wrap">
+      <div class="pro-contact-grid">
+        <div class="pro-contact-intro">
+          <div class="eyebrow">Ligne prioritaire entreprises</div>
+          <h2>Mettons en place votre compte entreprise</h2>
+          <p>Les demandes des entreprises sont traitées en priorité. Quelques mots suffisent : nous revenons vers vous par e-mail ou par téléphone. Vous pouvez aussi nous joindre directement.</p>
+          <div class="pro-contact-direct">
+            <a href="tel:+32470091715" class="btn">Appeler · +32 4 70 09 17 15</a>
+            <a href="https://wa.me/32470091715?text=Bonjour%20Prestigia%2C%20demande%20professionnelle%20%28entreprise%29%20%3A%20" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:info@prestigia.vip?subject=%5BPrioritaire%5D%20Demande%20professionnelle%20%E2%80%94%20Entreprise" class="btn btn-ghost">E-mail</a>
+          </div>
+        </div>
+        <!-- Formulaire statique (pas de serveur) : à l'envoi, un e-mail pré-rempli « [Prioritaire] » s'ouvre vers info@prestigia.vip -->
+        <form class="pro-contact-form" id="proForm" data-profil="Entreprise">
+          <div class="form-field">
+            <label for="pro-societe">Entreprise</label>
+            <input type="text" id="pro-societe" name="societe" autocomplete="organization" required>
+          </div>
+          <div class="form-field">
+            <label for="pro-nom">Votre nom</label>
+            <input type="text" id="pro-nom" name="nom" autocomplete="name" required>
+          </div>
+          <div class="form-field full">
+            <label for="pro-contact">Téléphone ou e-mail</label>
+            <input type="text" id="pro-contact" name="contact" autocomplete="email" required>
+          </div>
+          <div class="form-field full">
+            <label for="pro-demande">Votre demande</label>
+            <textarea id="pro-demande" name="demande" rows="3" placeholder="Ex. : transferts aéroport réguliers pour nos clients, séminaire en mars…" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer ma demande prioritaire</button>
+          <p class="pro-contact-note">Votre messagerie s'ouvre avec la demande pré-remplie : il ne reste qu'à l'envoyer.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
 
   <!-- PITCH -->
   <section class="section" style="padding-top:0">
@@ -175,17 +223,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Mettons en place votre compte entreprise</h2>
-      <p>Décrivez-nous vos besoins récurrents — transferts, événements, volumes — et nous vous proposons une solution adaptée.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -247,6 +284,20 @@
 
 <script src="js/scroll-progress.js?v=20261112-progress"></script>
 <script src="script.js?v=20261111-showroom"></script>
+<script>
+/* Contact professionnel prioritaire : prépare un e-mail « [Prioritaire] » vers info@prestigia.vip */
+document.getElementById('proForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, profil = f.dataset.profil;
+  var subject = '[Prioritaire] Demande professionnelle — ' + profil + ' — ' + f.societe.value;
+  var body =
+    profil + ' : ' + f.societe.value + '\n' +
+    'Nom : ' + f.nom.value + '\n' +
+    'Téléphone / e-mail : ' + f.contact.value + '\n\n' +
+    'Demande :\n' + f.demande.value;
+  window.location.href = 'mailto:info@prestigia.vip?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+});
+</script>
 
 </body>
 </html>
