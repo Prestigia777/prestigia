@@ -450,6 +450,28 @@
 .showroom .page-hero--black .brand-title{color:#111111;font-weight:300}
 .showroom .page-hero--black .tagline, .showroom .page-hero--black p.lead{color:var(--text-muted)}
 
+/* Bannière centrée et compacte (toutes les pages intérieures) :
+   (fil d'Ariane) → pastille → titre → sous-titre, centrés ; la hauteur suit le contenu ;
+   56 px de marge en haut et en bas (40 px sur mobile). Sélecteur à 3 classes pour passer devant .page-hero .wrap. */
+.showroom .page-hero{min-height:0;align-items:center;justify-content:center}
+.showroom .page-hero .page-hero-inner{
+  width:100%;max-width:none;
+  padding:56px 48px;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+}
+.showroom .page-hero .breadcrumb{justify-content:center;margin-bottom:18px}
+.showroom .page-hero .eyebrow{margin-bottom:16px}
+.showroom .page-hero h1{max-width:900px;margin-left:auto;margin-right:auto;margin-bottom:14px;font-size:clamp(2rem, 3.6vw, 2.9rem);text-wrap:balance}
+.showroom .page-hero p.lead{max-width:640px;margin-left:auto;margin-right:auto;text-wrap:balance}
+/* Voile plus uniforme pour un texte centré : la photo reste visible, le blanc reste lisible partout */
+.showroom .page-hero:not(.page-hero--black) .page-hero-overlay{
+  background:
+    radial-gradient(ellipse 70% 75% at 50% 50%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.10) 35%, rgba(0,0,0,0.10) 60%, rgba(0,0,0,0.35) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.55) 100%);
+}
+
 /* ---------- Blocs texte + photo : façon bento (carte grise + carte photo) ---------- */
 .showroom .content-grid{gap:20px;align-items:stretch}
 .showroom .content-grid-text{
@@ -621,6 +643,114 @@
 .showroom .legal-content a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .showroom .legal-placeholder{color:var(--text-muted)}
 
+/* ---------- Section compacte (utilisée sur Transferts aéroport et gare uniquement) ----------
+   Objectif : bannière + titre + 3 cartes visibles sans défiler à 1280×720. */
+.showroom .section.section--tight{padding:40px 0}
+.showroom .section--tight .section-head{margin-bottom:28px;max-width:900px}
+.showroom .section--tight .section-head h2{margin-top:16px;font-size:clamp(24px,2.5vw,32px);font-weight:400}
+/* Cartes alignées sur la bannière et le menu : même conteneur (1240 px max, 14 px de chaque côté) */
+.showroom .section--tight .wrap{width:calc(100% - 28px);max-width:1240px;padding:0;margin:0 auto}
+/* Section suivante : 40 px en haut au lieu des 96 px forcés pour les sections en padding-top:0 */
+.showroom main > section.section--tight + section.section{padding-top:40px !important}
+.showroom .section--tight .pillar{padding:22px 24px}
+.showroom .section--tight .pillar svg{width:24px;height:24px;margin-bottom:10px}
+.showroom .section--tight .pillar h3{margin-bottom:6px}
+
+/* ---------- Premier écran (.fold) : bannière + première section = hauteur de la fenêtre ----------
+   Pages : <div class="fold"> autour de la bannière et de la première section (classe section--tight).
+   Ratio bannière / section = flex 2 / 3 ; plafond 1100px ; valeurs verticales en clamp(min, svh, max).
+   Sous 768 px de large ou 560 px de haut : mise en page naturelle. */
+.showroom .fold > .section--tight{background:var(--surface)}
+.showroom .fold .pillar h3{font-size:17px}
+.showroom .fold .pillar p{font-size:15px;line-height:1.6}
+@media (min-width:768px) and (min-height:560px){
+  .showroom .fold{
+    display:flex;flex-direction:column;
+    min-height:min(100vh, 1100px);   /* repli */
+    min-height:min(100svh, 1100px);
+  }
+  .showroom .fold > .page-hero{flex:2 1 auto}
+  .showroom .fold .page-hero .page-hero-inner{padding:clamp(14px, 4svh, 56px) 48px}
+  .showroom .fold .page-hero .breadcrumb{margin-bottom:clamp(8px, 1.6svh, 18px)}
+  .showroom .fold .page-hero .eyebrow{margin-bottom:clamp(8px, 1.8svh, 16px)}
+  .showroom .fold .page-hero h1{font-size:clamp(28px, min(3.6vw, 5.4svh), 46px);margin-bottom:clamp(6px, 1.4svh, 14px)}
+  .showroom .fold > .section--tight{
+    flex:3 1 auto;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(10px, 3svh, 48px) 0 !important;   /* passe devant les padding écrits dans le HTML */
+  }
+  .showroom .fold .section--tight .section-head{margin-bottom:clamp(12px, 3svh, 28px)}
+  .showroom .fold .section--tight .section-head h2{margin-top:clamp(6px, 1.6svh, 16px);font-size:clamp(22px, min(2.5vw, 4svh), 32px)}
+  .showroom .fold .section--tight .pillar{padding:clamp(14px, 2.6svh, 24px) 24px}
+  .showroom .fold .section--tight .pillar svg{margin-bottom:clamp(6px, 1.2svh, 10px)}
+  .showroom .fold .section--tight .pillar h3{margin-bottom:clamp(4px, 0.8svh, 8px)}
+  .showroom .fold .section--tight .stat{padding:clamp(14px, 2.6svh, 28px) 24px}
+}
+
+/* ---------- Pages intérieures (avec bannière) : blocs alignés sur la bannière, vides resserrés ----------
+   Comme sur Transferts : chaque bloc prend les bords de la bannière et du menu (1240 px max, 14 px de chaque côté,
+   10 px sur mobile). Sur ordinateur, les vides haut / bas des sections passent de 96 px à clamp(32px, 5svh, 56px).
+   Les padding:0 écrits dans le HTML (sections accolées) sont respectés. */
+.showroom main:has(.page-hero) section.section > .wrap,
+.showroom main:has(.page-hero) .event-featured{width:calc(100% - 28px);max-width:1240px;padding-left:0;padding-right:0;margin-left:auto;margin-right:auto}
+@media (max-width:680px){
+  .showroom main:has(.page-hero) section.section > .wrap,
+  .showroom main:has(.page-hero) .event-featured{width:calc(100% - 20px)}
+}
+@media (min-width:768px) and (min-height:560px){
+  body.showroom main:has(.page-hero) > section.section[style*="padding-top:0"],
+  body.showroom main:has(.page-hero) > section.section:not([style*="padding-top"]){padding-top:clamp(32px, 5svh, 56px) !important}
+  .showroom main:has(.page-hero) > section.section{padding-bottom:clamp(32px, 5svh, 56px)}
+}
+
+/* ---------- Bandeau noir remonté (.cta-slot) ----------
+   Le bandeau de réservation est placé juste après le premier écran (ou la bannière) : c'est la première
+   chose vue en descendant. Le conteneur .cta-slot n'est pas une <section>, l'alternance des fonds reste intacte. */
+.showroom .cta-slot{padding-top:clamp(20px, 3svh, 40px)}
+.showroom .cta-slot .cta-band{margin:0 auto}
+/* Pages à une seule section : le bandeau est le dernier bloc, on garde l'espace d'une section avant le pied de page */
+.showroom .cta-slot:last-child{padding-bottom:clamp(32px, 5svh, 56px)}
+
+/* ---------- Contact professionnel prioritaire (.pro-contact) ----------
+   Espace Entreprises et Espace Agences de voyage : le bandeau noir devient un contact rapide.
+   À gauche : priorité + accès directs (appel, WhatsApp, e-mail). À droite : formulaire court (4 champs). */
+.showroom .pro-contact{text-align:left}
+.showroom .pro-contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px, 4vw, 56px);align-items:center;max-width:1120px;margin:0 auto}
+.showroom .pro-contact .eyebrow{display:inline-block;margin-bottom:12px;color:#B3B3B3}
+.showroom .pro-contact h2{text-align:left;margin-bottom:12px;line-height:1.12;text-wrap:balance}
+.showroom .pro-contact-intro > p{margin:0 0 22px;max-width:none;font-size:15px;line-height:1.6}
+.showroom .pro-contact-direct{display:flex;flex-wrap:wrap;gap:10px}
+.showroom .pro-contact-form{background:#FFFFFF;border-radius:var(--radius-lg);padding:clamp(18px, 3svh, 28px);display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.showroom .pro-contact-form .form-field{display:flex;flex-direction:column;gap:6px}
+.showroom .pro-contact-form .form-field.full{grid-column:1 / -1}
+.showroom .pro-contact-form .form-field label{color:var(--text)}
+.showroom .pro-contact-form .form-field :is(input, textarea){width:100%;font-family:inherit;font-size:15px;padding:12px 14px}
+.showroom .pro-contact-form textarea{resize:vertical;min-height:84px}
+.showroom .pro-contact-form .btn{grid-column:1 / -1;width:100%;justify-content:center}
+.showroom .pro-contact-form .pro-contact-note{grid-column:1 / -1;margin:0;max-width:none;font-size:13px;line-height:1.5;color:var(--text-muted-card);text-align:center}
+@media (max-width:900px){
+  .showroom .pro-contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .showroom .pro-contact-form{grid-template-columns:1fr}
+}
+
+/* ---------- Bandeau noir (compact) et pied de page ----------
+   Commun à toutes les pages. Valeurs verticales en clamp(min, svh, max), textes inchangés.
+   (La règle « section suivie du bandeau » ne sert plus depuis que le bandeau est remonté dans .cta-slot.) */
+@media (min-width:768px) and (min-height:560px){
+  .showroom main > section.section:has(+ .cta-band){padding-bottom:clamp(16px, 3svh, 40px)}
+  .showroom .cta-band{margin-bottom:clamp(16px, 2.4svh, 24px);padding:clamp(20px, 4svh, 56px) 24px}
+  .showroom .cta-band h2{margin-bottom:clamp(8px, 1.4svh, 16px)}
+  .showroom .cta-band p{margin-bottom:clamp(14px, 2.6svh, 32px);max-width:640px}
+  .showroom footer{padding-top:clamp(22px, 4svh, 64px)}
+  .showroom .footer-grid{padding-bottom:clamp(16px, 3svh, 48px)}
+  .showroom .footer-brand img{margin-bottom:clamp(10px, 1.6svh, 18px)}
+  .showroom .footer-col h3{margin-bottom:clamp(10px, 2svh, 22px)}
+  .showroom .footer-col a, .showroom .footer-col span{margin-bottom:clamp(6px, 1svh, 14px)}
+  .showroom .footer-bottom{padding:clamp(12px, 2svh, 26px) 0}
+}
+
 /* ---------- Responsive des pages intérieures ---------- */
 @media(max-width:960px){
   .showroom .content-grid-text{padding:34px}
@@ -628,7 +758,8 @@
 @media(max-width:680px){
   .showroom .page-hero{width:calc(100% - 20px);margin-top:84px;border-radius:22px}
   .showroom .page-hero .wrap{padding:0 22px}
-  .showroom .page-hero-inner{padding:56px 0 40px}
+  .showroom .page-hero .page-hero-inner{padding:40px 22px}
+  .showroom .section--tight .wrap{width:calc(100% - 20px)}
   .showroom .content-grid-text{padding:28px 22px}
   .showroom .content-grid-media, .showroom .content-grid-media img{min-height:240px}
   .showroom .cta-band{width:calc(100% - 20px);padding:56px 20px;margin-bottom:72px;border-radius:22px}

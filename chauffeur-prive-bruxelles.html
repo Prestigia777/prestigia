@@ -15,9 +15,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-cta2">
+<style>
+/* =====================================================================
+   Chauffeur privé à Bruxelles UNIQUEMENT (body.page-chauffeur-bxl)
+   Premier écran : menu (fixe) + bannière + bloc « L'expérience Prestigia » = hauteur de la fenêtre,
+   plafonnée à 1100 px (règles .fold communes dans showroom.css : bannière flex 2, clamp en svh).
+   Ici : le bloc passe en 2 colonnes sur ordinateur (texte | liste), aligné sur la bannière.
+   ===================================================================== */
+/* Le bloc est dans .fold (plus enfant direct de <main>) : on lui redonne son fond blanc */
+.page-chauffeur-bxl .fold > section.section{background:var(--surface)}
+
+@media (min-width:768px) and (min-height:560px){
+  /* Section : 3 parts de l'espace en trop, contenu centré verticalement */
+  .page-chauffeur-bxl .fold > section.section{
+    flex:3 1 auto;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(10px, 3svh, 48px) 0 !important;
+  }
+  /* Mêmes bords que le menu et la bannière (1240 px max, 14 px de chaque côté) */
+  .page-chauffeur-bxl .fold > section.section > .wrap{width:calc(100% - 28px);max-width:1240px;padding:0;margin:0 auto}
+  .page-chauffeur-bxl .fold .content-grid{grid-template-columns:1fr !important;max-width:none !important}
+  /* bannière un peu plus compacte que la valeur commune (4svh) pour que le bloc tienne à 1280×600 et au zoom 125 % */
+  .page-chauffeur-bxl .fold .page-hero .page-hero-inner{padding:clamp(12px, 3.4svh, 56px) 48px}
+  /* 2 colonnes : pastille + titre + paragraphes à gauche, liste à droite (centrée verticalement) */
+  .page-chauffeur-bxl .fold .content-grid-text{
+    display:grid;
+    grid-template-columns:minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-rows:auto auto auto auto;
+    column-gap:clamp(32px, 4.5vw, 72px);
+    align-content:center;
+    padding:clamp(18px, 3svh, 44px) clamp(28px, 3.5vw, 48px);
+  }
+  .page-chauffeur-bxl .fold .content-grid-text > :not(ul){grid-column:1}
+  .page-chauffeur-bxl .fold .content-grid-text > ul{grid-column:2;grid-row:1 / span 4;align-self:center;width:100%;margin:0}
+  .page-chauffeur-bxl .fold .content-grid-text .eyebrow{margin-bottom:clamp(6px, 1.2svh, 14px)}
+  .page-chauffeur-bxl .fold .content-grid h2{font-size:clamp(24px, min(3vw, 4.6svh), 40px);margin-bottom:clamp(8px, 1.6svh, 18px)}
+  .page-chauffeur-bxl .fold .content-grid p{font-size:15px;line-height:clamp(22px, 3svh, 27px);margin-bottom:clamp(6px, 1.4svh, 16px)}
+  .page-chauffeur-bxl .fold .content-grid p:last-of-type{margin-bottom:0}
+  .page-chauffeur-bxl .fold .content-grid ul li{font-size:15px;line-height:1.45;padding-top:clamp(6px, 1.2svh, 14px);padding-bottom:clamp(6px, 1.2svh, 14px)}
+
+  /* Reste de la page : vides haut / bas resserrés (contenu et structure inchangés).
+     Le bas de la dernière section avant le bandeau reste réglé par showroom.css. */
+  body.showroom.page-chauffeur-bxl main > section.section{padding-top:clamp(40px, 7svh, 72px) !important}  /* passe devant la règle commune des 96 px */
+  .page-chauffeur-bxl main > section.section{padding-bottom:clamp(40px, 7svh, 72px)}
+}
+</style>
 </head>
-<body class="showroom">
+<body class="showroom page-chauffeur-bxl">
 
 <header id="siteHeader">
   <div class="wrap nav">
@@ -37,6 +82,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -78,6 +124,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -96,6 +143,9 @@
 </div>
 
 <main>
+
+  <!-- PREMIER ÉCRAN : bannière + « L'expérience Prestigia » (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -127,6 +177,22 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Quel que soit votre trajet, nous nous adaptons</h2>
+      <p>Décrivez-nous votre besoin — nous revenons vers vous avec une proposition adaptée.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Recevoir un devis</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
 
   <!-- SERVICE LINKS -->
   <section class="section">
@@ -366,17 +432,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Quel que soit votre trajet, nous nous adaptons</h2>
-      <p>Décrivez-nous votre besoin — nous revenons vers vous avec une proposition adaptée.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -438,6 +493,37 @@
 
 <script src="js/scroll-progress.js?v=20261112-progress"></script>
 <script src="script.js?v=20261111-showroom"></script>
+<script>
+/* Bandeaux défilants (services, flotte) : boucle sans fin, sans vide blanc.
+   L'animation CSS défile de -50 % : chaque moitié de la bande doit couvrir au moins la largeur de l'écran.
+   On ajoute donc autant de copies de la série que nécessaire, et on allonge la durée pour garder la même vitesse. */
+(function(){
+  var tracks=document.querySelectorAll('.services-marquee-track, .fleet-marquee-track');
+  var BASE=110; /* secondes pour défiler une série (valeur d'origine dans styles.css) */
+  function fill(track){
+    var originals=[].slice.call(track.children).filter(function(c){return !c.hasAttribute('aria-hidden')});
+    if(!originals.length) return;
+    var set=originals.reduce(function(sum,c){return sum+c.getBoundingClientRect().width+(parseFloat(getComputedStyle(c).marginRight)||0)},0);
+    if(!set) return;
+    var view=track.parentElement.getBoundingClientRect().width;
+    var perHalf=Math.max(1,Math.ceil(view/set));          /* séries par moitié */
+    var wanted=originals.length*perHalf*2;                 /* cartes au total */
+    var all=[].slice.call(track.children);
+    while(all.length<wanted){                              /* ajoute des copies, dans l'ordre */
+      var clone=originals[all.length%originals.length].cloneNode(true);
+      clone.setAttribute('aria-hidden','true');clone.setAttribute('tabindex','-1');
+      clone.querySelectorAll('a,[tabindex]').forEach(function(e){e.setAttribute('tabindex','-1')});
+      track.appendChild(clone);all.push(clone);
+    }
+    while(all.length>wanted && all.length>originals.length*2){track.removeChild(all.pop())}
+    track.style.animationDuration=(BASE*perHalf)+'s';
+  }
+  function run(){tracks.forEach(fill)}
+  run();
+  window.addEventListener('load',run);
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(run,200)});
+})();
+</script>
 
 </body>
 </html>

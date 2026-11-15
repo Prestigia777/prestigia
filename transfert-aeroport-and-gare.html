@@ -15,9 +15,72 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-cta2">
+<style>
+/* =====================================================================
+   Transferts aéroport et gare UNIQUEMENT (body.page-transferts)
+   Le premier écran (.fold) est réglé dans showroom.css, commun à plusieurs pages.
+   Ici : le deuxième écran (.zone2), propre à cette page.
+   ===================================================================== */
+/* ---------- Deuxième écran (.zone2) : mêmes fonds qu'avant ---------- */
+/* Les sections ne sont plus enfants directs de <main> : on redonne fonds et marges d'origine */
+.page-transferts .zone2 > section.section:first-child{background:var(--bg);padding-top:96px !important}
+@media (max-width:680px){ .page-transferts .zone2 > section.section:first-child{padding-top:72px !important} }  /* même espacement que les autres pages sous le bandeau */
+.page-transferts .zone2 > section.section:nth-child(2){background:var(--surface)}
+/* (la marge haute d'origine de cette section, imposée par showroom.css, était de 96 px / 72 px sur mobile) */
+.page-transferts .zone2 > section.section:nth-child(2){padding-top:96px !important}
+@media (max-width:680px){ .page-transferts .zone2 > section.section:nth-child(2){padding-top:72px !important} }
+/* Texte lisible : corps 15 px minimum */
+.page-transferts .zone2 .content-grid p,
+.page-transferts .zone2 .content-grid ul li,
+.page-transferts .zone2 .cta-band p{font-size:15px}
+
+/* ---------- Deuxième écran sur ordinateur : 3 blocs sur une hauteur de fenêtre ----------
+   Hauteur min(100svh, 1100px), contenu centré. Le menu flottant mesure 82 px (14 px + 68 px) :
+   on le laisse libre en haut de la zone. Réglages : --z2-gap (espace entre blocs), clamp(min, svh, max). */
+@media (min-width:768px) and (min-height:560px){
+  .page-transferts .zone2{
+    --hdr:82px;
+    --z2-gap:clamp(13px, 1.9svh, 18px);
+    display:flex;flex-direction:column;justify-content:center;
+    min-height:min(100vh, 1100px);
+    min-height:min(100svh, 1100px);
+    padding:calc(var(--hdr) + var(--z2-gap)) 0 var(--z2-gap);
+    margin-bottom:clamp(24px, 6svh, 96px);
+  }
+  /* mêmes bords que le menu, la bannière et le bandeau noir */
+  .page-transferts .zone2 > section.section > .wrap{width:calc(100% - 28px);max-width:1240px;padding:0;margin:0 auto}
+  .page-transferts .zone2 > section.section:first-child{padding:0 !important}
+  .page-transferts .zone2 > section.section:nth-child(2){padding:var(--z2-gap) 0 !important}
+  /* Bloc 1 : « Comment ça se passe » */
+  .page-transferts .zone2 .content-grid-text{padding:clamp(18px, 2.5svh, 24px) clamp(24px, 3svh, 36px)}
+  .page-transferts .zone2 .content-grid .eyebrow{margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid h2{font-size:clamp(24px, min(3.2vw, 3svh), 28px);margin-bottom:clamp(8px, 1.2svh, 10px)}
+  .page-transferts .zone2 .content-grid p{line-height:clamp(22px, 2.4svh, 23px);margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid ul{margin-top:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid ul li{line-height:1.45;padding-top:clamp(4px, 0.6svh, 5px);padding-bottom:clamp(4px, 0.6svh, 5px)}
+  .page-transferts .zone2 .content-grid-media{min-height:clamp(200px, 30svh, 320px)}
+  /* Bloc 2 : 24h/7j et +15 pays */
+  .page-transferts .zone2 .stat{padding:clamp(12px, 1.5svh, 14px) 24px}
+  .page-transferts .zone2 .stat-num{font-size:clamp(24px, 2.8svh, 28px)}
+  /* Bloc 3 : bandeau noir */
+  .page-transferts .zone2 .cta-band{margin:0 auto;padding:clamp(18px, 2.6svh, 24px) 24px}
+  .page-transferts .zone2 .cta-band h2{font-size:clamp(24px, min(3.6vw, 3svh), 28px);margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .cta-band p{margin-bottom:clamp(10px, 1.6svh, 14px)}
+}
+
+/* Le bandeau noir est remonté juste avant .zone2 : la zone démarre comme une section ordinaire
+   (même espacement que sur International : 40 px à 1440×800), sans hauteur forcée ni réserve pour le menu. */
+@media (min-width:768px) and (min-height:560px){
+  .page-transferts .cta-slot + .zone2{
+    min-height:0;
+    justify-content:flex-start;
+    padding-top:clamp(32px, 5svh, 56px);
+  }
+}
+</style>
 </head>
-<body class="showroom">
+<body class="showroom page-transferts">
 
 <header id="siteHeader">
   <div class="wrap nav">
@@ -37,6 +100,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -78,6 +142,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -97,9 +162,12 @@
 
 <main>
 
+  <!-- PREMIER ÉCRAN : bannière + section blanche (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <img class="page-hero-media" src="hidden-travel-costs.webp" alt="Salon aéroport au coucher du soleil avec vue sur les avions — transferts Prestigia" loading="eager" fetchpriority="high">
+    <img class="page-hero-media" src="hidden-travel-costs.webp" style="object-position:center 22%" alt="Salon aéroport au coucher du soleil avec vue sur les avions — transferts Prestigia" loading="eager" fetchpriority="high">
     <div class="page-hero-overlay"></div>
     <div class="wrap page-hero-inner">
       <div class="eyebrow">Chauffeur privé</div>
@@ -109,7 +177,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="section">
+  <section class="section section--tight">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">L'essentiel, sans imprévu</div>
@@ -135,6 +203,25 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Réservez votre transfert aéroport ou gare</h2>
+      <p>Indiquez votre vol, votre train ou votre horaire — nous nous occupons du reste.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Recevoir un devis</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
+
+  <!-- DEUXIÈME ÉCRAN : « Comment ça se passe » + chiffres + bandeau, réunis sur un écran (blocs inchangés) -->
+  <div class="zone2">
 
   <!-- DETAILS -->
   <section class="section" style="padding-top:0">
@@ -175,17 +262,8 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Réservez votre transfert aéroport ou gare</h2>
-      <p>Indiquez votre vol, votre train ou votre horaire — nous nous occupons du reste.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
+
+  </div><!-- /.zone2 -->
 
 </main>
 

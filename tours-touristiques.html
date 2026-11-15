@@ -16,9 +16,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-cta2">
+<style>
+/* Tours touristiques UNIQUEMENT : le sous-titre de la bannière est très long (≈ 480 caractères).
+   Sur ordinateur, il prend la largeur du titre (900 px au lieu de 640) pour que le premier écran tienne à 1280×600. */
+@media (min-width:768px) and (min-height:560px){
+  .page-tours .page-hero p.lead{max-width:900px}
+  .page-tours .fold .page-hero .page-hero-inner{padding:clamp(12px, 3.4svh, 56px) 48px}
+}
+</style>
 </head>
-<body class="showroom">
+<body class="showroom page-tours">
 
 <header id="siteHeader">
   <div class="wrap nav">
@@ -38,6 +46,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -79,6 +88,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -98,6 +108,9 @@
 
 <main>
 
+  <!-- PREMIER ÉCRAN : bannière + première section (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
     <img class="page-hero-media" src="Tourstouristiques.jpg" style="object-position:center 42%" alt="Canal illuminé au coucher du soleil à Bruges — tour touristique en chauffeur privé Prestigia" loading="eager" fetchpriority="high">
@@ -110,7 +123,7 @@
   </section>
 
   <!-- FORMULES -->
-  <section class="section">
+  <section class="section section--tight">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Nos formules</div>
@@ -141,6 +154,22 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Réservez votre tour touristique</h2>
+      <p>Indiquez-nous les villes souhaitées et la durée — nous vous proposons un itinéraire sur mesure.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Recevoir un devis</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
 
   <!-- CATEGORIES -->
   <section class="section" style="padding-top:0">
@@ -223,17 +252,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Réservez votre tour touristique</h2>
-      <p>Indiquez-nous les villes souhaitées et la durée — nous vous proposons un itinéraire sur mesure.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 

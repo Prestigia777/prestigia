@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-cta2">
 </head>
 <body class="showroom">
 
@@ -37,6 +37,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -78,6 +79,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -97,6 +99,9 @@
 
 <main>
 
+  <!-- PREMIER ÉCRAN : bannière + première section (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
     <img class="page-hero-media" src="service-sur-mesure.webp" style="object-position:center 62%" alt="Concierge en tenue présentant une clochette de service — symbole du service entièrement sur-mesure Prestigia" loading="eager" fetchpriority="high">
@@ -109,7 +114,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="section">
+  <section class="section section--tight">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Au-delà du service standard</div>
@@ -136,6 +141,22 @@
     </div>
   </section>
 
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Parlez-nous de votre demande</h2>
+      <p>Décrivez votre besoin, même s'il sort de l'ordinaire — nous vous répondons avec une proposition concrète.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Recevoir un devis</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
+
   <!-- PITCH -->
   <section class="section" style="padding-top:0">
     <div class="wrap">
@@ -159,17 +180,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Parlez-nous de votre demande</h2>
-      <p>Décrivez votre besoin, même s'il sort de l'ordinaire — nous vous répondons avec une proposition concrète.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 

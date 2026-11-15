@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="showroom.css?v=20261115-menu">
+<link rel="stylesheet" href="showroom.css?v=20261115-cta2">
 </head>
 <body class="showroom">
 
@@ -37,6 +37,7 @@
           <a href="tours-touristiques.html">Tours touristiques</a>
           <a href="evenements.html">Événements</a>
           <a href="espace-entreprises.html">Espace Entreprises</a>
+          <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
           <a href="flotte.html">Flotte</a>
         </div>
       </li>
@@ -78,6 +79,7 @@
     <a href="tours-touristiques.html">Tours touristiques</a>
     <a href="evenements.html">Événements</a>
     <a href="espace-entreprises.html">Espace Entreprises</a>
+    <a href="espace-agences-de-voyage.html">Espace Agences de voyage</a>
     <a href="flotte.html">Flotte</a>
   </div>
   <div class="m-group-title">Services</div>
@@ -97,6 +99,9 @@
 
 <main>
 
+  <!-- PREMIER ÉCRAN : bannière + première section (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
     <img class="page-hero-media" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1600,fit=crop/AR01jOEGPpI5k0KP/amsterdam2-YsE0JfRQQaKX4nJZ.jpg" alt="Amsterdam, destination desservie par Prestigia depuis Bruxelles" loading="eager" fetchpriority="high">
@@ -109,7 +114,7 @@
   </section>
 
   <!-- STATS -->
-  <section class="section" style="padding-bottom:0">
+  <section class="section section--tight" style="padding-bottom:0">
     <div class="wrap">
       <div class="stats-row" data-reveal>
         <div class="stat">
@@ -123,6 +128,22 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Réservez votre trajet vers Amsterdam</h2>
+      <p>Indiquez votre date et votre lieu de prise en charge — nous vous confirmons un prix fixe pour ce trajet.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Recevoir un devis</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
 
   <!-- CONTENT -->
   <section class="section">
@@ -147,17 +168,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Réservez votre trajet vers Amsterdam</h2>
-      <p>Indiquez votre date et votre lieu de prise en charge — nous vous confirmons un prix fixe pour ce trajet.</p>
-      <div class="btn-row">
-        <a href="devis.html" class="btn">Recevoir un devis</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 
