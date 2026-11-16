@@ -572,6 +572,30 @@
 .showroom .market-item h3{font-family:var(--font-title);font-weight:500;color:var(--text)}
 .showroom .market-item span{color:var(--text-muted-card)}
 .showroom .market-item small{color:var(--text-muted-card)}
+/* ---------- Indicateur d'affluence des événements (4 niveaux) ----------
+   ●●●● plus de 100 000 · ●●●○ 30 000 à 100 000 · ●●○○ 5 000 à 30 000 · ●○○○ moins de 5 000 ; « Sur invitation » à part */
+.showroom .affluence{display:inline-flex;align-items:center;gap:3px;vertical-align:middle;
+  font-size:11px;font-weight:500;letter-spacing:0.02em;text-transform:none;color:var(--text-muted-card)}
+.showroom .affluence i{display:block;width:7px;height:7px;border-radius:50%;border:1px solid var(--accent);background:transparent}
+.showroom .affluence i.on{background:var(--accent)}
+.showroom .affluence em{font-style:normal;margin-left:6px}
+.showroom .simple-event-loc .affluence{display:flex;justify-content:flex-end;margin-top:8px}
+.showroom .market-item .affluence{display:flex;margin-top:10px;font-size:11px;letter-spacing:0.02em;text-transform:none;color:var(--text-muted-card)}
+/* Légende : seuls les points, sans libellé */
+.showroom .affluence-legend{margin:-12px 0 22px;font-size:13px;line-height:1.9;color:var(--text-muted);text-align:center}
+.showroom .affluence-legend .affluence{margin:0 2px 0 6px}
+.showroom .affluence-legend .affluence em{display:none}
+/* Raccourcis vers les sections d'une page (ex. Festivals & concerts) */
+.showroom .section-jump{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-8px 0 28px}
+.showroom .section-jump a{padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:#FFFFFF;font-size:13.5px;font-weight:600;color:var(--text);transition:border-color .2s ease,color .2s ease}
+.showroom .section-jump a:hover{border-color:var(--accent);color:var(--accent)}
+.showroom section[id]{scroll-margin-top:100px}
+/* Événements sur invitation : libellé plus marqué ; petite étiquette dans la légende */
+.showroom .affluence--inv em{font-weight:600;color:var(--text)}
+.showroom .affluence-legend-invite{display:inline-block;margin-left:4px;padding:1px 9px;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:600;color:var(--text);background:#FFFFFF}
+@media(max-width:760px){
+  .showroom .simple-event-loc .affluence{justify-content:flex-start}
+}
 .showroom .city-heading{font-family:var(--font-title);font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--text)}
 .showroom .attraction-item{border-top-color:var(--line)}
 .showroom .attraction-item h3{font-family:var(--font-title);font-weight:500;color:var(--text)}
@@ -981,3 +1005,8 @@
 @media(prefers-reduced-motion:reduce){
   .scroll-progress{transition:none}
 }
+
+/* ---------- Grille d'atouts à 4 colonnes (Espace Entreprises : « Comment ça fonctionne ») ---------- */
+.pillars-grid--4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.pillars-grid--4{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.pillars-grid--4{grid-template-columns:1fr}}

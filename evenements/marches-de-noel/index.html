@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="../../showroom.css?v=20261115-cta2">
+<link rel="stylesheet" href="../../showroom.css?v=20261116-jump">
 
 <!-- Données structurées : fil d'Ariane + marchés de Noël (dates indicatives, saison hivernale — à mettre à jour chaque année) -->
 <script type="application/ld+json">
@@ -28,30 +28,315 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Accueil","item":"https://prestigia.vip/"},
-        {"@type":"ListItem","position":2,"name":"Événements","item":"https://prestigia.vip/evenements.html"},
-        {"@type":"ListItem","position":3,"name":"Marchés de Noël","item":"https://prestigia.vip/evenements/marches-de-noel"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://prestigia.vip/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Événements",
+          "item": "https://prestigia.vip/evenements.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Marchés de Noël",
+          "item": "https://prestigia.vip/evenements/marches-de-noel"
+        }
       ]
     },
-    {"@type":"Event","name":"Winter Wonders / Plaisirs d'Hiver","startDate":"2026-11-27","endDate":"2027-01-04","description":"Marché de Noël de Bruxelles, au cœur du centre historique.","location":{"@type":"Place","name":"Bruxelles","address":{"@type":"PostalAddress","addressLocality":"Bruxelles","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Village de Noël de Liège","startDate":"2026-11-27","endDate":"2026-12-30","description":"Marché de Noël de Liège, dans le centre-ville.","location":{"@type":"Place","name":"Liège","address":{"@type":"PostalAddress","addressLocality":"Liège","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Lueur d'Hiver","startDate":"2026-11-27","endDate":"2027-01-04","description":"Marché de Noël de Bruges, dans le décor médiéval du centre historique.","location":{"@type":"Place","name":"Bruges","address":{"@type":"PostalAddress","addressLocality":"Bruges","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Hiver à Gand (Gentse Winterfeesten)","startDate":"2026-12-05","endDate":"2027-01-03","description":"Marché de Noël et fêtes hivernales de Gand.","location":{"@type":"Place","name":"Gand","address":{"@type":"PostalAddress","addressLocality":"Gand","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"L'Hiver à Anvers","startDate":"2026-12-11","endDate":"2027-01-03","description":"Marché de Noël et patinoire dans le centre d'Anvers.","location":{"@type":"Place","name":"Anvers","address":{"@type":"PostalAddress","addressLocality":"Anvers","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Namur","startDate":"2026-12-05","endDate":"2026-12-28","description":"Marché de Noël du centre-ville de Namur.","location":{"@type":"Place","name":"Namur","address":{"@type":"PostalAddress","addressLocality":"Namur","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Mons — Cœur en Neige","startDate":"2026-12-05","endDate":"2027-01-03","description":"Marché de Noël de Mons, sur la Grand-Place.","location":{"@type":"Place","name":"Mons","address":{"@type":"PostalAddress","addressLocality":"Mons","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Charleroi","startDate":"2026-12-05","endDate":"2026-12-28","description":"Marché de Noël du centre-ville de Charleroi.","location":{"@type":"Place","name":"Charleroi","address":{"@type":"PostalAddress","addressLocality":"Charleroi","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Louvain la Neige","startDate":"2026-12-05","endDate":"2026-12-24","description":"Marché de Noël de Louvain-la-Neuve.","location":{"@type":"Place","name":"Louvain-la-Neuve","address":{"@type":"PostalAddress","addressLocality":"Louvain-la-Neuve","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Durbuy","startDate":"2026-11-28","endDate":"2027-01-04","description":"Marché de Noël de Durbuy, plus petite ville du monde.","location":{"@type":"Place","name":"Durbuy","address":{"@type":"PostalAddress","addressLocality":"Durbuy","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Knokke-Heist","startDate":"2026-12-05","endDate":"2027-01-04","description":"Marché de Noël de la station balnéaire de Knokke-Heist.","location":{"@type":"Place","name":"Knokke-Heist","address":{"@type":"PostalAddress","addressLocality":"Knokke-Heist","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Ciney — Les Féeries du Parc","startDate":"2026-12-05","endDate":"2026-12-28","description":"Marché de Noël illuminé du parc de Ciney.","location":{"@type":"Place","name":"Ciney","address":{"@type":"PostalAddress","addressLocality":"Ciney","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Maredsous","startDate":"2026-12-05","endDate":"2026-12-28","description":"Marché de Noël au pied de l'abbaye de Maredsous.","location":{"@type":"Place","name":"Maredsous","address":{"@type":"PostalAddress","addressLocality":"Maredsous","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Binche","startDate":"2026-12-05","endDate":"2026-12-24","description":"Marché de Noël du centre historique de Binche.","location":{"@type":"Place","name":"Binche","address":{"@type":"PostalAddress","addressLocality":"Binche","addressCountry":"BE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Lille","startDate":"2026-11-27","endDate":"2026-12-30","description":"Marché de Noël de Lille, à environ 1h30 de route de Bruxelles.","location":{"@type":"Place","name":"Lille","address":{"@type":"PostalAddress","addressLocality":"Lille","addressCountry":"FR"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Maastricht","startDate":"2026-11-20","endDate":"2026-12-23","description":"Marché de Noël de Maastricht, aux Pays-Bas.","location":{"@type":"Place","name":"Maastricht","address":{"@type":"PostalAddress","addressLocality":"Maastricht","addressCountry":"NL"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël souterrain de Valkenburg","startDate":"2026-11-13","endDate":"2026-12-23","description":"Marché de Noël souterrain de Valkenburg, dans d'anciennes galeries de craie.","location":{"@type":"Place","name":"Valkenburg","address":{"@type":"PostalAddress","addressLocality":"Valkenburg","addressCountry":"NL"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël d'Aix-la-Chapelle","startDate":"2026-11-23","endDate":"2026-12-23","description":"Marché de Noël d'Aix-la-Chapelle (Aachen), à environ 1h30 de route de Bruxelles.","location":{"@type":"Place","name":"Aix-la-Chapelle","address":{"@type":"PostalAddress","addressLocality":"Aachen","addressCountry":"DE"}},"url":"https://prestigia.vip/evenements/marches-de-noel"},
-    {"@type":"Event","name":"Marché de Noël de Luxembourg-Ville","startDate":"2026-11-20","endDate":"2027-01-04","description":"Marché de Noël de Luxembourg-Ville, au Grand-Duché de Luxembourg.","location":{"@type":"Place","name":"Luxembourg-Ville","address":{"@type":"PostalAddress","addressLocality":"Luxembourg","addressCountry":"LU"}},"url":"https://prestigia.vip/evenements/marches-de-noel"}
+    {
+      "@type": "Event",
+      "name": "Winter Wonders / Plaisirs d'Hiver",
+      "startDate": "2026-11-27",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël de Bruxelles, au cœur du centre historique.",
+      "location": {
+        "@type": "Place",
+        "name": "Bruxelles",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruxelles",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Village de Noël de Liège",
+      "startDate": "2026-11-27",
+      "endDate": "2026-12-30",
+      "description": "Marché de Noël de Liège, dans le centre-ville.",
+      "location": {
+        "@type": "Place",
+        "name": "Liège",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Liège",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Lueur d'Hiver",
+      "startDate": "2026-11-20",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël de Bruges, dans le décor médiéval du centre historique.",
+      "location": {
+        "@type": "Place",
+        "name": "Bruges",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruges",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Hiver à Gand (Gentse Winterfeesten)",
+      "startDate": "2026-12-03",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël et fêtes hivernales de Gand.",
+      "location": {
+        "@type": "Place",
+        "name": "Gand",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gand",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Namur",
+      "startDate": "2026-11-27",
+      "endDate": "2026-12-31",
+      "description": "Marché de Noël du centre-ville de Namur.",
+      "location": {
+        "@type": "Place",
+        "name": "Namur",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Namur",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Mons — Cœur en Neige",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-31",
+      "description": "Marché de Noël de Mons, sur la Grand-Place.",
+      "location": {
+        "@type": "Place",
+        "name": "Mons",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mons",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Charleroi",
+      "startDate": "2026-11-20",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël du centre-ville de Charleroi.",
+      "location": {
+        "@type": "Place",
+        "name": "Charleroi",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Charleroi",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Louvain la Neige",
+      "startDate": "2026-11-27",
+      "endDate": "2026-12-20",
+      "description": "Marché de Noël de Louvain-la-Neuve.",
+      "location": {
+        "@type": "Place",
+        "name": "Louvain-la-Neuve",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Louvain-la-Neuve",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Durbuy",
+      "startDate": "2026-11-20",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël de Durbuy, plus petite ville du monde.",
+      "location": {
+        "@type": "Place",
+        "name": "Durbuy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Durbuy",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Ciney — Les Féeries du Parc",
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-21",
+      "description": "Marché de Noël illuminé du parc de Ciney.",
+      "location": {
+        "@type": "Place",
+        "name": "Ciney",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ciney",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Maredsous",
+      "startDate": "2026-11-13",
+      "endDate": "2026-12-20",
+      "description": "Marché de Noël au pied de l'abbaye de Maredsous.",
+      "location": {
+        "@type": "Place",
+        "name": "Maredsous",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Maredsous",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Binche",
+      "startDate": "2026-12-04",
+      "endDate": "2026-12-13",
+      "description": "Marché de Noël du centre historique de Binche.",
+      "location": {
+        "@type": "Place",
+        "name": "Binche",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Binche",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Lille",
+      "startDate": "2026-11-18",
+      "endDate": "2026-12-30",
+      "description": "Marché de Noël de Lille, à environ 1h30 de route de Bruxelles.",
+      "location": {
+        "@type": "Place",
+        "name": "Lille",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lille",
+          "addressCountry": "FR"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Maastricht",
+      "startDate": "2026-11-27",
+      "endDate": "2026-12-27",
+      "description": "Marché de Noël de Maastricht, aux Pays-Bas.",
+      "location": {
+        "@type": "Place",
+        "name": "Maastricht",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Maastricht",
+          "addressCountry": "NL"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël souterrain de Valkenburg",
+      "startDate": "2026-11-13",
+      "endDate": "2026-12-30",
+      "description": "Marché de Noël souterrain de Valkenburg, dans d'anciennes galeries de craie.",
+      "location": {
+        "@type": "Place",
+        "name": "Valkenburg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valkenburg",
+          "addressCountry": "NL"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël d'Aix-la-Chapelle",
+      "startDate": "2026-11-20",
+      "endDate": "2026-12-23",
+      "description": "Marché de Noël d'Aix-la-Chapelle (Aachen), à environ 1h30 de route de Bruxelles.",
+      "location": {
+        "@type": "Place",
+        "name": "Aix-la-Chapelle",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Aachen",
+          "addressCountry": "DE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    },
+    {
+      "@type": "Event",
+      "name": "Marché de Noël de Luxembourg-Ville",
+      "startDate": "2026-11-20",
+      "endDate": "2027-01-03",
+      "description": "Marché de Noël de Luxembourg-Ville, au Grand-Duché de Luxembourg.",
+      "location": {
+        "@type": "Place",
+        "name": "Luxembourg-Ville",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Luxembourg",
+          "addressCountry": "LU"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/marches-de-noel"
+    }
   ]
 }
 </script>
@@ -166,62 +451,119 @@
         <hr class="gold-line">
       </div>
 
-      <div class="market-grid" data-reveal>
-        <div class="market-item">
-          <h3>Winter Wonders / Plaisirs d'Hiver</h3>
-          <span>Bruxelles</span>
+      <p class="affluence-legend">Affluence habituelle,&nbsp;à&nbsp;titre indicatif : <span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em hidden>Très grande affluence</em></span> plus de 100&nbsp;000 visiteurs · <span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em hidden>Grande affluence</em></span> de 30&nbsp;000&nbsp;à&nbsp;100&nbsp;000 · <span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Affluence moyenne</em></span> de 5&nbsp;000&nbsp;à&nbsp;30&nbsp;000 · <span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Public restreint</em></span> moins de 5&nbsp;000 · <span class="affluence-legend-invite">Sur invitation</span> : accès réservé aux invités</p>
+      <div class="simple-events" data-reveal>
+        <div class="simple-event">
+          <div class="simple-event-date">Week-ends, 13 nov. → 20 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Maredsous</h3>
+            <p>Plus de 60 chalets autour de l'abbaye, et une patinoire.</p>
+          </div>
+          <div class="simple-event-loc">Maredsous<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Village de Noël de Liège</h3>
-          <span>Liège</span>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-nov. → début janv.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Knokke-Heist</h3>
+            <p>Ambiance scandinave au bord de la mer, avec patinoire couverte.</p>
+          </div>
+          <div class="simple-event-loc">Knokke-Heist<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Lueur d'Hiver</h3>
-          <span>Bruges</span>
+        <div class="simple-event">
+          <div class="simple-event-date">20 nov. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Lueur d'Hiver</h3>
+            <p>Marché de Noël sur le Markt et la place Simon Stevin, au cœur de la ville historique.</p>
+          </div>
+          <div class="simple-event-loc">Bruges<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Hiver à Gand <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:12.5px;letter-spacing:0">/ Gentse Winterfeesten</span></h3>
-          <span>Gand</span>
+        <div class="simple-event">
+          <div class="simple-event-date">20 nov. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Charleroi</h3>
+            <p>Chalets et animations de fin d'année au centre-ville.</p>
+          </div>
+          <div class="simple-event-loc">Charleroi<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>L'Hiver à Anvers</h3>
-          <span>Anvers</span>
+        <div class="simple-event">
+          <div class="simple-event-date">20 nov. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Durbuy</h3>
+            <p>Plus de 100 exposants répartis sur trois sites, dans la plus petite ville du monde.</p>
+          </div>
+          <div class="simple-event-loc">Durbuy<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Namur</h3>
-          <span>Namur</span>
+        <div class="simple-event">
+          <div class="simple-event-date">27 nov. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Winter Wonders / Plaisirs d'Hiver</h3>
+            <p>Le grand marché de Noël de Bruxelles, de la Bourse à la place Sainte-Catherine, avec grande roue et patinoire.</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Mons <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:12.5px;letter-spacing:0">— Cœur en Neige</span></h3>
-          <span>Mons</span>
+        <div class="simple-event">
+          <div class="simple-event-date">27 nov. → 30 déc.</div>
+          <div class="simple-event-main">
+            <h3>Village de Noël de Liège</h3>
+            <p>Le plus ancien et l'un des plus grands villages de Noël de Belgique, au cœur de la ville.</p>
+          </div>
+          <div class="simple-event-loc">Liège<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Charleroi</h3>
-          <span>Charleroi</span>
+        <div class="simple-event">
+          <div class="simple-event-date">27 nov. → 31 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Namur</h3>
+            <p>Chalets place d'Armes et place de l'Ange, au pied de la citadelle.</p>
+          </div>
+          <div class="simple-event-loc">Namur<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Louvain la Neige</h3>
-          <span>Louvain-la-Neuve</span>
+        <div class="simple-event">
+          <div class="simple-event-date">27 nov. → 20 déc.</div>
+          <div class="simple-event-main">
+            <h3>Louvain la Neige</h3>
+            <p>Une centaine de chalets sur la place de l'Université.</p>
+          </div>
+          <div class="simple-event-loc">Louvain-la-Neuve<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Durbuy</h3>
-          <span>Durbuy</span>
+        <div class="simple-event">
+          <div class="simple-event-date">3 déc. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Hiver à Gand <span style="color:var(--muted);font-weight:400">/ Gentse Winterfeesten</span></h3>
+            <p>Marché de Noël, grande roue et patinoire dans le centre historique de Gand.</p>
+          </div>
+          <div class="simple-event-loc">Gand<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Knokke-Heist</h3>
-          <span>Knokke-Heist</span>
+        <div class="simple-event">
+          <div class="simple-event-date">3-7, 10-14 et 17-21 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Ciney <span style="color:var(--muted);font-weight:400">— Les Féeries du Parc</span></h3>
+            <p>Près de 300 exposants dans le parc Saint-Roch, trois semaines de suite.</p>
+          </div>
+          <div class="simple-event-loc">Ciney<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Ciney <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:12.5px;letter-spacing:0">— Les Féeries du Parc</span></h3>
-          <span>Ciney</span>
+        <div class="simple-event">
+          <div class="simple-event-date">4 → 13 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Binche</h3>
+            <p>Une quarantaine de chalets dans le parc communal.</p>
+          </div>
+          <div class="simple-event-loc">Binche<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Maredsous</h3>
-          <span>Maredsous</span>
+        <div class="simple-event">
+          <div class="simple-event-date">5 → 31 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Mons <span style="color:var(--muted);font-weight:400">— Cœur en Neige</span></h3>
+            <p>Le marché de Noël de la Grand-Place de Mons.</p>
+          </div>
+          <div class="simple-event-loc">Mons<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Binche</h3>
-          <span>Binche</span>
+        <div class="simple-event">
+          <div class="simple-event-date">Décembre</div>
+          <div class="simple-event-main">
+            <h3>L'Hiver à Anvers</h3>
+            <p>Chalets et animations sur plusieurs places du centre historique.</p>
+          </div>
+          <div class="simple-event-loc">Anvers<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
       </div>
     </div>
@@ -250,29 +592,46 @@
         <hr class="gold-line">
       </div>
 
-      <div class="market-grid" data-reveal>
-        <div class="market-item">
-          <h3>Marché de Noël de Lille</h3>
-          <span>France</span>
-          <small>~1h30 de route</small>
+      <div class="simple-events" data-reveal>
+        <div class="simple-event">
+          <div class="simple-event-date">13 nov. → 30 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël souterrain de Valkenburg</h3>
+            <p>Dans d'anciennes galeries de craie, à 20 minutes de la frontière.</p>
+          </div>
+          <div class="simple-event-loc">Pays-Bas<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Maastricht</h3>
-          <span>Pays-Bas</span>
+        <div class="simple-event">
+          <div class="simple-event-date">18 nov. → 30 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Lille</h3>
+            <p>Chalets place Rihour et grande roue sur la Grand-Place ; environ 1 h 30 de route.</p>
+          </div>
+          <div class="simple-event-loc">France<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël souterrain de Valkenburg</h3>
-          <span>Pays-Bas</span>
-          <small>Dans d'anciennes galeries de craie</small>
+        <div class="simple-event">
+          <div class="simple-event-date">20 nov. → 23 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël d'Aix-la-Chapelle <span style="color:var(--muted);font-weight:400">(Aachen)</span></h3>
+            <p>Autour de la cathédrale et de l'hôtel de ville ; environ 1 h 30 de route.</p>
+          </div>
+          <div class="simple-event-loc">Allemagne<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël d'Aix-la-Chapelle <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:12.5px;letter-spacing:0">(Aachen)</span></h3>
-          <span>Allemagne</span>
-          <small>~1h30 de route</small>
+        <div class="simple-event">
+          <div class="simple-event-date">20 nov. → 3 janv.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Luxembourg-Ville</h3>
+            <p>Marchés et animations sur plusieurs places de la ville, pendant les Winterlights.</p>
+          </div>
+          <div class="simple-event-loc">Luxembourg<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
-        <div class="market-item">
-          <h3>Marché de Noël de Luxembourg-Ville</h3>
-          <span>Luxembourg</span>
+        <div class="simple-event">
+          <div class="simple-event-date">27 nov. → 27 déc.</div>
+          <div class="simple-event-main">
+            <h3>Marché de Noël de Maastricht</h3>
+            <p>Magisch Maastricht : chalets et patinoire sur le Vrijthof.</p>
+          </div>
+          <div class="simple-event-loc">Pays-Bas<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
       </div>
 
@@ -298,7 +657,7 @@
           <span>Découvrir →</span>
         </a>
         <a href="../festivals/" class="related-category-card">
-          <h3>Festivals</h3>
+          <h3>Festivals &amp; concerts</h3>
           <span>Découvrir →</span>
         </a>
       </div>
@@ -365,7 +724,7 @@
 </footer>
 
 <script src="../../js/scroll-progress.js?v=20261112-progress"></script>
-<script src="../../script.js?v=20261111-showroom"></script>
+<script src="../../script.js?v=20261116-reveal"></script>
 
 </body>
 </html>

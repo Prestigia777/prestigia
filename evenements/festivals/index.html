@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chauffeur privé pour festivals en Belgique | PRESTIGIA</title>
-<meta name="description" content="Transferts privés Prestigia pour les grands festivals de Belgique : Tomorrowland, Rock Werchter, Pukkelpop, Gentse Feesten et Les Ardentes.">
-<meta property="og:title" content="Chauffeur privé pour festivals en Belgique | PRESTIGIA">
-<meta property="og:description" content="Transferts privés pour Tomorrowland, Rock Werchter, Pukkelpop et tous les grands festivals de musique de Belgique.">
+<title>Chauffeur privé pour festivals et concerts en Belgique | PRESTIGIA</title>
+<meta name="description" content="Transferts privés Prestigia pour les festivals, concerts et grandes soirées de Belgique : Tomorrowland, Rock Werchter, Pukkelpop, AFAS Dome, Forest National, Hangar et plus encore.">
+<meta property="og:title" content="Chauffeur privé pour festivals et concerts en Belgique | PRESTIGIA">
+<meta property="og:description" content="Transferts privés pour Tomorrowland, Rock Werchter, les grands concerts et les grandes soirées de Belgique.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://prestigia.vip/evenements/festivals">
 <meta property="og:image" content="https://images.pexels.com/photos/36257830/pexels-photo-36257830.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="../../showroom.css?v=20261115-cta2">
+<link rel="stylesheet" href="../../showroom.css?v=20261116-jump">
 
 <!-- Données structurées : fil d'Ariane + festivals (dates indicatives — à mettre à jour chaque année) -->
 <script type="application/ld+json">
@@ -28,55 +28,110 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Accueil","item":"https://prestigia.vip/"},
-        {"@type":"ListItem","position":2,"name":"Événements","item":"https://prestigia.vip/evenements.html"},
-        {"@type":"ListItem","position":3,"name":"Festivals","item":"https://prestigia.vip/evenements/festivals"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://prestigia.vip/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Événements",
+          "item": "https://prestigia.vip/evenements.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Festivals & concerts",
+          "item": "https://prestigia.vip/evenements/festivals"
+        }
       ]
     },
     {
-      "@type":"MusicEvent",
-      "name":"Rock Werchter",
-      "startDate":"2027-07-01",
-      "endDate":"2027-07-04",
-      "description":"L'un des plus grands festivals rock d'Europe, dans le Festivalpark de Werchter.",
-      "location":{"@type":"Place","name":"Festivalpark","address":{"@type":"PostalAddress","addressLocality":"Werchter","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/festivals"
+      "@type": "MusicEvent",
+      "name": "Rock Werchter",
+      "startDate": "2027-07-01",
+      "endDate": "2027-07-04",
+      "description": "L'un des plus grands festivals rock d'Europe, dans le Festivalpark de Werchter.",
+      "location": {
+        "@type": "Place",
+        "name": "Festivalpark",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Werchter",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/festivals"
     },
     {
-      "@type":"MusicEvent",
-      "name":"Les Ardentes",
-      "startDate":"2027-07-08",
-      "endDate":"2027-07-11",
-      "description":"Festival de hip-hop, RnB et musiques urbaines au cœur de Liège.",
-      "location":{"@type":"Place","name":"Liège","address":{"@type":"PostalAddress","addressLocality":"Liège","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/festivals"
+      "@type": "MusicEvent",
+      "name": "Les Ardentes",
+      "startDate": "2027-07-08",
+      "endDate": "2027-07-11",
+      "description": "Festival de hip-hop, RnB et musiques urbaines au cœur de Liège.",
+      "location": {
+        "@type": "Place",
+        "name": "Liège",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Liège",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/festivals"
     },
     {
-      "@type":"Event",
-      "name":"Gentse Feesten",
-      "startDate":"2027-07-17",
-      "endDate":"2027-07-26",
-      "description":"Dix jours de fête populaire, concerts et animations dans les rues du centre historique de Gand.",
-      "location":{"@type":"Place","name":"Gand","address":{"@type":"PostalAddress","addressLocality":"Gand","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/festivals"
+      "@type": "Event",
+      "name": "Gentse Feesten",
+      "startDate": "2027-07-17",
+      "endDate": "2027-07-26",
+      "description": "Dix jours de fête populaire, concerts et animations dans les rues du centre historique de Gand.",
+      "location": {
+        "@type": "Place",
+        "name": "Gand",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gand",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/festivals"
     },
     {
-      "@type":"MusicEvent",
-      "name":"Tomorrowland",
-      "startDate":"2027-07-16",
-      "endDate":"2027-07-25",
-      "description":"Le festival de musique électronique le plus connu au monde, réparti sur deux week-ends à Boom.",
-      "location":{"@type":"Place","name":"De Schorre","address":{"@type":"PostalAddress","addressLocality":"Boom","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/festivals"
+      "@type": "MusicEvent",
+      "name": "Tomorrowland",
+      "startDate": "2027-07-16",
+      "endDate": "2027-07-25",
+      "description": "Le festival de musique électronique le plus connu au monde, réparti sur deux week-ends à Boom.",
+      "location": {
+        "@type": "Place",
+        "name": "De Schorre",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boom",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/festivals"
     },
     {
-      "@type":"MusicEvent",
-      "name":"Pukkelpop",
-      "startDate":"2027-08-13",
-      "endDate":"2027-08-15",
-      "description":"Festival pop-rock et musiques actuelles de référence en Belgique, à Kiewit.",
-      "location":{"@type":"Place","name":"Kiewit","address":{"@type":"PostalAddress","addressLocality":"Hasselt","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/festivals"
+      "@type": "MusicEvent",
+      "name": "Pukkelpop",
+      "startDate": "2027-08-13",
+      "endDate": "2027-08-15",
+      "description": "Festival pop-rock et musiques actuelles de référence en Belgique, à Kiewit.",
+      "location": {
+        "@type": "Place",
+        "name": "Kiewit",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hasselt",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/festivals"
     }
   ]
 }
@@ -174,32 +229,86 @@
         <span class="sep">/</span>
         <a href="../../evenements.html">Événements</a>
         <span class="sep">/</span>
-        <span class="current">Festivals</span>
+        <span class="current">Festivals &amp; concerts</span>
       </nav>
       <div class="eyebrow">Vivez l'exception</div>
-      <h1>Chauffeur privé pour vos festivals en Belgique</h1>
+      <h1>Chauffeur privé pour vos festivals et concerts en Belgique</h1>
       <p class="lead">Prestigia vous conduit aux plus grands festivals de musique de Belgique, sans les contraintes de stationnement ni les navettes bondées. Que vous cherchiez un chauffeur privé pour Tomorrowland, un transfert VIP Rock Werchter jusqu'au Festivalpark, ou un chauffeur festival en Belgique pour les Gentse Feesten, Pukkelpop ou Les Ardentes, nos chauffeurs vous déposent au plus près de l'entrée et vous récupèrent à l'heure convenue, même tard dans la nuit.</p>
     </div>
   </section>
 
 
   <!-- EVENTS LIST -->
-  <section class="section">
+  <section class="section" id="festivals">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Calendrier</div>
         <h2>Les grands festivals de musique belges</h2>
         <hr class="gold-line">
       </div>
+      <nav class="section-jump" aria-label="Sur cette page">
+        <a href="#festivals">Festivals</a>
+        <a href="#salles">Salles de concert</a>
+        <a href="#soirees">Grandes soirées</a>
+      </nav>
 
+      <p class="affluence-legend">Affluence habituelle,&nbsp;à&nbsp;titre indicatif : <span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em hidden>Très grande affluence</em></span> plus de 100&nbsp;000 visiteurs · <span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em hidden>Grande affluence</em></span> de 30&nbsp;000&nbsp;à&nbsp;100&nbsp;000 · <span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Affluence moyenne</em></span> de 5&nbsp;000&nbsp;à&nbsp;30&nbsp;000 · <span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Public restreint</em></span> moins de 5&nbsp;000 · <span class="affluence-legend-invite">Sur invitation</span> : accès réservé aux invités</p>
       <div class="simple-events" data-reveal>
+        <div class="simple-event">
+          <div class="simple-event-date">Mai <span style="opacity:.6">(18 jours)</span></div>
+          <div class="simple-event-main">
+            <h3>Les Nuits Botanique</h3>
+            <p>Le festival qui ouvre la saison, dans les salles et le parc du Botanique.</p>
+          </div>
+          <div class="simple-event-loc">Botanique, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin mai</div>
+          <div class="simple-event-main">
+            <h3>Brussels Jazz Weekend</h3>
+            <p>Plus d'une centaine de concerts gratuits sur les places et scènes de Bruxelles.</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Pentecôte</div>
+          <div class="simple-event-main">
+            <h3>Jazz Middelheim</h3>
+            <p>Le grand festival de jazz d'Anvers.</p>
+          </div>
+          <div class="simple-event-loc">Anvers<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-juin</div>
+          <div class="simple-event-main">
+            <h3>Graspop Metal Meeting</h3>
+            <p>Le grand rendez-vous européen du metal et du hard rock, sur plusieurs scènes.</p>
+          </div>
+          <div class="simple-event-loc">Dessel<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin juin</div>
+          <div class="simple-event-main">
+            <h3>Couleur Café</h3>
+            <p>Musiques du monde, hip-hop et soul, dans une ambiance festive au cœur de Bruxelles.</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin juin</div>
+          <div class="simple-event-main">
+            <h3>Paradise City</h3>
+            <p>Festival de musique électronique, réputé pour son engagement durable.</p>
+          </div>
+          <div class="simple-event-loc">Steenokkerzeel<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
         <div class="simple-event">
           <div class="simple-event-date">Début juillet</div>
           <div class="simple-event-main">
             <h3>Rock Werchter</h3>
             <p>L'un des plus grands festivals rock d'Europe, dans le Festivalpark de Werchter.</p>
           </div>
-          <div class="simple-event-loc">Werchter</div>
+          <div class="simple-event-loc">Werchter<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -208,7 +317,47 @@
             <h3>Les Ardentes</h3>
             <p>Festival de hip-hop, RnB et musiques urbaines au cœur de Liège.</p>
           </div>
-          <div class="simple-event-loc">Liège</div>
+          <div class="simple-event-loc">Liège<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Juillet</div>
+          <div class="simple-event-main">
+            <h3>Gent Jazz</h3>
+            <p>Festival de jazz de référence, sur le site historique de la Bijloke.</p>
+          </div>
+          <div class="simple-event-loc">Gand<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-juillet</div>
+          <div class="simple-event-main">
+            <h3>Dour Festival</h3>
+            <p>Musiques alternatives, électro et hip-hop sur de nombreuses scènes, dans le Hainaut.</p>
+          </div>
+          <div class="simple-event-loc">Dour<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-juillet</div>
+          <div class="simple-event-main">
+            <h3>Cactusfestival</h3>
+            <p>Festival rock et musiques actuelles, dans le Minnewaterpark.</p>
+          </div>
+          <div class="simple-event-loc">Bruges<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-juillet</div>
+          <div class="simple-event-main">
+            <h3>LaSemo</h3>
+            <p>Festival familial et engagé, dans le parc du château d'Enghien.</p>
+          </div>
+          <div class="simple-event-loc">Enghien<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-juillet</div>
+          <div class="simple-event-main">
+            <h3>Rock Zottegem</h3>
+            <p>Festival rock et pop au bord des étangs de Bevegem.</p>
+          </div>
+          <div class="simple-event-loc">Zottegem<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -217,7 +366,15 @@
             <h3>Gentse Feesten</h3>
             <p>Dix jours de fête populaire, concerts et animations dans le centre historique de Gand.</p>
           </div>
-          <div class="simple-event-loc">Gand</div>
+          <div class="simple-event-loc">Gand<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Juillet</div>
+          <div class="simple-event-main">
+            <h3>Les Francofolies de Spa</h3>
+            <p>Le grand festival de la chanson francophone, dans la ville d'eau de Spa.</p>
+          </div>
+          <div class="simple-event-loc">Spa<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -226,7 +383,63 @@
             <h3>Tomorrowland</h3>
             <p>Le festival de musique électronique le plus connu au monde, sur deux week-ends.</p>
           </div>
-          <div class="simple-event-loc">Boom</div>
+          <div class="simple-event-loc">Boom<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin juillet</div>
+          <div class="simple-event-main">
+            <h3>Les Gens d'Ere</h3>
+            <p>Festival de chanson et de rock, dans un cadre champêtre près de Tournai.</p>
+          </div>
+          <div class="simple-event-loc">Ere (Tournai)<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin juillet – début août</div>
+          <div class="simple-event-main">
+            <h3>Reggae Geel</h3>
+            <p>L'un des plus anciens festivals de reggae d'Europe.</p>
+          </div>
+          <div class="simple-event-loc">Geel<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début août <span style="opacity:.6">(10 jours)</span></div>
+          <div class="simple-event-main">
+            <h3>Lokerse Feesten</h3>
+            <p>Dix soirées de concerts rock et pop dans le centre de Lokeren.</p>
+          </div>
+          <div class="simple-event-loc">Lokeren<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début août</div>
+          <div class="simple-event-main">
+            <h3>Esperanzah!</h3>
+            <p>Festival de musiques du monde, dans le cadre de l'abbaye de Floreffe.</p>
+          </div>
+          <div class="simple-event-loc">Floreffe<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début août</div>
+          <div class="simple-event-main">
+            <h3>Dranouter</h3>
+            <p>Festival folk et musiques du monde, au cœur des collines du Heuvelland.</p>
+          </div>
+          <div class="simple-event-loc">Dranouter (Heuvelland)<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début août</div>
+          <div class="simple-event-main">
+            <h3>Ronquières Festival</h3>
+            <p>Concerts au pied du plan incliné de Ronquières, site emblématique.</p>
+          </div>
+          <div class="simple-event-loc">Ronquières<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début août</div>
+          <div class="simple-event-main">
+            <h3>Alcatraz</h3>
+            <p>Festival de hard rock et de metal.</p>
+          </div>
+          <div class="simple-event-loc">Courtrai<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -235,7 +448,15 @@
             <h3>Pukkelpop</h3>
             <p>Festival pop-rock et musiques actuelles de référence en Belgique.</p>
           </div>
-          <div class="simple-event-loc">Hasselt / Kiewit</div>
+          <div class="simple-event-loc">Hasselt / Kiewit<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début septembre</div>
+          <div class="simple-event-main">
+            <h3>Les Solidarités</h3>
+            <p>Festival de musique et de solidarité, à Namur.</p>
+          </div>
+          <div class="simple-event-loc">Namur<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
       </div>
 
@@ -247,7 +468,7 @@
   <div class="cta-slot">
   <section class="cta-band">
     <div class="wrap">
-      <h2>Un festival à préparer ?</h2>
+      <h2>Un festival ou un concert à préparer ?</h2>
       <p>Indiquez-nous la date, le lieu et le nombre de passagers — nous organisons votre transfert privé.</p>
       <div class="btn-row">
         <a href="../../devis.html" class="btn">Demander un devis</a>
@@ -256,6 +477,173 @@
     </div>
   </section>
   </div><!-- /.cta-slot -->
+
+  <!-- LES GRANDES SALLES DE CONCERT -->
+  <section class="section" id="salles">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Concerts</div>
+        <h2>Les grandes salles de concert</h2>
+        <hr class="gold-line">
+      </div>
+      <div class="simple-events" data-reveal>
+        <div class="simple-event">
+          <div class="simple-event-date">Été</div>
+          <div class="simple-event-main">
+            <h3>Stade Roi Baudouin</h3>
+            <p>Les grands concerts en plein air de l'été, jusqu'à environ 50 000 spectateurs.</p>
+          </div>
+          <div class="simple-event-loc">Heysel, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>AFAS Dome <span style="opacity:.6">(ex-Sportpaleis)</span></h3>
+            <p>La plus grande salle de concert du pays, environ 20 000 à 23 000 places.</p>
+          </div>
+          <div class="simple-event-loc">Merksem, Anvers<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Trixxo Arena</h3>
+            <p>Grande salle de concerts et de soirées, jusqu'à environ 18 000 places debout.</p>
+          </div>
+          <div class="simple-event-loc">Hasselt<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>ING Arena</h3>
+            <p>La grande arène de Bruxelles au Heysel, environ 15 000 places.</p>
+          </div>
+          <div class="simple-event-loc">Heysel, Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Forest National</h3>
+            <p>Salle mythique des grandes tournées internationales, environ 8 400 places.</p>
+          </div>
+          <div class="simple-event-loc">Forest, Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Lotto Arena</h3>
+            <p>Salle de concert voisine de l'AFAS Dome, environ 8 000 places.</p>
+          </div>
+          <div class="simple-event-loc">Merksem, Anvers<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Country Hall</h3>
+            <p>La grande salle de concert de Liège, environ 7 200 places.</p>
+          </div>
+          <div class="simple-event-loc">Liège<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Spiroudome</h3>
+            <p>Salle de sport et de concerts de Charleroi, environ 6 300 places assises.</p>
+          </div>
+          <div class="simple-event-loc">Charleroi<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Toute l'année</div>
+          <div class="simple-event-main">
+            <h3>Ancienne Belgique</h3>
+            <p>Salle emblématique du centre de Bruxelles, des têtes d'affiche aux jeunes talents.</p>
+          </div>
+          <div class="simple-event-loc">Centre, Bruxelles<span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Public restreint</em></span></div>
+        </div>
+      </div>
+
+      <p class="events-note">Capacités indicatives : elles varient selon la configuration de la salle. Indiquez-nous le concert et la date — nous organisons l'aller et le retour, y compris en fin de soirée.</p>
+    </div>
+  </section>
+
+  <!-- LES GRANDES SOIRÉES -->
+  <section class="section" id="soirees">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Soirées</div>
+        <h2>Les grandes soirées</h2>
+        <hr class="gold-line">
+      </div>
+      <div class="simple-events" data-reveal>
+        <div class="simple-event">
+          <div class="simple-event-date">Début avril</div>
+          <div class="simple-event-main">
+            <h3>Rave Rebels XXL</h3>
+            <p>La plus grande rave en salle de Belgique.</p>
+          </div>
+          <div class="simple-event-loc">ING Arena, Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début avril</div>
+          <div class="simple-event-main">
+            <h3>The Tunnels</h3>
+            <p>Soirées électro dans les tunnels du Cinquantenaire, par Listen Festival et Hangar.</p>
+          </div>
+          <div class="simple-event-loc">Cinquantenaire, Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Printemps</div>
+          <div class="simple-event-main">
+            <h3>I Love the 90s</h3>
+            <p>La grande soirée des années 90 : eurodance, boys bands et tubes de la décennie.</p>
+          </div>
+          <div class="simple-event-loc">Trixxo Arena, Hasselt<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Début mai</div>
+          <div class="simple-event-main">
+            <h3>Hangar Festival</h3>
+            <p>Deux jours de musique électronique au bord du canal, par le collectif Hangar.</p>
+          </div>
+          <div class="simple-event-loc">Port de Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Avril → sept.</div>
+          <div class="simple-event-main">
+            <h3>Hangar Open Air</h3>
+            <p>Grandes soirées en plein air avec des DJ internationaux : Atomium, place Poelaert, Cinquantenaire…</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin août</div>
+          <div class="simple-event-main">
+            <h3>LEMF</h3>
+            <p>Nouveau festival électro liégeois porté par huit collectifs de la ville.</p>
+          </div>
+          <div class="simple-event-loc">Seraing (Liège)<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin novembre</div>
+          <div class="simple-event-main">
+            <h3>Night of the Proms</h3>
+            <p>Pop et orchestre symphonique réunis sur scène, une tradition anversoise depuis 40 ans.</p>
+          </div>
+          <div class="simple-event-loc">AFAS Dome, Anvers<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Chaque week-end</div>
+          <div class="simple-event-main">
+            <h3>Clubs de référence</h3>
+            <p>Fuse et C12 à Bruxelles, Kompass Klub à Gand, Ampere à Anvers.</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles · Gand · Anvers<span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Public restreint</em></span></div>
+        </div>
+      </div>
+
+      <p class="events-note">Les dates et les lieux des soirées changent d'une édition à l'autre. <a href="../../contact.html">Contactez-nous</a> pour organiser votre retour en toute sécurité.</p>
+    </div>
+  </section>
+
 
   <!-- VOIR AUSSI -->
   <section class="section" style="padding-top:0">
@@ -342,7 +730,7 @@
 </footer>
 
 <script src="../../js/scroll-progress.js?v=20261112-progress"></script>
-<script src="../../script.js?v=20261111-showroom"></script>
+<script src="../../script.js?v=20261116-reveal"></script>
 
 </body>
 </html>
