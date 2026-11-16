@@ -26,7 +26,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, {threshold:0.15});
+    }, {threshold:0, rootMargin:'0px 0px -60px 0px'});  /* dès que le haut du bloc entre à l'écran, même pour une très longue liste */
     revealEls.forEach(function(el){ io.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('in'); });
