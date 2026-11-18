@@ -5,10 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Devis Chauffeur Privé | PRESTIGIA</title>
 <meta name="description" content="Demandez votre devis pour un transfert privé, une mise à disposition ou un service sur-mesure avec Prestigia à Bruxelles. Réponse rapide, prix fixe.">
+<link rel="canonical" href="https://prestigia.vip/devis">
+<link rel="alternate" hreflang="fr" href="https://prestigia.vip/devis">
+<link rel="alternate" hreflang="nl" href="https://prestigia.vip/nl/devis">
+<link rel="alternate" hreflang="en" href="https://prestigia.vip/en/devis">
+<link rel="alternate" hreflang="de" href="https://prestigia.vip/de/devis">
+<link rel="alternate" hreflang="x-default" href="https://prestigia.vip/devis">
 <meta property="og:title" content="Devis Chauffeur Privé | PRESTIGIA">
 <meta property="og:description" content="Demandez votre devis Prestigia — transfert, mise à disposition ou service sur-mesure, en Belgique et en Europe.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://prestigia.vip/devis.html">
+<meta property="og:url" content="https://prestigia.vip/devis">
 <link rel="icon" href="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg">
 <link rel="preconnect" href="https://assets.zyrosite.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,9 +123,10 @@
 
     <div class="nav-right">
       <div class="lang-pills" aria-label="Langue">
-        <a href="#" class="active" aria-current="true" lang="fr">FR</a>
-        <a href="#" lang="nl">NL</a>
-        <a href="#" lang="en">EN</a>
+        <a href="devis.html" lang="fr" hreflang="fr" class="active" aria-current="true">FR</a>
+        <a href="nl/devis.html" lang="nl" hreflang="nl">NL</a>
+        <a href="en/devis.html" lang="en" hreflang="en">EN</a>
+        <a href="de/devis.html" lang="de" hreflang="de">DE</a>
       </div>
       <a href="devis.html" class="btn">Réserver</a>
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
@@ -152,10 +159,11 @@
   </div>
   <a href="devis.html">Devis</a>
   <a href="contact.html">Contact</a>
-  <div class="mobile-lang">
-    <a href="#" class="active">FR</a>
-    <a href="#">NL</a>
-    <a href="#">EN</a>
+  <div class="mobile-lang" aria-label="Langue">
+    <a href="devis.html" lang="fr" hreflang="fr" class="active" aria-current="true">FR</a>
+    <a href="nl/devis.html" lang="nl" hreflang="nl">NL</a>
+    <a href="en/devis.html" lang="en" hreflang="en">EN</a>
+    <a href="de/devis.html" lang="de" hreflang="de">DE</a>
   </div>
 </div>
 
@@ -439,6 +447,7 @@
     var box = function(el){ return el.closest('.form-field'); };
     var lab = function(el){ return el.tagName === 'FIELDSET' ? el.querySelector('legend') : f.querySelector('label[for="' + el.id + '"]'); };
     var relabel = function(el){ return el.type !== 'checkbox'; };   // la case à cocher garde son libellé (il contient l'input)
+    var choix = function(sel){ return sel.options[sel.selectedIndex].text; };   // texte affiché (dans la langue de la page) ; la valeur reste technique
     var l0 = {}, ph0 = {};
     Object.keys(F).forEach(function(k){ if (relabel(F[k])) l0[k] = lab(F[k]).textContent; ph0[k] = F[k].placeholder; });
     var msg0 = [lab(f.message).textContent, f.message.placeholder];
@@ -546,18 +555,19 @@
       if (f.service.value === TOUR_SERVICE) {
         subject = tour.subject(); body = tour.body();
       } else {
-        var lignes = ['Service : ' + f.service.value];
+        var lignes = ['Service : ' + choix(f.service)];
         Object.keys(F).forEach(function(k){
           var el = F[k], v;
           if (box(el).hidden) return;
-          if (el.tagName === 'FIELDSET') { var r = el.querySelector('input:checked'); v = r ? r.value : ''; }
+          if (el.tagName === 'FIELDSET') { var r = el.querySelector('input:checked'); v = r ? r.parentNode.textContent.trim() : ''; }
           else if (el.type === 'checkbox') v = el.checked ? 'Oui' : 'Non';
+          else if (el.tagName === 'SELECT') v = el.value ? choix(el) : '';
           else v = el.value.trim();
-          if (v) lignes.push((relabel(el) ? lab(el).textContent.replace(/ \((facultatif|si connue?)\)$/, '') : 'Enlèvement et livraison à domicile') + ' : ' + v);
+          if (v) lignes.push((relabel(el) ? lab(el).textContent.replace(/ \([^)]*\)$/, '') : 'Enlèvement et livraison à domicile') + ' : ' + v);
         });
-        if (f.message.value.trim()) lignes.push(lab(f.message).textContent.replace(/ \(optionnel\)$/, '') + ' : ' + f.message.value.trim());
+        if (f.message.value.trim()) lignes.push(lab(f.message).textContent.replace(/ \([^)]*\)$/, '') + ' : ' + f.message.value.trim());
         lignes.push('', 'Nom : ' + f.name.value, 'Téléphone : ' + f.phone.value, 'Email : ' + f.email.value);
-        subject = 'Demande de devis — ' + f.service.value + (f.company.value.trim() ? ' — ' + f.company.value.trim() : '');
+        subject = 'Demande de devis — ' + choix(f.service) + (f.company.value.trim() ? ' — ' + f.company.value.trim() : '');
         body = lignes.join('\n');
       }
       window.location.href = 'mailto:info@prestigia.vip?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);

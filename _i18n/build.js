@@ -27,16 +27,20 @@ const KEEP = new Set(['Prestigia', 'PRESTIGIA', 'FR', 'NL', 'EN', 'DE', 'WhatsAp
   'Jean-Marc D.', 'Sophie L.', 'Ahmed K.', 'Marie C.', 'Pierre V.', 'Laura R.', 'First Class', 'Van', 'Minibus', '→', '×']);
 
 function loadDict(page){
-  const dict = {}, raw = [];
+  const dict = {}, raw = [], js = {};
   const add = (d) => {
     if(!d) return;
     Object.keys(d.seg || {}).forEach(k => { dict[norm(k)] = d.seg[k]; });
     (d.raw || []).forEach(r => raw.push(r));
   };
   add(require('./common.js'));
-  const f = path.join(__dirname, 'pages', page.replace(/\//g, '__').replace(/\.html$/, '') + '.js');
-  if(fs.existsSync(f)) add(require(f)); else console.warn('  (pas de dictionnaire pour ' + page + ' : ' + path.relative(ROOT, f) + ')');
-  return { dict, raw };
+  // Un texte traduit sur une page sert aussi aux autres pages ; le dictionnaire de la page elle-même passe en dernier.
+  const own = page.replace(/\//g, '__').replace(/\.html$/, '') + '.js';
+  const dir = path.join(__dirname, 'pages');
+  fs.readdirSync(dir).filter(n => n !== own && n.endsWith('.js')).forEach(n => add({ seg: require(path.join(dir, n)).seg }));
+  const f = path.join(dir, own);
+  if(fs.existsSync(f)){ const own = require(f); add(own); Object.keys(own.js || {}).forEach(k => { js[norm(k)] = own.js[k]; }); } else console.warn('  (pas de dictionnaire pour ' + page + ' : ' + path.relative(ROOT, f) + ')');
+  return { dict, raw, js };
 }
 function norm(s){ return String(s).replace(/\s+/g, ' ').trim(); }
 const hasWords = s => /[A-Za-zÀ-ÿ]/.test(s.replace(/&[a-z]+;|&#\d+;/g, ''));
@@ -126,12 +130,13 @@ function translate(html, page, lang, D, pp, missing){
     if(t.startsWith('<script')){
       const ld = t.match(/^(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)$/);
       if(ld) return ld[1] + translateJson(ld[2], lang, T, pp) + ld[3];
-      return fixPaths(t.replace(/<\/script>$/, '').match(/^<script[^>]*>/)[0]) + t.replace(/^<script[^>]*>/, '');
+      const open = t.match(/^<script[^>]*>/)[0];
+      return fixPaths(open) + translateJs(t.slice(open.length), lang, D);
     }
     if(t.startsWith('<')){
       let tag = fixPaths(t);
       const isMetaText = /<meta\s+(name="description"|property="og:(title|description)"|name="twitter:(title|description)")/.test(tag);
-      tag = tag.replace(/\s(alt|title|aria-label|placeholder|content|data-label)="([^"]*)"/g, (m, attr, val) => {
+      tag = tag.replace(/\s(alt|title|aria-label|placeholder|content|data-label|data-profil)="([^"]*)"/g, (m, attr, val) => {
         if(attr === 'content' && !isMetaText) return m;
         const tr = T(val, '[' + attr + ']');
         return tr == null ? m : ' ' + attr + '="' + tr.replace(/"/g, '&quot;') + '"';
@@ -144,6 +149,22 @@ function translate(html, page, lang, D, pp, missing){
     const lead = t.match(/^\s*/)[0], trail = t.match(/\s*$/)[0];
     return lead + tr + trail;
   }).join('');
+}
+// Scripts intégrés : une chaîne '…' ou "…" dont le texte figure dans le dictionnaire « js » de la page est traduite
+// (espaces, \n et ponctuation de bord conservés : 'Nom : ' → 'Name: '). Seul ce dictionnaire est utilisé,
+// pour ne jamais traduire une clé technique (ex. les noms de services du devis).
+function translateJs(code, lang, D){
+  return code.replace(/'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"/g, (m, b1, b2) => {
+    const q = b1 != null ? "'" : '"';
+    const txt = (b1 != null ? b1 : b2).replace(/\\(['"])/g, '$1');
+    const mm = txt.match(/^((?:\s|\\n|[—(\[])*)([\s\S]*?)((?:\s|\\n|[:—)\]])*)$/);
+    const core = norm(mm[2]);
+    if(txt === ' : ' && lang !== 'fr' && Object.keys(D.js).length) return q + ': ' + q;   // séparateur « libellé : valeur » sans espace avant
+    if(!core || !D.js[core] || D.js[core][lang] == null) return m;
+    let tail = mm[3];
+    if(lang !== 'fr') tail = tail.replace(/^\s+:/, ':');   // « Nom : » → « Name: »
+    return q + (mm[1] + D.js[core][lang] + tail).split(q).join('\\' + q) + q;
+  });
 }
 function translateJson(src, lang, T, pp){
   let obj;
@@ -166,9 +187,19 @@ function translateJson(src, lang, T, pp){
 }
 
 // ---------- Programme ----------
-const PAGES = ['index.html'];
+function allPages(){   // toutes les pages françaises (hors dossiers internes et dossiers de langue)
+  const out = [];
+  const walk = (d) => fs.readdirSync(path.join(ROOT, d || '.'), { withFileTypes: true }).forEach(e => {
+    const rel = d ? d + '/' + e.name : e.name;
+    if(e.isDirectory()){ if(!/^(_|\.|nl$|en$|de$|images$|js$|node_modules$)/.test(e.name)) walk(rel); }
+    else if(/\.html$/.test(e.name) && rel !== 'Prestigia.vip_code_soucre.html') out.push(rel);
+  });
+  walk('');
+  return out.sort();
+}
 let args = process.argv.slice(2);
-if(args[0] === '--all') args = PAGES;
+const DUMP = args[0] === '--dump'; if(DUMP) args = args.slice(1);   // --dump : liste seulement les textes à traduire
+if(args[0] === '--all') args = allPages();
 if(!args.length){ console.log('Usage : node _i18n/build.js <page.html> … | --all'); process.exit(1); }
 let problems = 0;
 args.forEach(page => {
@@ -189,6 +220,7 @@ args.forEach(page => {
     fs.mkdirSync(path.dirname(out), { recursive: true });
     fs.writeFileSync(out, html, 'utf8');
     const uniq = Array.from(new Set(missing));
+    if(DUMP){ if(lang === 'nl') uniq.forEach(m => console.log(m.replace(/^\[(texte|[a-z-]+)\] /, ''))); return; }
     console.log(lang + '/' + page + (uniq.length ? '  — ' + uniq.length + ' texte(s) non traduit(s) :' : '  — OK'));
     uniq.forEach(m => console.log('    ' + m));
     problems += uniq.length;
