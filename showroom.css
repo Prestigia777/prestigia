@@ -1016,9 +1016,9 @@
    bord à bord (100vh), sans cadre arrondi ni marge, et passe sous le menu fixe.
    Le texte garde sa position (ancien décalage carte + marge intérieure : 104 + 64 px,
    88 + 40 px sur mobile) ; le cadrage de la voiture reste calculé par script.js
-   (bas de la voiture vers 97 % de la hauteur du hero).
+   (bas de la voiture vers 92 % de la hauteur du hero, au-dessus du fondu).
    ===================================================================== */
-.showroom .hero{padding:0;background:#F5F5F5}
+.showroom .hero{padding:0;background:var(--surface)}
 .showroom .hero > .wrap{max-width:none;width:100%;margin:0;padding:0}
 .showroom .hero-card{
   border-radius:0;
@@ -1028,4 +1028,21 @@
 }
 @media(max-width:680px){
   .showroom .hero-card{padding:128px 20px 28px;border-radius:0}
+}
+/* Bord droit : la photo et son voile débordent de 2 px de chaque côté (rognés par la carte, overflow:hidden),
+   pour qu'aucun arrondi de pixel (zoom, mise à l'échelle Windows) ne laisse un liseré clair près de la barre de défilement. */
+.showroom .hero{overflow-x:clip}
+.showroom .hero-photo{left:-2px;right:-2px}
+/* Fondu bas : les 24 % inférieurs se fondent dans le fond de la section suivante (« Nos services », var(--surface)).
+   Courbe adoucie : presque rien jusqu'à mi-hauteur du fondu, pour garder la voiture lisible. */
+.showroom .hero-card::after{
+  left:-2px;right:-2px;
+  background:
+    linear-gradient(180deg,
+      transparent 76%,
+      color-mix(in srgb, var(--surface) 8%, transparent) 85%,
+      color-mix(in srgb, var(--surface) 32%, transparent) 92%,
+      color-mix(in srgb, var(--surface) 75%, transparent) 97.5%,
+      var(--surface) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.86) 0%, rgba(255,255,255,.66) 28%, rgba(255,255,255,.36) 52%, rgba(255,255,255,.16) 78%, rgba(255,255,255,.06) 100%);
 }

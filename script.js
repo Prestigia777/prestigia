@@ -506,13 +506,14 @@
 
 // Accueil : cadrage de la photo du hero (Classe S) selon la taille réelle de la carte
 // La hauteur de la carte suit celle de l'écran : un pourcentage fixe ferait monter ou descendre la voiture.
-// On calcule donc le décalage pour que le bas de la voiture arrive vers 97 % de la hauteur de la carte.
+// On calcule donc le décalage pour que le bas de la voiture arrive vers 92 % de la hauteur de la carte
+// (au-dessus du fondu blanc des 24 % inférieurs, voir .hero-card::after dans showroom.css).
 (function(){
   var card = document.querySelector('.hero-card');
   var img = card && card.querySelector('.hero-photo img');
   if(!img) return;
   var CAR_BOTTOM = 0.712;   // bas de la voiture (pneus et bouclier), en fraction de la hauteur de la photo
-  var TARGET = 0.97;        // position souhaitée du bas de la voiture, en fraction de la hauteur de la carte
+  var TARGET = 0.92;        // position souhaitée du bas de la voiture, en fraction de la hauteur de la carte
   function fit(){
     var iw = img.naturalWidth || 2400, ih = img.naturalHeight || 3000;
     var bw = img.clientWidth, bh = img.clientHeight;
@@ -522,7 +523,7 @@
     var boxTop = img.offsetTop + img.parentNode.offsetTop;
     if(slack < 2){
       // Photo calée sur la hauteur (mobile, tablette) : on agrandit l'image juste assez,
-      // ancrée en haut, pour que le bas de la voiture arrive aussi vers 97 % de la carte.
+      // ancrée en haut, pour que le bas de la voiture arrive aussi vers 92 % de la carte.
       var boxH = img.parentNode.clientHeight;
       var k = (TARGET * card.clientHeight - boxTop) / (CAR_BOTTOM * boxH);
       img.style.height = (Math.max(1, k) * 100).toFixed(2) + '%';
