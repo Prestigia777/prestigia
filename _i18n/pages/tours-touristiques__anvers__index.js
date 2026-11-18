@@ -60,7 +60,9 @@ module.exports = { seg: {
   'DIAMANTAIRE': L('WIJK', 'DISTRICT', 'VIERTEL'),
   'MAISON': L('RUBENS-', 'RUBENS', 'RUBENS-'),
   'RUBENS': L('HUIS', 'HOUSE', 'HAUS'),
-  'CATHÉDRALE': L('KATHEDRAAL', 'CATHEDRAL', 'KATHEDRALE'),
+  'CATHÉDRALE': L('O.-L.-VROUWE-', 'CATHEDRAL', 'LIEBFRAUEN-'),
   'GROTE MARKT': K('GROTE MARKT'), 'PLANTIN-MORETUS': K('PLANTIN-MORETUS'),
+  'NOTRE-DAME': L('KATHEDRAAL', 'OF OUR LADY', 'KATHEDRALE'),
+  'MUSÉE': L('MUSEUM', 'MUSEUM', 'MUSEUM'),
   'Envie d\'explorer Anvers ?': L('Zin om Antwerpen te verkennen?', 'Keen to explore Antwerp?', 'Lust, Antwerpen zu entdecken?')
 } };

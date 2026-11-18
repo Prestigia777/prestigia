@@ -80,7 +80,9 @@ Le site est statique, sans inclusion côté serveur : un gabarit se **copie** da
 - **Sélecteur de langue** : pastilles FR / NL / EN / DE (`.lang-pills` et `.mobile-lang`) sur toutes les pages, y compris en français. Chaque pastille mène à la même page dans l'autre langue ; la langue active porte `class="active"`.
 - Textes affichés par le JS : ils suivent `<html lang>`. Événement mis en avant : `EVENT_I18N` et `EVENT_WORDS` dans `script.js` ; recherche du hero : titres `t: {nl, en, de}` et mots-clés allemands dans `js/search-index.js`.
 - « Prestigia » ne se traduit jamais. Les règles des tours touristiques (formulations interdites) s'appliquent dans chaque langue.
-- Formulaire de devis : `name`, `id`, valeurs techniques et paramètres d'URL (`?service=…&ville=…`) restent identiques dans toutes les langues ; seuls les textes affichés (et l'objet de l'e-mail) sont traduits.
+- Formulaire de devis : `name`, `id`, valeurs techniques et paramètres d'URL (`?service=…&ville=…`) restent identiques dans toutes les langues ; seuls les textes affichés (et l'objet de l'e-mail) sont traduits. Les options traduites portent `value="<nom français>"` (`raw` dans `_i18n/pages/devis.js`) et l'e-mail reprend le texte affiché.
+- Dictionnaires : un texte traduit sur une page sert aussi aux autres ; le dictionnaire de la page passe en priorité (utile pour les étiquettes courtes des cartes, ex. « NOTRE-DAME » à Bruges et à Anvers). Les chaînes des scripts intégrés aux pages ne sont traduites que si elles figurent dans le `js` du dictionnaire de la page (jamais les clés techniques). `raw` sert aux blocs à remplacer tels quels (hero, options, liens `mailto:`).
+- Cartes-itinéraires traduites : mêmes contrôles qu'en français (1440 et 375 px, aucun nom qui touche le tracé, un point ou un autre nom).
 
 ## Cache de la feuille de style
 

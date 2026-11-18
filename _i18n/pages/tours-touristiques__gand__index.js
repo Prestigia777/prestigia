@@ -48,8 +48,8 @@ module.exports = { seg: {
     'Schematic map of the private itinerary in Ghent, in 7 stops: 1, Small beguinage; 2, Graslei and Korenlei; 3, Groot Vleeshuis; 4, Castle of the Counts (Gravensteen); 5, Patershol and Vrijdagmarkt; 6, Belfry of Ghent; 7, St Bavo\'s Cathedral.',
     'Schematische Karte der privaten Route in Gent, in 7 Etappen: 1, Kleiner Beginenhof; 2, Graslei und Korenlei; 3, Groot Vleeshuis; 4, Grafenburg (Gravensteen); 5, Patershol und Vrijdagmarkt; 6, Belfried von Gent; 7, St.-Bavo-Kathedrale.'),
   // étiquettes de la carte (deux lignes au plus, longueur proche du français)
-  'PETIT': L('KLEIN', 'SMALL', 'KLEINER'),
-  'BÉGUINAGE': L('BEGIJNHOF', 'BEGUINAGE', 'BEGINENHOF'),
+  'PETIT': L('KLEIN', 'SMALL', 'BEGINEN-'),
+  'BÉGUINAGE': L('BEGIJNHOF', 'BEGUINAGE', 'HOF'),
   'GRASLEI &amp;': K('GRASLEI &amp;'), 'KORENLEI': K('KORENLEI'), 'GROOT': K('GROOT'), 'VLEESHUIS': K('VLEESHUIS'),
   'GRAVENSTEEN': K('GRAVENSTEEN'), 'PATERSHOL &amp;': K('PATERSHOL &amp;'), 'VRIJDAGMARKT': K('VRIJDAGMARKT'),
   'BEFFROI': L('BELFORT', 'BELFRY', 'BELFRIED'),
