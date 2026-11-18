@@ -1,0 +1,66 @@
+/* tours-touristiques/anvers/index.html */
+const L = (nl, en, de) => ({ nl, en, de });
+const K = (s) => ({ nl: s, en: s, de: s });
+module.exports = { seg: {
+  'Attractions touristiques à Anvers | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Antwerpen | Privéchauffeur PRESTIGIA', 'Antwerp Sightseeing | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten in Antwerpen | Privatchauffeur PRESTIGIA'),
+  'Chauffeur privé pour visiter les attractions touristiques d\'Anvers : Cathédrale Notre-Dame, MAS, quartier des diamants, gare centrale et plus. Tours sur-mesure avec Prestigia.': L(
+    'Privéchauffeur om de bezienswaardigheden van Antwerpen te bezoeken: Onze-Lieve-Vrouwekathedraal, MAS, diamantwijk, Centraal Station en meer. Tours op maat met Prestigia.',
+    'Private chauffeur to visit the attractions of Antwerp: the Cathedral of Our Lady, the MAS, the diamond district, Central Station and more. Bespoke tours with Prestigia.',
+    'Privatchauffeur für die Sehenswürdigkeiten von Antwerpen: Liebfrauenkathedrale, MAS, Diamantenviertel, Hauptbahnhof und mehr. Maßgeschneiderte Touren mit Prestigia.'),
+  'Découvrez les attractions incontournables d\'Anvers avec un chauffeur privé qui vous dépose et vous reprend aux points convenus — Cathédrale Notre-Dame, MAS, quartier des diamants et plus.': L(
+    'Ontdek de mooiste bezienswaardigheden van Antwerpen met een privéchauffeur die u afzet en weer ophaalt op de afgesproken plaatsen — Onze-Lieve-Vrouwekathedraal, MAS, diamantwijk en meer.',
+    'Discover the must-see attractions of Antwerp with a private chauffeur who drops you off and picks you up at agreed points — the Cathedral of Our Lady, the MAS, the diamond district and more.',
+    'Entdecken Sie die schönsten Sehenswürdigkeiten von Antwerpen mit einem Privatchauffeur, der Sie an vereinbarten Punkten absetzt und wieder abholt — Liebfrauenkathedrale, MAS, Diamantenviertel und mehr.'),
+  'Attractions touristiques à Anvers': L('Bezienswaardigheden in Antwerpen', 'Antwerp attractions', 'Sehenswürdigkeiten in Antwerpen'),
+  'Cathédrale Notre-Dame d\'Anvers': L('Onze-Lieve-Vrouwekathedraal van Antwerpen', 'Cathedral of Our Lady, Antwerp', 'Liebfrauenkathedrale von Antwerpen'),
+  'Cathédrale d\'Anvers abritant plusieurs œuvres de Rubens.': L('Kathedraal van Antwerpen met verschillende werken van Rubens.', 'Antwerp\'s cathedral, home to several works by Rubens.', 'Die Kathedrale von Antwerpen mit mehreren Werken von Rubens.'),
+  'Grote Markt d\'Anvers': L('Grote Markt van Antwerpen', 'Grote Markt, Antwerp', 'Grote Markt von Antwerpen'),
+  'Place centrale d\'Anvers bordée de maisons de guildes.': L('Centrale plein van Antwerpen, omzoomd door gildehuizen.', 'Antwerp\'s central square, lined with guild houses.', 'Zentraler Platz Antwerpens, gesäumt von Zunfthäusern.'),
+  'MAS (Museum aan de Stroom)': K('MAS (Museum aan de Stroom)'),
+  'Musée panoramique sur les quais d\'Anvers.': L('Panoramisch museum aan de Antwerpse kaaien.', 'Panoramic museum on the Antwerp quays.', 'Panoramamuseum an den Kais von Antwerpen.'),
+  'Gare centrale d\'Anvers': L('Antwerpen-Centraal', 'Antwerp Central Station', 'Hauptbahnhof Antwerpen'),
+  'Gare classée parmi les plus belles au monde pour son architecture.': L('Station die tot de mooiste ter wereld gerekend wordt om zijn architectuur.', 'A station ranked among the most beautiful in the world for its architecture.', 'Ein Bahnhof, der wegen seiner Architektur zu den schönsten der Welt zählt.'),
+  'Maison Rubens': L('Rubenshuis', 'Rubens House', 'Rubenshaus'),
+  'Ancienne demeure et atelier du peintre Pierre Paul Rubens, à Anvers.': L('Voormalige woning en atelier van de schilder Peter Paul Rubens, in Antwerpen.', 'Former home and studio of the painter Peter Paul Rubens, in Antwerp.', 'Ehemaliges Wohnhaus und Atelier des Malers Peter Paul Rubens in Antwerpen.'),
+  'Quartier des diamants d\'Anvers': L('Antwerpse diamantwijk', 'Antwerp diamond district', 'Diamantenviertel von Antwerpen'),
+  'Capitale mondiale historique du commerce du diamant.': L('Historische wereldhoofdstad van de diamanthandel.', 'The historic world capital of the diamond trade.', 'Historische Welthauptstadt des Diamantenhandels.'),
+  'Zoo d\'Anvers': L('ZOO Antwerpen', 'Antwerp Zoo', 'Zoo Antwerpen'),
+  'L\'un des plus anciens zoos du monde, au cœur d\'Anvers.': L('Een van de oudste dierentuinen ter wereld, in het hart van Antwerpen.', 'One of the oldest zoos in the world, in the heart of Antwerp.', 'Einer der ältesten Zoos der Welt, im Herzen Antwerpens.'),
+  'Anvers, les incontournables — itinéraire privé avec chauffeur': L('Antwerpen, de hoogtepunten — privéroute met chauffeur', 'Antwerp highlights — private itinerary with chauffeur', 'Antwerpen, die Highlights — private Route mit Chauffeur'),
+  'Itinéraire privé avec chauffeur à travers sept incontournables d\'Anvers : Gare centrale, Quartier des diamants, Maison Rubens, Cathédrale Notre-Dame, Grote Markt, Musée Plantin-Moretus et MAS. Transport privé ou visite clé en main (billets et réservations par nos soins en option). Itinéraire modifiable sur demande.': L(
+    'Privéroute met chauffeur langs zeven hoogtepunten van Antwerpen: Centraal Station, diamantwijk, Rubenshuis, Onze-Lieve-Vrouwekathedraal, Grote Markt, Museum Plantin-Moretus en MAS. Privévervoer of kant-en-klaar bezoek (tickets en reserveringen door ons, optioneel). Route aanpasbaar op aanvraag.',
+    'Private itinerary with chauffeur through seven Antwerp highlights: Central Station, the diamond district, the Rubens House, the Cathedral of Our Lady, the Grote Markt, the Plantin-Moretus Museum and the MAS. Private transport or turnkey visit (tickets and bookings handled by us, as an option). Itinerary adjustable on request.',
+    'Private Route mit Chauffeur zu sieben Highlights von Antwerpen: Hauptbahnhof, Diamantenviertel, Rubenshaus, Liebfrauenkathedrale, Grote Markt, Museum Plantin-Moretus und MAS. Privattransport oder Besuch aus einer Hand (Tickets und Reservierungen durch uns, optional). Route auf Wunsch anpassbar.'),
+  'Gare centrale': L('Centraal Station', 'Central Station', 'Hauptbahnhof'),
+  'Chef-d\'œuvre architectural': L('Architecturaal meesterwerk', 'Architectural masterpiece', 'Architektonisches Meisterwerk'),
+  'Quartier des diamants': L('Diamantwijk', 'Diamond district', 'Diamantenviertel'),
+  'Capitale du diamant': L('Hoofdstad van de diamant', 'Diamond capital', 'Hauptstadt der Diamanten'),
+  'Demeure du peintre': L('Woning van de schilder', 'The painter\'s home', 'Wohnhaus des Malers'),
+  'Cathédrale Notre-Dame': L('Onze-Lieve-Vrouwekathedraal', 'Cathedral of Our Lady', 'Liebfrauenkathedrale'),
+  'Œuvres de Rubens': L('Werken van Rubens', 'Works by Rubens', 'Werke von Rubens'),
+  'Grote Markt': K('Grote Markt'),
+  'Maisons de guildes': L('Gildehuizen', 'Guild houses', 'Zunfthäuser'),
+  'Musée Plantin-Moretus': L('Museum Plantin-Moretus', 'Plantin-Moretus Museum', 'Museum Plantin-Moretus'),
+  'MAS': K('MAS'),
+  'Panorama sur la ville': L('Panorama over de stad', 'Panoramic city views', 'Panoramablick über die Stadt'),
+  'Attractions touristiques à Anvers, avec chauffeur privé': L('Bezienswaardigheden in Antwerpen, met privéchauffeur', 'Antwerp attractions, with a private chauffeur', 'Sehenswürdigkeiten in Antwerpen, mit Privatchauffeur'),
+  'Mode, diamants et architecture portuaire — Anvers surprend par ses contrastes. Prestigia vous conduit de la cathédrale Notre-Dame au MAS, sans souci de stationnement dans le centre.': L(
+    'Mode, diamant en havenarchitectuur — Antwerpen verrast met zijn contrasten. Prestigia brengt u van de Onze-Lieve-Vrouwekathedraal naar het MAS, zonder parkeerzorgen in het centrum.',
+    'Fashion, diamonds and port architecture — Antwerp surprises with its contrasts. Prestigia takes you from the Cathedral of Our Lady to the MAS, with no parking worries in the centre.',
+    'Mode, Diamanten und Hafenarchitektur — Antwerpen überrascht mit seinen Kontrasten. Prestigia bringt Sie von der Liebfrauenkathedrale zum MAS, ohne Parkplatzsorgen im Zentrum.'),
+  'Anvers, les incontournables': L('Antwerpen, de hoogtepunten', 'Antwerp highlights', 'Antwerpen, die Highlights'),
+  'Carte schématique de l&#x27;itinéraire privé à Anvers, en 7 étapes : 1, Gare centrale ; 2, Quartier des diamants ; 3, Maison Rubens ; 4, Cathédrale Notre-Dame ; 5, Grote Markt ; 6, Musée Plantin-Moretus ; 7, MAS.': L(
+    'Schematische kaart van de privéroute in Antwerpen, in 7 etappes: 1, Centraal Station; 2, Diamantwijk; 3, Rubenshuis; 4, Onze-Lieve-Vrouwekathedraal; 5, Grote Markt; 6, Museum Plantin-Moretus; 7, MAS.',
+    'Schematic map of the private itinerary in Antwerp, in 7 stops: 1, Central Station; 2, Diamond district; 3, Rubens House; 4, Cathedral of Our Lady; 5, Grote Markt; 6, Plantin-Moretus Museum; 7, MAS.',
+    'Schematische Karte der privaten Route in Antwerpen, in 7 Etappen: 1, Hauptbahnhof; 2, Diamantenviertel; 3, Rubenshaus; 4, Liebfrauenkathedrale; 5, Grote Markt; 6, Museum Plantin-Moretus; 7, MAS.'),
+  // étiquettes de la carte
+  'GARE': L('CENTRAAL', 'CENTRAL', 'HAUPT-'),
+  'CENTRALE': L('STATION', 'STATION', 'BAHNHOF'),
+  'QUARTIER': L('DIAMANT-', 'DIAMOND', 'DIAMANTEN-'),
+  'DIAMANTAIRE': L('WIJK', 'DISTRICT', 'VIERTEL'),
+  'MAISON': L('RUBENS-', 'RUBENS', 'RUBENS-'),
+  'RUBENS': L('HUIS', 'HOUSE', 'HAUS'),
+  'CATHÉDRALE': L('KATHEDRAAL', 'CATHEDRAL', 'KATHEDRALE'),
+  'GROTE MARKT': K('GROTE MARKT'), 'PLANTIN-MORETUS': K('PLANTIN-MORETUS'),
+  'Envie d\'explorer Anvers ?': L('Zin om Antwerpen te verkennen?', 'Keen to explore Antwerp?', 'Lust, Antwerpen zu entdecken?')
+} };
