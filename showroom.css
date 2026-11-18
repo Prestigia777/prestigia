@@ -1010,3 +1010,22 @@
 .pillars-grid--4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1000px){.pillars-grid--4{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.pillars-grid--4{grid-template-columns:1fr}}
+
+/* =====================================================================
+   ACCUEIL — hero plein écran : la photo de la Classe S occupe tout l'écran,
+   bord à bord (100vh), sans cadre arrondi ni marge, et passe sous le menu fixe.
+   Le texte garde sa position (ancien décalage carte + marge intérieure : 104 + 64 px,
+   88 + 40 px sur mobile) ; le cadrage de la voiture reste calculé par script.js
+   (bas de la voiture vers 97 % de la hauteur du hero).
+   ===================================================================== */
+.showroom .hero{padding:0;background:#F5F5F5}
+.showroom .hero > .wrap{max-width:none;width:100%;margin:0;padding:0}
+.showroom .hero-card{
+  border-radius:0;
+  min-height:100vh;
+  min-height:100svh;
+  padding:168px 48px 40px;
+}
+@media(max-width:680px){
+  .showroom .hero-card{padding:128px 20px 28px;border-radius:0}
+}
