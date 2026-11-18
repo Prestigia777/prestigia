@@ -146,7 +146,7 @@ function translate(html, page, lang, D, pp, missing){
     const k = norm(t);
     const tr = T(t, '[texte]');
     if(tr == null) return t;
-    const lead = t.match(/^\s*/)[0], trail = t.match(/\s*$/)[0];
+    const lead = /^[:,.]/.test(tr) ? '' : t.match(/^\s*/)[0], trail = t.match(/\s*$/)[0];   // « <strong>X</strong> : … » → « X: … »
     return lead + tr + trail;
   }).join('');
 }

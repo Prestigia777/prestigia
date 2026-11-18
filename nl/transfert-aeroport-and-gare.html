@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luchthaven- &amp; stationstransfer | Privéchauffeur PRESTIGIA</title>
+<meta name="description" content="Privétransfers naar de Belgische luchthavens (Zaventem, Charleroi, Luik) en stations — realtime vluchtopvolging, persoonlijk onthaal, gegarandeerde vaste prijs.">
+<link rel="canonical" href="https://prestigia.vip/nl/transfert-aeroport-and-gare">
+<link rel="alternate" hreflang="fr" href="https://prestigia.vip/transfert-aeroport-and-gare">
+<link rel="alternate" hreflang="nl" href="https://prestigia.vip/nl/transfert-aeroport-and-gare">
+<link rel="alternate" hreflang="en" href="https://prestigia.vip/en/transfert-aeroport-and-gare">
+<link rel="alternate" hreflang="de" href="https://prestigia.vip/de/transfert-aeroport-and-gare">
+<link rel="alternate" hreflang="x-default" href="https://prestigia.vip/transfert-aeroport-and-gare">
+<meta property="og:title" content="Luchthaven- &amp; stationstransfer | PRESTIGIA">
+<meta property="og:description" content="Realtime vluchtopvolging, persoonlijk onthaal, gegarandeerde vaste prijs — de luchthaven- en stationstransfers van Prestigia in Brussel.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prestigia.vip/nl/transfert-aeroport-and-gare">
+<link rel="icon" href="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg">
+<link rel="preconnect" href="https://assets.zyrosite.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261111-showroom">
+<link rel="stylesheet" href="../showroom.css?v=20261115-cta2">
+<style>
+/* =====================================================================
+   Transferts aéroport et gare UNIQUEMENT (body.page-transferts)
+   Le premier écran (.fold) est réglé dans showroom.css, commun à plusieurs pages.
+   Ici : le deuxième écran (.zone2), propre à cette page.
+   ===================================================================== */
+/* ---------- Deuxième écran (.zone2) : mêmes fonds qu'avant ---------- */
+/* Les sections ne sont plus enfants directs de <main> : on redonne fonds et marges d'origine */
+.page-transferts .zone2 > section.section:first-child{background:var(--bg);padding-top:96px !important}
+@media (max-width:680px){ .page-transferts .zone2 > section.section:first-child{padding-top:72px !important} }  /* même espacement que les autres pages sous le bandeau */
+.page-transferts .zone2 > section.section:nth-child(2){background:var(--surface)}
+/* (la marge haute d'origine de cette section, imposée par showroom.css, était de 96 px / 72 px sur mobile) */
+.page-transferts .zone2 > section.section:nth-child(2){padding-top:96px !important}
+@media (max-width:680px){ .page-transferts .zone2 > section.section:nth-child(2){padding-top:72px !important} }
+/* Texte lisible : corps 15 px minimum */
+.page-transferts .zone2 .content-grid p,
+.page-transferts .zone2 .content-grid ul li,
+.page-transferts .zone2 .cta-band p{font-size:15px}
+
+/* ---------- Deuxième écran sur ordinateur : 3 blocs sur une hauteur de fenêtre ----------
+   Hauteur min(100svh, 1100px), contenu centré. Le menu flottant mesure 82 px (14 px + 68 px) :
+   on le laisse libre en haut de la zone. Réglages : --z2-gap (espace entre blocs), clamp(min, svh, max). */
+@media (min-width:768px) and (min-height:560px){
+  .page-transferts .zone2{
+    --hdr:82px;
+    --z2-gap:clamp(13px, 1.9svh, 18px);
+    display:flex;flex-direction:column;justify-content:center;
+    min-height:min(100vh, 1100px);
+    min-height:min(100svh, 1100px);
+    padding:calc(var(--hdr) + var(--z2-gap)) 0 var(--z2-gap);
+    margin-bottom:clamp(24px, 6svh, 96px);
+  }
+  /* mêmes bords que le menu, la bannière et le bandeau noir */
+  .page-transferts .zone2 > section.section > .wrap{width:calc(100% - 28px);max-width:1240px;padding:0;margin:0 auto}
+  .page-transferts .zone2 > section.section:first-child{padding:0 !important}
+  .page-transferts .zone2 > section.section:nth-child(2){padding:var(--z2-gap) 0 !important}
+  /* Bloc 1 : « Comment ça se passe » */
+  .page-transferts .zone2 .content-grid-text{padding:clamp(18px, 2.5svh, 24px) clamp(24px, 3svh, 36px)}
+  .page-transferts .zone2 .content-grid .eyebrow{margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid h2{font-size:clamp(24px, min(3.2vw, 3svh), 28px);margin-bottom:clamp(8px, 1.2svh, 10px)}
+  .page-transferts .zone2 .content-grid p{line-height:clamp(22px, 2.4svh, 23px);margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid ul{margin-top:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .content-grid ul li{line-height:1.45;padding-top:clamp(4px, 0.6svh, 5px);padding-bottom:clamp(4px, 0.6svh, 5px)}
+  .page-transferts .zone2 .content-grid-media{min-height:clamp(200px, 30svh, 320px)}
+  /* Bloc 2 : 24h/7j et +15 pays */
+  .page-transferts .zone2 .stat{padding:clamp(12px, 1.5svh, 14px) 24px}
+  .page-transferts .zone2 .stat-num{font-size:clamp(24px, 2.8svh, 28px)}
+  /* Bloc 3 : bandeau noir */
+  .page-transferts .zone2 .cta-band{margin:0 auto;padding:clamp(18px, 2.6svh, 24px) 24px}
+  .page-transferts .zone2 .cta-band h2{font-size:clamp(24px, min(3.6vw, 3svh), 28px);margin-bottom:clamp(6px, 1svh, 8px)}
+  .page-transferts .zone2 .cta-band p{margin-bottom:clamp(10px, 1.6svh, 14px)}
+}
+
+/* Le bandeau noir est remonté juste avant .zone2 : la zone démarre comme une section ordinaire
+   (même espacement que sur International : 40 px à 1440×800), sans hauteur forcée ni réserve pour le menu. */
+@media (min-width:768px) and (min-height:560px){
+  .page-transferts .cta-slot + .zone2{
+    min-height:0;
+    justify-content:flex-start;
+    padding-top:clamp(32px, 5svh, 56px);
+  }
+}
+</style>
+</head>
+<body class="showroom page-transferts">
+
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <img src="../logo-prestigia-dark.png" alt="Prestigia — privéchauffeur en luxelimousine in Brussel">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="chauffeur-prive-bruxelles.html">Privéchauffeur <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="transfert-aeroport-and-gare.html">Luchthaven- &amp; stationstransfer</a>
+          <a href="voyages-ville-a-ville.html">Van stad tot stad</a>
+          <a href="international.html">Internationaal</a>
+          <a href="mise-a-disposition.html">Chauffeur ter beschikking</a>
+          <a href="tours-touristiques.html">Toeristische tours</a>
+          <a href="evenements.html">Evenementen</a>
+          <a href="espace-entreprises.html">Bedrijven</a>
+          <a href="espace-agences-de-voyage.html">Reisbureaus</a>
+          <a href="flotte.html">Vloot</a>
+        </div>
+      </li>
+      <li>
+        <a href="services.html">Diensten <span class="caret"></span></a>
+        <div class="dropdown">
+          <a href="location-de-vehicules.html">Voertuigverhuur</a>
+          <a href="esthetique-automobile.html">Autoverzorging</a>
+          <a href="service-sur-mesure.html">Maatwerk</a>
+        </div>
+      </li>
+      <li><a href="devis.html">Offerte</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-pills" aria-label="Taal">
+        <a href="../transfert-aeroport-and-gare.html" lang="fr" hreflang="fr">FR</a>
+        <a href="../nl/transfert-aeroport-and-gare.html" lang="nl" hreflang="nl" class="active" aria-current="true">NL</a>
+        <a href="../en/transfert-aeroport-and-gare.html" lang="en" hreflang="en">EN</a>
+        <a href="../de/transfert-aeroport-and-gare.html" lang="de" hreflang="de">DE</a>
+      </div>
+      <a href="devis.html" class="btn">Reserveren</a>
+      <button class="burger" id="burgerBtn" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Menu sluiten">&times;</button>
+  <a href="index.html">Home</a>
+  <div class="m-group-title">Privéchauffeur</div>
+  <div class="sub">
+    <a href="transfert-aeroport-and-gare.html">Luchthaven- &amp; stationstransfer</a>
+    <a href="voyages-ville-a-ville.html">Van stad tot stad</a>
+    <a href="international.html">Internationaal</a>
+    <a href="mise-a-disposition.html">Chauffeur ter beschikking</a>
+    <a href="tours-touristiques.html">Toeristische tours</a>
+    <a href="evenements.html">Evenementen</a>
+    <a href="espace-entreprises.html">Bedrijven</a>
+    <a href="espace-agences-de-voyage.html">Reisbureaus</a>
+    <a href="flotte.html">Vloot</a>
+  </div>
+  <div class="m-group-title">Diensten</div>
+  <div class="sub">
+    <a href="location-de-vehicules.html">Voertuigverhuur</a>
+    <a href="esthetique-automobile.html">Autoverzorging</a>
+    <a href="service-sur-mesure.html">Maatwerk</a>
+  </div>
+  <a href="devis.html">Offerte</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-lang" aria-label="Taal">
+    <a href="../transfert-aeroport-and-gare.html" lang="fr" hreflang="fr">FR</a>
+    <a href="../nl/transfert-aeroport-and-gare.html" lang="nl" hreflang="nl" class="active" aria-current="true">NL</a>
+    <a href="../en/transfert-aeroport-and-gare.html" lang="en" hreflang="en">EN</a>
+    <a href="../de/transfert-aeroport-and-gare.html" lang="de" hreflang="de">DE</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- PREMIER ÉCRAN : bannière + section blanche (hauteur de la fenêtre, plafonnée à 1100 px) -->
+  <div class="fold">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img class="page-hero-media" src="../hidden-travel-costs.webp" style="object-position:center 22%" alt="Luchthavenlounge bij zonsondergang met zicht op de vliegtuigen — transfers van Prestigia" loading="eager" fetchpriority="high">
+    <div class="page-hero-overlay"></div>
+    <div class="wrap page-hero-inner">
+      <div class="eyebrow">Privéchauffeur</div>
+      <h1>Luchthaven- en stationstransfers, zonder stress</h1>
+      <p class="lead">Zaventem, Charleroi, Brussel-Zuid, Antwerpen, Luik — waar u ook aankomt, er wacht een chauffeur op u, zonder dat u aan de logistiek hoeft te denken.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Het essentiële, zonder verrassingen</div>
+        <h2>Een transfer voor uw gemoedsrust</h2>
+        <hr class="gold-line">
+      </div>
+      <div class="pillars-grid" data-reveal>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+          <h3>Realtime vluchtopvolging</h3>
+          <p>Uw chauffeur past het ophaaluur automatisch aan bij vertraging of vervroeging — u wacht nooit onnodig.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="13" rx="1.5"/><circle cx="9" cy="11" r="1.7"/><path d="M13.5 10h3M13.5 13h2.5M6.5 16h11"/></svg>
+          <h3>Persoonlijk onthaal</h3>
+          <p>Uw chauffeur wacht op u in de terminal, met een naambord, voor een vlotte ontvangst zodra u uw bagage hebt.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.7 20 10.1a2 2 0 0 1 0 2.8l-6.6 6.6a2 2 0 0 1-2.8 0L3 12V4a1.3 1.3 0 0 1 1.3-1.3h8Z"/><circle cx="8" cy="8" r="1.3"/></svg>
+          <h3>Gegarandeerde vaste prijs</h3>
+          <p>Het tarief wordt bij de reservering bevestigd: het verkeer heeft geen invloed op de eindprijs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /.fold -->
+
+  <!-- CTA : remonté juste après le premier écran (première chose vue en descendant) -->
+  <div class="cta-slot">
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Reserveer uw luchthaven- of stationstransfer</h2>
+      <p>Geef uw vlucht, trein of uur door — wij zorgen voor de rest.</p>
+      <div class="btn-row">
+        <a href="devis.html" class="btn">Offerte ontvangen</a>
+        <a href="contact.html" class="btn btn-ghost">Contacteer ons</a>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.cta-slot -->
+
+  <!-- DEUXIÈME ÉCRAN : « Comment ça se passe » + chiffres + bandeau, réunis sur un écran (blocs inchangés) -->
+  <div class="zone2">
+
+  <!-- DETAILS -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="content-grid" data-reveal>
+        <div class="content-grid-text">
+          <div class="eyebrow">Hoe het verloopt</div>
+          <h2>Van luchthaven of station naar uw bestemming, zonder onderbreking</h2>
+          <p>Of u nu aankomt op Brussels Airport (Zaventem), Brussels South Charleroi Airport of in een van de grote Belgische stations — Brussel-Zuid, Antwerpen-Centraal, Luik-Guillemins en vele andere — uw chauffeur kent uw werkelijke aankomstuur en wacht op u op de afgesproken plaats.</p>
+          <p>Hulp met de bagage, een wagen met airco, een rechtstreekse rit naar uw hotel, kantoor of woning: elk detail is geregeld vóór uw aankomst.</p>
+          <ul>
+            <li>Luchthavens: Brussels Airport – Zaventem (BRU), Brussels South Charleroi Airport (CRL), Liège Airport (LGG)</li>
+            <li>Stations: Brussel-Zuid, Brussel-Centraal, Antwerpen-Centraal, Gent-Sint-Pieters, Luik-Guillemins</li>
+            <li>Hulp met de bagage inbegrepen</li>
+            <li>24/7 beschikbaar, ook voor nachtvluchten en nachttreinen</li>
+          </ul>
+        </div>
+        <div class="content-grid-media">
+          <img src="../gare_antwerpen.jpg" alt="Klok en trein in het station Antwerpen-Centraal — stationstransfers van Prestigia" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="stats-row" data-reveal>
+        <div class="stat">
+          <div class="stat-num">24/7</div>
+          <div class="stat-lbl">Beschikbaarheid</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15+ landen</div>
+          <div class="stat-lbl">Europese dekking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </div><!-- /.zone2 -->
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://assets.zyrosite.com/AR01jOEGPpI5k0KP/prestigia-logo-4-x5277SOfI58rBz5C.svg" alt="Prestigia — privéchauffeur en limousine in Brussel">
+        <p>Privéchauffeur en premium limousineservice in Brussel, actief in heel Europa. Een service op maat voor een veeleisende clientèle.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigatie</h3>
+        <a href="chauffeur-prive-bruxelles.html">Privéchauffeur</a>
+        <a href="services.html">Diensten</a>
+        <a href="evenements.html">Evenementen</a>
+        <a href="devis.html">Offerte</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacteer ons</h3>
+        <div>
+          <span style="margin-bottom:2px">E-mail</span>
+          <a href="mailto:info@prestigia.vip">info@prestigia.vip</a>
+        </div>
+        <div style="margin-top:10px">
+          <span style="margin-bottom:2px">WhatsApp / Telefoon</span>
+          <a href="https://wa.me/32470091715">+32 4 70 09 17 15</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Volg ons</h3>
+        <div class="social-row">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.39H7.08v-3.46h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.24 2.68.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.88v2.24h3.33l-.53 3.46h-2.8v8.39C19.61 23.02 24 18.06 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 5.85a6.15 6.15 0 1 0 0 12.3 6.15 6.15 0 0 0 0-12.3Zm0 10.15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.84-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0ZM23.92 7.05c-.09-1.92-.53-3.62-1.94-5.03C20.57.6 18.87.16 16.95.07 14.97-.04 9.03-.04 7.05.07 5.13.16 3.43.6 2.02 2.02.6 3.43.16 5.13.08 7.05-.04 9.03-.04 14.97.08 16.95c.09 1.92.53 3.62 1.94 5.03 1.41 1.41 3.1 1.85 5.03 1.95 1.98.11 7.92.11 9.9 0 1.92-.09 3.62-.53 5.03-1.95 1.4-1.4 1.84-3.1 1.94-5.03.11-1.98.11-7.92 0-9.9ZM21.36 19.07c-.42 1.05-1.23 1.86-2.28 2.28-1.58.63-5.32.48-7.08.48s-5.5.14-7.08-.48c-1.05-.42-1.86-1.23-2.28-2.28-.63-1.58-.48-5.32-.48-7.07S2.02 6.5 2.64 4.93c.42-1.05 1.23-1.86 2.28-2.28C6.5 2.02 10.24 2.16 12 2.16s5.5-.14 7.08.49c1.05.42 1.86 1.23 2.28 2.28.63 1.58.48 5.32.48 7.07s.15 5.49-.48 7.07Z"/></svg>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M22.5 9.84a7.5 7.5 0 0 1-5.76-2.16v8.38a6.68 6.68 0 1 1-6.68-6.68c.19 0 .38.01.57.03v3.2a3.5 3.5 0 1 0 2.44 3.34V0h3.63a4.66 4.66 0 0 0 4.24 4.55c.19.02.38.03.56.03v5.26Z"/></svg>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.25 2.25h6.83l4.72 6.23 5.44-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Prestigia. Alle rechten voorbehouden.</span>
+      <span>Brussel, België</span>
+      <a href="mentions-legales.html">Wettelijke vermeldingen</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/scroll-progress.js?v=20261112-progress"></script>
+<script src="../script.js?v=20261116-reveal"></script>
+
+</body>
+</html>
