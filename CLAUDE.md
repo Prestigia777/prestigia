@@ -72,6 +72,16 @@ Le site est statique, sans inclusion côté serveur : un gabarit se **copie** da
   - L'objet de l'e-mail est « Demande de tour privé — [ville] — [formule] ».
   - Sans paramètre, le formulaire est inchangé.
 
+## Langues (FR, NL, EN, DE)
+
+- Le **français** reste à la racine et fait référence. Les versions **néerlandaise (nl-BE)**, **anglaise** et **allemande** sont dans `nl/`, `en/` et `de/`, avec exactement la même arborescence et les mêmes noms de fichiers (ex. `en/devis.html`, `de/evenements/galas/index.html`). Les slugs ne se traduisent pas.
+- Ces pages sont **générées** : ne pas les modifier à la main. On modifie la page française, on met à jour les dictionnaires dans `_i18n/` (`common.js` pour la nav et le footer, `pages/<page>.js` pour chaque page), puis on lance `node _i18n/build.js <page.html>` (ou `--all`). Le script signale tout texte resté en français. `_i18n/` n'est pas publié.
+- Le script gère : `lang` (`fr-BE`, `nl-BE`, `en`, `de`), canonical vers sa propre langue, `hreflang` fr / nl / en / de + `x-default` (FR) sur les 4 versions, `og:url`, JSON-LD (`inLanguage`), chemins des ressources (`../`), sélecteur de langue.
+- **Sélecteur de langue** : pastilles FR / NL / EN / DE (`.lang-pills` et `.mobile-lang`) sur toutes les pages, y compris en français. Chaque pastille mène à la même page dans l'autre langue ; la langue active porte `class="active"`.
+- Textes affichés par le JS : ils suivent `<html lang>`. Événement mis en avant : `EVENT_I18N` et `EVENT_WORDS` dans `script.js` ; recherche du hero : titres `t: {nl, en, de}` et mots-clés allemands dans `js/search-index.js`.
+- « Prestigia » ne se traduit jamais. Les règles des tours touristiques (formulations interdites) s'appliquent dans chaque langue.
+- Formulaire de devis : `name`, `id`, valeurs techniques et paramètres d'URL (`?service=…&ville=…`) restent identiques dans toutes les langues ; seuls les textes affichés (et l'objet de l'e-mail) sont traduits.
+
 ## Cache de la feuille de style
 
 Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, avec un numéro incrémenté à chaque changement. Sinon les navigateurs gardent l'ancienne version. Aujourd'hui, seules la page de Gand et `tours-touristiques.html` ont ce numéro.
@@ -98,7 +108,7 @@ Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, 
 
 ### Reste à faire avant publication
 - [ ] **Retirer les avis clients fictifs** (`.reviews-grid` sur `index.html`). Ne pas en inventer d'autres : seuls de vrais avis pourront y figurer.
-- [ ] **Retirer le sélecteur de langue** (`.lang-select` et `.mobile-lang`) sur toutes les pages : le site est en français uniquement pour l'instant.
+- [ ] **Traduire tout le site en NL / EN / DE** (en cours sur la branche `langues`, voir « Langues » ci-dessus). Le sélecteur de langue est **conservé** : l'ancienne consigne de le retirer est annulée.
 - [ ] Créer `sitemap.xml` (URLs absolues `https://prestigia.vip/…`, sans `Prestigia.vip_code_soucre.html`).
 - [ ] Créer `robots.txt` (avec le lien vers le sitemap).
 - [ ] Créer la page `404.html` aux couleurs du site.

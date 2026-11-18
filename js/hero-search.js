@@ -15,6 +15,8 @@
   var list = panel.querySelector('.hero-search-list');
   var empty = panel.querySelector('.hero-search-empty');
   var MAX = 5, results = [], active = -1;
+  var LANG = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
+  function titleOf(e){ return (e.t && e.t[LANG]) || e.title; }   // titre dans la langue de la page
 
   var ICONS = {
     plane:'<path d="M2.5 16.5l19-7-19-7 3 7-3 7z"/><path d="M5.5 9.5h8"/>',
@@ -68,7 +70,7 @@
     var kws = e.keywords || [];
     // « =expression » : expression entière uniquement (ses mots ne sont pas indexés séparément)
     var exact = kws.filter(function(k){ return k.charAt(0) === '='; }).map(function(k){ return norm(k.slice(1)); });
-    var phrases = [e.title].concat(kws.filter(function(k){ return k.charAt(0) !== '='; })).map(norm).filter(Boolean);
+    var phrases = [e.title].concat(e.t ? [e.t.nl, e.t.en, e.t.de] : []).concat(kws.filter(function(k){ return k.charAt(0) !== '='; })).map(norm).filter(Boolean);
     var words = {};
     phrases.forEach(function(p){ p.split(' ').forEach(function(w){ if(w.length > 1) words[w] = true; }); });
     return { data: e, phrases: phrases, exact: exact, words: Object.keys(words), boost: e.boost || 0 };
@@ -104,7 +106,7 @@
       if(exactHit) total += 24;                                              // expression entière (« =Grand Prix ») : priorité nette
       if(entry.phrases.some(function(p){ return p === nq; })) total += 8;    // expression exacte
       else if(toks.length > 1 && entry.phrases.some(function(p){ return p.indexOf(nq) !== -1; })) total += 5;
-      if(norm(entry.data.title).indexOf(nq) !== -1) total += 3;              // présent dans le titre
+      if(norm(titleOf(entry.data)).indexOf(nq) !== -1) total += 3;              // présent dans le titre
       total += entry.boost;
       out.push({ entry: entry.data, score: total });
     });
@@ -131,7 +133,7 @@
       li.setAttribute('role', 'option');
       li.setAttribute('aria-selected', 'false');
       li.innerHTML = '<span class="hero-search-ico">' + icon(r.icon) + '</span><span class="hero-search-title"></span>';
-      li.querySelector('.hero-search-title').textContent = r.title;
+      li.querySelector('.hero-search-title').textContent = titleOf(r);
       li.addEventListener('mousedown', function(e){ e.preventDefault(); });   // garde le focus dans le champ
       li.addEventListener('click', function(){ go(r); });
       li.addEventListener('mousemove', function(){ setActive(i); });

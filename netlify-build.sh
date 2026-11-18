@@ -16,6 +16,7 @@ tar -cf - \
   --exclude='./Prestigia.vip_code_soucre.html' \
   --exclude='./_templates' \
   --exclude='./_archive' \
+  --exclude='./_i18n' \
   --exclude='*.py' \
   . | tar -xf - -C _site
 

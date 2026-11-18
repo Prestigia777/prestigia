@@ -12,7 +12,8 @@
   var track = document.createElement('div');
   track.className = 'scroll-progress';
   track.setAttribute('role', 'progressbar');
-  track.setAttribute('aria-label', 'Progression dans la page');
+  var LABELS = { fr:'Progression dans la page', nl:'Voortgang op de pagina', en:'Page progress', de:'Fortschritt auf der Seite' };
+  track.setAttribute('aria-label', LABELS[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || LABELS.fr);
   track.setAttribute('aria-valuemin', '0');
   track.setAttribute('aria-valuemax', '100');
   track.setAttribute('aria-valuenow', '0');

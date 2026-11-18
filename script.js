@@ -185,6 +185,139 @@
     }
   ];
 
+  // ---------- Langues (NL / EN / DE) ----------
+  // La langue vient de <html lang>. Les chemins d'images locales sont relatifs à la racine du site :
+  // depuis /en/ ou /evenements/galas/, on les préfixe avec le chemin qui mène à script.js.
+  var SITE_LANG = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
+  var SITE_ROOT = (function(){
+    var s = document.querySelector('script[src*="script.js"]');
+    return s ? s.getAttribute('src').replace(/script\.js.*$/, '') : '';
+  })();
+  function siteAsset(u){ return /^(https?:)?\/\//.test(u) ? u : SITE_ROOT + u; }
+  var EVENT_WORDS = {   // lieux et périodes
+    'Bruxelles': {nl:'Brussel', en:'Brussels', de:'Brüssel'},
+    'Bruxelles Expo': {nl:'Brussels Expo', en:'Brussels Expo', de:'Brussels Expo'},
+    'Flandre': {nl:'Vlaanderen', en:'Flanders', de:'Flandern'},
+    'Septembre': {nl:'September', en:'September', de:'September'},
+    'Nov-Janvier': {nl:'Nov-januari', en:'Nov-January', de:'Nov-Januar'},
+    'Janvier': {nl:'Januari', en:'January', de:'Januar'},
+    'Février-Mars': {nl:'Februari-maart', en:'February-March', de:'Februar-März'},
+    'Avril': {nl:'April', en:'April', de:'April'},
+    'Mai-Juin': {nl:'Mei-juni', en:'May-June', de:'Mai-Juni'},
+    'Juillet': {nl:'Juli', en:'July', de:'Juli'},
+    'Août': {nl:'Augustus', en:'August', de:'August'}
+  };
+  var EVENT_I18N = {
+    'memorial-van-damme': {
+      nl: {alt:'Close-up van de witte lijnen van een atletiekbaan', altHome:'Atletiekbaan — privéchauffeur van Prestigia voor de Memorial Van Damme in Brussel',
+        paragraph:'De Belgische etappe van de Diamond League brengt de wereldtop van de atletiek samen in het Koning Boudewijnstadion. Geniet van een privétransfer tot aan het stadion, zonder parkeerstress of overvol openbaar vervoer.'},
+      en: {alt:'Close-up of the white lane lines on an athletics track', altHome:'Athletics track — Prestigia private chauffeur for the Memorial Van Damme in Brussels',
+        paragraph:'The Belgian leg of the Diamond League brings the world\'s athletics elite to the King Baudouin Stadium. Enjoy a private transfer right to the stadium, with no parking worries and no crowded public transport.'},
+      de: {alt:'Nahaufnahme der weißen Bahnlinien einer Leichtathletikbahn', altHome:'Leichtathletikbahn — Privatchauffeur von Prestigia zum Memorial Van Damme in Brüssel',
+        paragraph:'Das belgische Meeting der Diamond League vereint die Weltelite der Leichtathletik im König-Baudouin-Stadion. Genießen Sie einen Privattransfer bis zum Stadion — ohne Parkplatzsuche und ohne überfüllte öffentliche Verkehrsmittel.'}
+    },
+    'marche-de-noel': {
+      nl: {title:'Kerstmarkt · Winter Wonders', alt:'Sfeer van een verlichte kerstmarkt bij nacht', altHome:'Verlichte kerstmarkt — privéchauffeur van Prestigia voor Winter Wonders in Brussel',
+        paragraph:'De Brusselse kerstmarkt zet het stadscentrum van november tot januari in feestverlichting. Geniet van een zorgeloze avond zonder parkeerzorgen, met een chauffeur die op u wacht zolang als nodig.'},
+      en: {title:'Christmas Market · Winter Wonders', alt:'Illuminated Christmas market atmosphere at night', altHome:'Illuminated Christmas market — Prestigia private chauffeur for Winter Wonders in Brussels',
+        paragraph:'The Brussels Christmas market lights up the city centre from November to January. Enjoy a carefree evening with no parking to worry about and a chauffeur waiting for you as long as you wish.'},
+      de: {title:'Weihnachtsmarkt · Winter Wonders', alt:'Stimmung eines beleuchteten Weihnachtsmarkts bei Nacht', altHome:'Beleuchteter Weihnachtsmarkt — Privatchauffeur von Prestigia für Winter Wonders in Brüssel',
+        paragraph:'Der Brüsseler Weihnachtsmarkt bringt die Innenstadt von November bis Januar zum Leuchten. Genießen Sie einen sorglosen Abend ohne Parkplatzsuche — Ihr Chauffeur wartet, so lange Sie möchten.'}
+    },
+    'motor-show': {
+      nl: {alt:'Privéchauffeur van Prestigia voor het Autosalon van Brussel', altHome:'Privéchauffeur van Prestigia voor het Autosalon van Brussel',
+        paragraph:'Het grootste autosalon van België brengt de nieuwste modellen samen onder één dak. Prestigia zet u rechtstreeks af aan de ingang van Brussels Expo, zonder een parkeerplaats te moeten zoeken.'},
+      en: {alt:'Prestigia private chauffeur for the Brussels Motor Show', altHome:'Prestigia private chauffeur for the Brussels Motor Show',
+        paragraph:'Belgium\'s largest motor show gathers the latest models under one roof. Prestigia drops you right at the entrance of Brussels Expo — no need to search for a parking space.'},
+      de: {alt:'Privatchauffeur von Prestigia zum Brussels Motor Show', altHome:'Privatchauffeur von Prestigia zum Brussels Motor Show',
+        paragraph:'Die größte Automesse Belgiens zeigt die neuesten Modelle unter einem Dach. Prestigia setzt Sie direkt am Eingang von Brussels Expo ab — ganz ohne Parkplatzsuche.'}
+    },
+    'brafa': {
+      nl: {alt:'Klassieke kunstgalerij met ingelijste schilderijen aan de muur', altHome:'Kunstgalerij met ingelijste schilderijen — privéchauffeur van Prestigia voor de Brafa in Brussel',
+        paragraph:'De Brussels Art Fair brengt enkele van de meest prestigieuze antiquairs en kunstgalerijen van Europa samen. Kom ontspannen aan, zonder de parkeerperikelen van de wijk.'},
+      en: {alt:'Classic art gallery with framed paintings on display', altHome:'Art gallery with framed paintings — Prestigia private chauffeur for Brafa in Brussels',
+        paragraph:'The Brussels Art Fair brings together some of Europe\'s most prestigious antique dealers and art galleries. Arrive at ease, free from the parking constraints of the area.'},
+      de: {alt:'Klassische Kunstgalerie mit gerahmten Gemälden an der Wand', altHome:'Kunstgalerie mit gerahmten Gemälden — Privatchauffeur von Prestigia zur Brafa in Brüssel',
+        paragraph:'Die Brussels Art Fair vereint einige der renommiertesten Antiquitätenhändler und Kunstgalerien Europas. Kommen Sie entspannt an, ohne die Parkplatzprobleme des Viertels.'}
+    },
+    'batibouw': {
+      nl: {alt:'Ingang van een elegante, hedendaagse woning, \'s avonds verlicht', altHome:'Verlichte hedendaagse woning — privéchauffeur van Prestigia voor Batibouw in Brussel',
+        paragraph:'Dé afspraak voor bouwen en renoveren in België. Een privétransfer maakt uw heen-en-terugritten eenvoudig, zeker als u met collega\'s meerdere stands bezoekt.'},
+      en: {alt:'Entrance of an elegant contemporary house lit up in the evening', altHome:'Illuminated contemporary house — Prestigia private chauffeur for Batibouw in Brussels',
+        paragraph:'Belgium\'s unmissable building and renovation fair. A private transfer makes coming and going effortless, especially when visiting several stands with colleagues.'},
+      de: {alt:'Eingang eines eleganten, modernen Hauses am Abend beleuchtet', altHome:'Beleuchtetes modernes Haus — Privatchauffeur von Prestigia zur Batibouw in Brüssel',
+        paragraph:'Die wichtigste Messe für Bauen und Renovieren in Belgien. Ein Privattransfer vereinfacht Ihre Hin- und Rückfahrten, vor allem wenn Sie mit Kollegen mehrere Stände besuchen.'}
+    },
+    'tour-des-flandres': {
+      nl: {title:'Ronde van Vlaanderen', alt:'Landweg met bomen tussen vlakke velden, in het licht van de late namiddag', altHome:'Landweg in Vlaanderen — privéchauffeur van Prestigia voor de Ronde van Vlaanderen',
+        paragraph:'Een van de meest prestigieuze wielerklassiekers, over de iconische hellingen van Vlaanderen. Prestigia brengt u naar de beste uitkijkpunten, met alle vrijheid langs het parcours.'},
+      en: {title:'Tour of Flanders', alt:'Tree-lined country road through flat fields in late-afternoon light', altHome:'Country road in Flanders — Prestigia private chauffeur for the Tour of Flanders',
+        paragraph:'One of cycling\'s most prestigious classics, across the iconic climbs of Flanders. Prestigia takes you to the best vantage points, with complete freedom of movement along the route.'},
+      de: {title:'Flandern-Rundfahrt', alt:'Baumgesäumte Landstraße zwischen flachen Feldern im Licht des späten Nachmittags', altHome:'Landstraße in Flandern — Privatchauffeur von Prestigia zur Flandern-Rundfahrt',
+        paragraph:'Einer der renommiertesten Radsport-Klassiker, über die legendären Anstiege Flanderns. Prestigia bringt Sie zu den besten Aussichtspunkten — mit voller Bewegungsfreiheit entlang der Strecke.'}
+    },
+    'premier-padel': {
+      nl: {alt:'Padelwedstrijd \'s avonds op Tour & Taxis, Brussels Premier Padel', altHome:'Padelwedstrijd op Tour & Taxis — privéchauffeur van Prestigia voor de Brussels Premier Padel',
+        paragraph:'Premier Padel strijkt een week lang neer op Tour & Taxis voor internationale competitie. Een privétransfer bespaart u de parkeerzorgen in deze drukke wijk.'},
+      en: {alt:'Evening padel match at Tour & Taxis, Brussels Premier Padel', altHome:'Padel match at Tour & Taxis — Prestigia private chauffeur for the Brussels Premier Padel',
+        paragraph:'Premier Padel comes to Tour & Taxis for a week of international competition. A private transfer spares you the parking hassle in this busy district.'},
+      de: {alt:'Padel-Match am Abend in Tour & Taxis, Brussels Premier Padel', altHome:'Padel-Match in Tour & Taxis — Privatchauffeur von Prestigia zum Brussels Premier Padel',
+        paragraph:'Premier Padel gastiert eine Woche lang mit internationalem Wettbewerb in Tour & Taxis. Ein Privattransfer erspart Ihnen die Parkplatzsuche in diesem belebten Viertel.'}
+    },
+    'roland-garros': {
+      nl: {alt:'Gravelbaan vanuit de lucht, omringd door bomen — Roland-Garros', altHome:'Gravelbaan — privéchauffeur van Prestigia voor Roland-Garros in Parijs', location:'Parijs',
+        paragraph:'Het grandslamtoernooi op gravel brengt elk jaar de wereldtop van het tennis samen in Parijs. Prestigia verzorgt uw privétransfer tussen Brussel en het Stade Roland-Garros, zodat u zorgeloos van het evenement geniet.'},
+      en: {alt:'Clay tennis court seen from above, surrounded by trees — Roland-Garros', altHome:'Clay tennis court — Prestigia private chauffeur for Roland-Garros in Paris',
+        paragraph:'The clay-court Grand Slam brings the world\'s tennis elite to Paris every year. Prestigia arranges your private transfer between Brussels and Stade Roland-Garros, so you can enjoy the event without a thought for the journey.'},
+      de: {alt:'Sandplatz aus der Luft, umgeben von Bäumen — Roland-Garros', altHome:'Tennis-Sandplatz — Privatchauffeur von Prestigia zu Roland-Garros in Paris',
+        paragraph:'Das Grand-Slam-Turnier auf Sand vereint jedes Jahr die Tennis-Weltelite in Paris. Prestigia organisiert Ihren Privattransfer zwischen Brüssel und dem Stade Roland-Garros — damit Sie das Event genießen, ohne an die Fahrt zu denken.'}
+    },
+    'art-brussels': {
+      nl: {alt:'Interieur van een galerij voor hedendaagse kunst met beelden', altHome:'Galerij voor hedendaagse kunst — privéchauffeur van Prestigia voor Art Brussels',
+        paragraph:'De grote Brusselse beurs voor hedendaagse kunst trekt verzamelaars en liefhebbers uit de hele wereld aan. Prestigia brengt u van galerij naar galerij, op uw eigen tempo.'},
+      en: {alt:'Interior of a contemporary art gallery with sculptures', altHome:'Contemporary art gallery — Prestigia private chauffeur for Art Brussels',
+        paragraph:'Brussels\' major contemporary art fair draws collectors and art lovers from around the world. Prestigia takes you from one gallery to the next, at your own pace.'},
+      de: {alt:'Innenraum einer Galerie für zeitgenössische Kunst mit Skulpturen', altHome:'Galerie für zeitgenössische Kunst — Privatchauffeur von Prestigia zur Art Brussels',
+        paragraph:'Die große Brüsseler Messe für zeitgenössische Kunst zieht Sammler und Kunstinteressierte aus aller Welt an. Prestigia begleitet Sie von Galerie zu Galerie, in Ihrem Tempo.'}
+    },
+    '24h-francorchamps': {
+      nl: {title:'24 Uur van Francorchamps', alt:'Abstracte lichtsporen bij nacht die de snelheid van een uithoudingsrace oproepen', altHome:'Lichtsporen bij nacht — privéchauffeur van Prestigia voor de 24 Uur van Francorchamps',
+        paragraph:'Een legendarische uithoudingsrace: 24 uur snelheid en strategie op het circuit van Spa-Francorchamps. Prestigia brengt u tot vlak bij het circuit, zodat u het evenement beleeft zonder logistieke zorgen.'},
+      en: {title:'Spa 24 Hours', alt:'Abstract light trails at night evoking the speed of an endurance race', altHome:'Light trails at night — Prestigia private chauffeur for the Spa 24 Hours',
+        paragraph:'A legendary endurance race: 24 hours of speed and strategy at the Spa-Francorchamps circuit. Prestigia drives you right to the circuit, so you can enjoy the event with no logistics to handle.'},
+      de: {title:'24 Stunden von Spa', alt:'Abstrakte Lichtspuren bei Nacht, die an die Geschwindigkeit eines Langstreckenrennens erinnern', altHome:'Lichtspuren bei Nacht — Privatchauffeur von Prestigia zu den 24 Stunden von Spa',
+        paragraph:'Ein legendäres Langstreckenrennen: 24 Stunden Tempo und Strategie auf dem Circuit de Spa-Francorchamps. Prestigia bringt Sie direkt an die Strecke — ohne jede Logistik für Sie.'}
+    },
+    'tomorrowland': {
+      nl: {alt:'Uitgelaten festivalpubliek onder het podiumlicht en vuurfonteinen bij nacht', altHome:'Uitgelaten festivalpubliek onder de spots — privétransfer van Prestigia naar Tomorrowland',
+        paragraph:'Het bekendste elektronische festival ter wereld maakt van Boom het wereldwijde epicentrum van de muziek. Met een privétransfer ontloopt u de lange wachtrijen voor de officiële shuttles.'},
+      en: {alt:'Euphoric festival crowd under stage lights and flame jets at night', altHome:'Euphoric festival crowd under the spotlights — Prestigia private transfer to Tomorrowland',
+        paragraph:'The world\'s best-known electronic music festival turns Boom into the global epicentre of music. A private transfer spares you the long queues for the official shuttles.'},
+      de: {alt:'Ausgelassene Festivalmenge unter Bühnenlicht und Flammenfontänen bei Nacht', altHome:'Ausgelassene Festivalmenge im Scheinwerferlicht — Privattransfer von Prestigia zum Tomorrowland',
+        paragraph:'Das bekannteste Elektro-Festival der Welt macht Boom zum globalen Epizentrum der Musik. Ein Privattransfer erspart Ihnen die langen Warteschlangen an den offiziellen Shuttles.'}
+    },
+    'f1-belgique': {
+      nl: {title:'Formule 1 Grote Prijs van België', alt:'Bochtig racecircuit vanuit de lucht, omringd door groen — Grote Prijs van België', altHome:'Bochtig racecircuit vanuit de lucht — privéchauffeur van Prestigia voor de Grote Prijs van België',
+        paragraph:'Elke zomer wordt het circuit van Spa-Francorchamps het epicentrum van de internationale autosport. Prestigia begeleidt een veeleisende clientèle met privétransfers tussen Brussel, uw verblijf in de Ardennen en het circuit.'},
+      en: {title:'Belgian F1 Grand Prix', alt:'Winding race circuit seen from above, surrounded by greenery — Belgian Grand Prix', altHome:'Winding race circuit seen from above — Prestigia private chauffeur for the Belgian Grand Prix',
+        paragraph:'Every summer, the Spa-Francorchamps circuit becomes the epicentre of world motorsport. Prestigia looks after discerning clients with private transfers between Brussels, your accommodation in the Ardennes and the circuit.'},
+      de: {title:'Formel-1-Grand-Prix von Belgien', alt:'Kurvenreiche Rennstrecke aus der Luft, umgeben von Grün — Großer Preis von Belgien', altHome:'Kurvenreiche Rennstrecke aus der Luft — Privatchauffeur von Prestigia zum Großen Preis von Belgien',
+        paragraph:'Jeden Sommer wird der Circuit de Spa-Francorchamps zum Epizentrum des internationalen Motorsports. Prestigia begleitet anspruchsvolle Kunden mit Privattransfers zwischen Brüssel, Ihrer Unterkunft in den Ardennen und der Rennstrecke.'}
+    }
+  };
+  // Renvoie l'événement dans la langue de la page (le français reste la base)
+  function localizeEvent(e){
+    var o = {}, k;
+    for(k in e) o[k] = e[k];
+    o.img = siteAsset(e.img); o.imgHome = siteAsset(e.imgHome);
+    if(SITE_LANG === 'fr') return o;
+    var tr = (EVENT_I18N[e.id] || {})[SITE_LANG] || {};
+    for(k in tr) o[k] = tr[k];
+    if(!tr.location && EVENT_WORDS[e.location]) o.location = EVENT_WORDS[e.location][SITE_LANG];
+    if(EVENT_WORDS[e.periodLabel]) o.periodLabel = EVENT_WORDS[e.periodLabel][SITE_LANG];
+    return o;
+  }
+
   function pickFeaturedEvent(){
     var today = new Date();
     today.setHours(0,0,0,0);
@@ -195,7 +328,7 @@
     return upcoming.length ? upcoming[0] : sorted[0];
   }
 
-  var featured = pickFeaturedEvent();
+  var featured = localizeEvent(pickFeaturedEvent());
 
   // Bloc magazine (page Événements)
   var featuredImg = document.getElementById('featuredImg');
