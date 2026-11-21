@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chauffeur privé pour événements sportifs en Belgique | PRESTIGIA</title>
-<meta name="description" content="Transferts privés Prestigia pour les grands événements sportifs de Belgique : Grand Prix de F1 à Spa-Francorchamps, Tour des Flandres, Champions League à Bruges et Bruxelles, et plus encore.">
+<meta name="description" content="Transferts privés Prestigia pour les grands événements sportifs de Belgique : Grand Prix de F1 à Spa-Francorchamps, Tour des Flandres, Champions League à Bruges, et plus encore.">
 <link rel="canonical" href="https://prestigia.vip/evenements/sport">
 <link rel="alternate" hreflang="fr" href="https://prestigia.vip/evenements/sport">
 <link rel="alternate" hreflang="nl" href="https://prestigia.vip/nl/evenements/sport">
@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles.css?v=20261111-showroom">
-<link rel="stylesheet" href="../../showroom.css?v=20261116-affluence4">
+<link rel="stylesheet" href="../../showroom.css?v=20261121-menu">
 
 <!-- Données structurées : fil d'Ariane + événements sportifs (dates approximatives, prochaine édition — à mettre à jour chaque année) -->
 <script type="application/ld+json">
@@ -33,93 +33,203 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Accueil","item":"https://prestigia.vip/"},
-        {"@type":"ListItem","position":2,"name":"Événements","item":"https://prestigia.vip/evenements.html"},
-        {"@type":"ListItem","position":3,"name":"Sport","item":"https://prestigia.vip/evenements/sport"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://prestigia.vip/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Événements",
+          "item": "https://prestigia.vip/evenements.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sport",
+          "item": "https://prestigia.vip/evenements/sport"
+        }
       ]
     },
     {
-      "@type":"SportsEvent",
-      "name":"Gent-Wevelgem",
-      "startDate":"2027-03-28",
-      "description":"Classique cycliste flandrienne, entre pavés et bergs, au cœur de la Flandre-Occidentale.",
-      "location":{"@type":"Place","name":"Flandre-Occidentale","address":{"@type":"PostalAddress","addressRegion":"Flandre-Occidentale","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Championnats du monde de cyclo-cross",
+      "startDate": "2027-01-29",
+      "endDate": "2027-01-31",
+      "description": "Les meilleurs coureurs du monde réunis à Ostende : un rendez-vous exceptionnel en Belgique.",
+      "location": {
+        "@type": "Place",
+        "name": "Ostende",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ostende",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Tour de Bruges",
-      "startDate":"2027-03-29",
-      "description":"Course d'un jour qui traverse le patrimoine médiéval de Bruges et ses environs.",
-      "location":{"@type":"Place","name":"Bruges","address":{"@type":"PostalAddress","addressLocality":"Bruges","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Middelkerke-Wevelgem",
+      "startDate": "2027-03-28",
+      "description": "Classique cycliste flandrienne (ex-Gand-Wevelgem), entre pavés et bergs, de la côte jusqu'à Wevelgem.",
+      "location": {
+        "@type": "Place",
+        "name": "Flandre-Occidentale",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Flandre-Occidentale",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Tour des Flandres",
-      "startDate":"2027-04-04",
-      "description":"Monument du cyclisme belge, entre Anvers et Audenarde, sur les monts emblématiques de Flandre.",
-      "location":{"@type":"Place","name":"Anvers → Audenarde","address":{"@type":"PostalAddress","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Tour de Bruges",
+      "startDate": "2027-03-29",
+      "description": "Course d'un jour qui traverse le patrimoine médiéval de Bruges et ses environs.",
+      "location": {
+        "@type": "Place",
+        "name": "Bruges",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruges",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Liège-Bastogne-Liège",
-      "startDate":"2027-04-25",
-      "description":"La Doyenne, plus ancienne classique cycliste du calendrier, à travers les Ardennes liégeoises.",
-      "location":{"@type":"Place","name":"Liège","address":{"@type":"PostalAddress","addressLocality":"Liège","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Tour des Flandres",
+      "startDate": "2027-04-04",
+      "description": "Monument du cyclisme belge, entre Anvers et Audenarde, sur les monts emblématiques de Flandre.",
+      "location": {
+        "@type": "Place",
+        "name": "Anvers → Audenarde",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Brussels Premier Padel",
-      "startDate":"2027-04-19",
-      "endDate":"2027-04-25",
-      "description":"Tournoi international de padel dans le cadre industriel réhabilité de Tour & Taxis.",
-      "location":{"@type":"Place","name":"Tour & Taxis","address":{"@type":"PostalAddress","addressLocality":"Bruxelles","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Liège-Bastogne-Liège",
+      "startDate": "2027-04-25",
+      "description": "La Doyenne, plus ancienne classique cycliste du calendrier, à travers les Ardennes liégeoises.",
+      "location": {
+        "@type": "Place",
+        "name": "Liège",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Liège",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"24 Heures de Spa-Francorchamps",
-      "startDate":"2027-06-26",
-      "description":"Course d'endurance mythique sur l'un des circuits les plus exigeants d'Europe.",
-      "location":{"@type":"Place","name":"Circuit de Spa-Francorchamps","address":{"@type":"PostalAddress","addressLocality":"Stavelot","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Brussels Premier Padel",
+      "startDate": "2027-04-19",
+      "endDate": "2027-04-25",
+      "description": "Tournoi international de padel dans le cadre industriel réhabilité de Tour & Taxis.",
+      "location": {
+        "@type": "Place",
+        "name": "Tour & Taxis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruxelles",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Grand Prix de Formule 1 de Belgique",
-      "startDate":"2027-07-25",
-      "description":"Rendez-vous incontournable de la F1, sur le tracé légendaire des Ardennes belges.",
-      "location":{"@type":"Place","name":"Circuit de Spa-Francorchamps","address":{"@type":"PostalAddress","addressLocality":"Stavelot","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "24 Heures de Spa-Francorchamps",
+      "startDate": "2027-06-26",
+      "description": "Course d'endurance mythique sur l'un des circuits les plus exigeants d'Europe.",
+      "location": {
+        "@type": "Place",
+        "name": "Circuit de Spa-Francorchamps",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Stavelot",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Memorial Van Damme",
-      "startDate":"2027-09-05",
-      "description":"Meeting Diamond League qui réunit l'élite mondiale de l'athlétisme à Bruxelles.",
-      "location":{"@type":"Place","name":"Stade Roi Baudouin","address":{"@type":"PostalAddress","addressLocality":"Bruxelles","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Grand Prix de Formule 1 de Belgique",
+      "startDate": "2027-07-25",
+      "description": "Rendez-vous incontournable de la F1, sur le tracé légendaire des Ardennes belges. Au calendrier en 2027, 2029 et 2031.",
+      "location": {
+        "@type": "Place",
+        "name": "Circuit de Spa-Francorchamps",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Stavelot",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Club Brugge · UEFA Champions League (matchs à domicile)",
-      "startDate":"2026-09-01",
-      "endDate":"2027-05-31",
-      "description":"Soirées européennes de Champions League au stade du Club Brugge — calendrier variable selon les tirages UEFA.",
-      "location":{"@type":"Place","name":"Jan Breydel Stadium","address":{"@type":"PostalAddress","addressLocality":"Bruges","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Memorial Van Damme",
+      "startDate": "2027-09-05",
+      "description": "Meeting Diamond League qui réunit l'élite mondiale de l'athlétisme à Bruxelles.",
+      "location": {
+        "@type": "Place",
+        "name": "Stade Roi Baudouin",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruxelles",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     },
     {
-      "@type":"SportsEvent",
-      "name":"Royale Union Saint-Gilloise · UEFA Champions League (matchs à domicile)",
-      "startDate":"2026-09-01",
-      "endDate":"2027-05-31",
-      "description":"L'Union Saint-Gilloise reçoit l'Europe au Lotto Park — calendrier variable selon les tirages UEFA.",
-      "location":{"@type":"Place","name":"Lotto Park","address":{"@type":"PostalAddress","addressLocality":"Bruxelles","addressCountry":"BE"}},
-      "url":"https://prestigia.vip/evenements/sport"
+      "@type": "SportsEvent",
+      "name": "Club Brugge · UEFA Champions League (matchs à domicile)",
+      "startDate": "2026-09-01",
+      "endDate": "2027-05-31",
+      "description": "Soirées européennes de Champions League au stade du Club Brugge — calendrier variable selon les tirages UEFA.",
+      "location": {
+        "@type": "Place",
+        "name": "Jan Breydel Stadium",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bruges",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
+    },
+    {
+      "@type": "SportsEvent",
+      "name": "Royale Union Saint-Gilloise · UEFA Europa League (matchs à domicile)",
+      "startDate": "2026-09-01",
+      "endDate": "2027-05-31",
+      "description": "L'Union Saint-Gilloise reçoit l'Europe en Ligue Europa — lieu et calendrier variables selon les matchs.",
+      "location": {
+        "@type": "Place",
+        "name": "Belgique",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BE"
+        }
+      },
+      "url": "https://prestigia.vip/evenements/sport"
     }
   ]
 }
@@ -240,10 +350,42 @@
       <p class="affluence-legend">Affluence habituelle,&nbsp;à&nbsp;titre indicatif : <span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em hidden>Très grande affluence</em></span> plus de 100&nbsp;000 visiteurs · <span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em hidden>Grande affluence</em></span> de 30&nbsp;000&nbsp;à&nbsp;100&nbsp;000 · <span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Affluence moyenne</em></span> de 5&nbsp;000&nbsp;à&nbsp;30&nbsp;000 · <span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em hidden>Public restreint</em></span> moins de 5&nbsp;000 · <span class="affluence-legend-invite">Sur invitation</span> : accès réservé aux invités</p>
       <div class="simple-events" data-reveal>
         <div class="simple-event">
+          <div class="simple-event-date">29 → 31 janv. 2027</div>
+          <div class="simple-event-main">
+            <h3>Championnats du monde de cyclo-cross</h3>
+            <p>Les meilleurs coureurs du monde réunis à Ostende : un rendez-vous exceptionnel en Belgique.</p>
+          </div>
+          <div class="simple-event-loc">Ostende<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin février</div>
+          <div class="simple-event-main">
+            <h3>Omloop Het Nieuwsblad</h3>
+            <p>L'ouverture de la saison des classiques flandriennes, sur les pavés et les monts de Flandre-Orientale.</p>
+          </div>
+          <div class="simple-event-loc">Gand → Ninove<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mars</div>
+          <div class="simple-event-main">
+            <h3>Belgian Darts Open <span style="color:var(--muted);font-weight:400">· fléchettes, PDC</span></h3>
+            <p>Tournoi du circuit européen PDC, avec les meilleurs joueurs de fléchettes du monde.</p>
+          </div>
+          <div class="simple-event-loc">Oktoberhallen, Wieze<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
           <div class="simple-event-date">Fin mars</div>
           <div class="simple-event-main">
-            <h3>Gent-Wevelgem</h3>
-            <p>Classique cycliste flandrienne, entre pavés et bergs, au cœur de la Flandre-Occidentale.</p>
+            <h3>E3 Saxo Classic</h3>
+            <p>Classique flandrienne réputée, souvent vue comme la répétition générale du Tour des Flandres.</p>
+          </div>
+          <div class="simple-event-loc">Harelbeke<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin mars</div>
+          <div class="simple-event-main">
+            <h3>Middelkerke-Wevelgem</h3>
+            <p>Classique cycliste flandrienne (ex-Gand-Wevelgem), entre pavés et bergs, de la côte jusqu'à Wevelgem.</p>
           </div>
           <div class="simple-event-loc">Flandre-Occidentale<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
@@ -256,6 +398,14 @@
           </div>
           <div class="simple-event-loc">Bruges<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin mars</div>
+          <div class="simple-event-main">
+            <h3>Dwars door Vlaanderen</h3>
+            <p>Classique flandrienne de milieu de semaine, quelques jours avant le Tour des Flandres.</p>
+          </div>
+          <div class="simple-event-loc">Waregem<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
 
         <div class="simple-event">
           <div class="simple-event-date">Début avril</div>
@@ -264,6 +414,14 @@
             <p>Monument du cyclisme belge, entre Anvers et Audenarde, sur les monts emblématiques de Flandre.</p>
           </div>
           <div class="simple-event-loc">Anvers → Audenarde<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Avril</div>
+          <div class="simple-event-main">
+            <h3>Flèche Wallonne</h3>
+            <p>Classique ardennaise, avec sa célèbre arrivée au sommet du mur de Huy.</p>
+          </div>
+          <div class="simple-event-loc">Huy<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -292,12 +450,28 @@
           <div class="simple-event-loc">Stade Roi Baudouin, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
         <div class="simple-event">
+          <div class="simple-event-date">Mai</div>
+          <div class="simple-event-main">
+            <h3>Finales du championnat belge de hockey</h3>
+            <p>Les finales des championnats de Belgique de hockey, messieurs et dames.</p>
+          </div>
+          <div class="simple-event-loc">Belgique<span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Public restreint</em></span></div>
+        </div>
+        <div class="simple-event">
           <div class="simple-event-date">Fin mai</div>
           <div class="simple-event-main">
             <h3>20 km de Bruxelles</h3>
             <p>Course à pied populaire à travers la capitale, au départ du Cinquantenaire.</p>
           </div>
           <div class="simple-event-loc">Cinquantenaire, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin mai</div>
+          <div class="simple-event-main">
+            <h3>Soudal Open <span style="color:var(--muted);font-weight:400">· golf, DP World Tour</span></h3>
+            <p>Le seul tournoi du circuit européen de golf en Belgique.</p>
+          </div>
+          <div class="simple-event-loc">Rinkven, Anvers<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
         <div class="simple-event">
           <div class="simple-event-date">Mai → juin</div>
@@ -311,9 +485,9 @@
           <div class="simple-event-date">Selon le calendrier</div>
           <div class="simple-event-main">
             <h3>Red Lions <span style="color:var(--muted);font-weight:400">· hockey, FIH Pro League</span></h3>
-            <p>Matchs à domicile de l'équipe nationale belge de hockey, parmi les meilleures au monde.</p>
+            <p>Matchs à domicile de l'équipe nationale belge de hockey, parmi les meilleures au monde, dans son nouveau stade.</p>
           </div>
-          <div class="simple-event-loc">Belgique<span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Public restreint</em></span></div>
+          <div class="simple-event-loc">Belfius Hockey Arena, Wavre<span class="affluence affluence--1" title="Public restreint"><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Public restreint</em></span></div>
         </div>
 
         <div class="simple-event">
@@ -328,7 +502,7 @@
           <div class="simple-event-date">Fin juin</div>
           <div class="simple-event-main">
             <h3>Ypres Rally</h3>
-            <p>Rallye automobile international sur les routes étroites autour d'Ypres.</p>
+            <p>Manche du championnat d'Europe des rallyes historiques, sur les routes étroites autour d'Ypres.</p>
           </div>
           <div class="simple-event-loc">Ypres<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
@@ -337,7 +511,7 @@
           <div class="simple-event-date">Mi-juillet</div>
           <div class="simple-event-main">
             <h3>Grand Prix de Formule 1 de Belgique</h3>
-            <p>Rendez-vous incontournable de la F1, sur le tracé légendaire des Ardennes belges.</p>
+            <p>Rendez-vous incontournable de la F1, sur le tracé légendaire des Ardennes belges. Au calendrier en 2027, 2029 et 2031.</p>
           </div>
           <div class="simple-event-loc">Spa-Francorchamps<span class="affluence affluence--4" title="Très grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><em>Très grande affluence</em></span></div>
         </div>
@@ -374,6 +548,14 @@
           </div>
           <div class="simple-event-loc">Stade Roi Baudouin, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Septembre</div>
+          <div class="simple-event-main">
+            <h3>Flanders Darts Trophy <span style="color:var(--muted);font-weight:400">· fléchettes, PDC</span></h3>
+            <p>Tournoi du circuit européen PDC, avec les meilleurs joueurs de fléchettes du monde.</p>
+          </div>
+          <div class="simple-event-loc">Antwerp Expo, Anvers<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
 
         <div class="simple-event">
           <div class="simple-event-date">Sept. → mai</div>
@@ -387,26 +569,42 @@
         <div class="simple-event">
           <div class="simple-event-date">Sept. → mai</div>
           <div class="simple-event-main">
-            <h3>Royale Union Saint-Gilloise <span style="color:var(--muted);font-weight:400">· UEFA Champions League</span></h3>
-            <p>Matchs à domicile lors des soirées européennes de Champions League.</p>
+            <h3>Royale Union Saint-Gilloise <span style="color:var(--muted);font-weight:400">· UEFA Europa League</span></h3>
+            <p>Matchs à domicile lors des soirées européennes de Ligue Europa ; le stade varie selon les matchs.</p>
           </div>
-          <div class="simple-event-loc">Lotto Park, Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+          <div class="simple-event-loc">Lieu selon le match<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
         <div class="simple-event">
           <div class="simple-event-date">Octobre</div>
           <div class="simple-event-main">
             <h3>European Open <span style="color:var(--muted);font-weight:400">· tennis ATP</span></h3>
-            <p>Tournoi de tennis du circuit ATP, en salle.</p>
+            <p>Tournoi de tennis du circuit ATP, en salle, à Bruxelles depuis 2025.</p>
           </div>
-          <div class="simple-event-loc">Lotto Arena, Anvers<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+          <div class="simple-event-loc">Brussels Expo, Bruxelles<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Fin octobre</div>
+          <div class="simple-event-main">
+            <h3>Brussels Airport Marathon</h3>
+            <p>Le marathon de la capitale, avec un semi-marathon, à travers les quartiers de Bruxelles.</p>
+          </div>
+          <div class="simple-event-loc">Bruxelles<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
         </div>
         <div class="simple-event">
           <div class="simple-event-date">Oct. → fév.</div>
           <div class="simple-event-main">
             <h3>Cyclo-cross</h3>
-            <p>Les manches de Coupe du monde et de Superprestige, une spécialité belge par excellence.</p>
+            <p>Les manches de Coupe du monde et de Superprestige, une spécialité belge par excellence : Anvers, Coxyde, Namur, Zonhoven, Hamme…</p>
           </div>
           <div class="simple-event-loc">Flandre &amp; Wallonie<span class="affluence affluence--2" title="Affluence moyenne"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><em>Affluence moyenne</em></span></div>
+        </div>
+        <div class="simple-event">
+          <div class="simple-event-date">Mi-novembre</div>
+          <div class="simple-event-main">
+            <h3>Six Jours de Gand</h3>
+            <p>La course sur piste mythique du vélodrome 't Kuipke, dans une ambiance de fête.</p>
+          </div>
+          <div class="simple-event-loc">'t Kuipke, Gand<span class="affluence affluence--3" title="Grande affluence"><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true" class="on"></i><i aria-hidden="true"></i><em>Grande affluence</em></span></div>
         </div>
         <div class="simple-event">
           <div class="simple-event-date">Fin décembre</div>
@@ -429,7 +627,7 @@
       <h2>Un événement sportif à préparer ?</h2>
       <p>Indiquez-nous la date, le lieu et le nombre de passagers — nous organisons votre transfert privé.</p>
       <div class="btn-row">
-        <a href="../../devis.html" class="btn">Demander un devis</a>
+        <a href="../../devis.html?service=evenement" class="btn"></a>
         <a href="../../contact.html" class="btn btn-ghost">Nous contacter</a>
       </div>
     </div>
@@ -515,7 +713,7 @@
     <div class="footer-bottom">
       <span>&copy; 2026 Prestigia. Tous droits réservés.</span>
       <span>Bruxelles, Belgique</span>
-      <a href="../../mentions-legales.html">Mentions légales</a>
+      <span class="footer-legal"><a href="../../mentions-legales.html">Mentions légales</a> · <a href="../../conditions-generales.html">Conditions générales</a> · <a href="../../politique-de-confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>
