@@ -150,7 +150,7 @@
 }
 /* Pont invisible au-dessus du menu : la souris ne « tombe » pas dans l'écart de 10 px */
 .showroom .dropdown::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
-.showroom .dropdown a{border-left:none;border-radius:10px;color:#444444;font-size:13.5px;padding:10px 14px}
+.showroom .dropdown a{border-left:none;border-radius:10px;color:#444444;font-size:13.5px;padding:10px 14px;white-space:nowrap}  /* un libellé par ligne : le menu s'élargit au plus long (ex. EN « Airport & train station transfers ») */
 .showroom .dropdown a:hover{background:var(--bg);color:var(--accent)}
 .showroom .nav-right{gap:10px}
 .showroom .lang-pills{display:flex;gap:6px}

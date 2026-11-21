@@ -7,13 +7,13 @@ const opt = (fr, nl, en, de) => ['<option>' + fr + '</option>', L(
 module.exports = {
   raw: [
     opt('Chauffeur privé', 'Privéchauffeur', 'Private chauffeur', 'Privatchauffeur'),
-    opt('Transfert aéroport &amp; gare', 'Luchthaven- &amp; stationstransfer', 'Airport &amp; station transfer', 'Flughafen- &amp; Bahnhofstransfer'),
-    opt('Voyage ville à ville', 'Rit van stad tot stad', 'City-to-city journey', 'Fahrt von Stadt zu Stadt'),
-    opt('International', 'Internationaal', 'International', 'International'),
+    opt('Transfert aéroport &amp; gare', 'Luchthaven- &amp; stationstransfer', 'Airport &amp; train station transfer', 'Flughafen- &amp; Bahnhofstransfer'),
+    opt('Voyage ville à ville', 'Rit van stad tot stad', 'City-to-city transfer', 'Fahrt von Stadt zu Stadt'),
+    opt('International', 'Internationaal', 'International transfer', 'International'),
     opt('Mise à disposition', 'Chauffeur ter beschikking', 'Chauffeur by the hour', 'Chauffeur auf Stundenbasis'),
     opt('Événement', 'Evenement', 'Event', 'Veranstaltung'),
-    opt('Tour touristique', 'Toeristische tour', 'Sightseeing tour', 'Sightseeing-Tour'),
-    opt('Location de véhicules', 'Voertuigverhuur', 'Vehicle hire', 'Fahrzeugvermietung'),
+    opt('Tour touristique', 'Toeristische tour', 'Private tour', 'Sightseeing-Tour'),
+    opt('Location de véhicules', 'Voertuigverhuur', 'Car rental', 'Fahrzeugvermietung'),
     opt('Esthétique &amp; services automobiles', 'Autoverzorging &amp; autodiensten', 'Car detailing &amp; vehicle services', 'Fahrzeugaufbereitung &amp; -service'),
     opt('Demande entreprise', 'Aanvraag voor bedrijven', 'Corporate request', 'Firmenanfrage'),
     opt('Agence de voyage', 'Reisbureau', 'Travel agency', 'Reisebüro'),
@@ -26,7 +26,7 @@ module.exports = {
     opt('Plusieurs prestations / à définir', 'Meerdere diensten / te bepalen', 'Several services / to be defined', 'Mehrere Leistungen / noch offen')
   ],
   seg: {
-    'Devis Chauffeur Privé | PRESTIGIA': L('Offerte privéchauffeur | PRESTIGIA', 'Private Chauffeur Quote | PRESTIGIA', 'Angebot Privatchauffeur | PRESTIGIA'),
+    'Devis Chauffeur Privé | PRESTIGIA': L('Offerte privéchauffeur | PRESTIGIA', 'Get a Quote | Private Chauffeur PRESTIGIA', 'Angebot Privatchauffeur | PRESTIGIA'),
     'Demandez votre devis pour un transfert privé, une mise à disposition ou un service sur-mesure avec Prestigia à Bruxelles. Réponse rapide, prix fixe.': L(
       'Vraag uw offerte aan voor een privétransfer, een chauffeur ter beschikking of een dienst op maat met Prestigia in Brussel. Snel antwoord, vaste prijs.',
       'Request your quote for a private transfer, chauffeur hire by the hour or a bespoke service with Prestigia in Brussels. Swift reply, fixed price.',

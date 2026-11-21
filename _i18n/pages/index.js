@@ -35,7 +35,7 @@ module.exports = {
     'Au-delà du transport': L('Meer dan vervoer', 'Beyond transport', 'Mehr als Transport'),
     'Nos services': L('Onze diensten', 'Our services', 'Unsere Leistungen'),
     'Ponctualité garantie': L('Gegarandeerde stiptheid', 'Guaranteed punctuality', 'Garantierte Pünktlichkeit'),
-    'Transferts aéroport &amp; gare': L('Luchthaven- &amp; stationstransfers', 'Airport &amp; station transfers', 'Flughafen- &amp; Bahnhofstransfers'),
+    'Transferts aéroport &amp; gare': L('Luchthaven- &amp; stationstransfers', 'Airport &amp; train station transfers', 'Flughafen- &amp; Bahnhofstransfers'),
     'Prise en charge dans les aéroports et gares de Belgique et d\'Europe, avec accueil personnalisé, suivi de vol en temps réel et prix fixe garanti — pour commencer ou terminer votre voyage sans stress.': L(
       'Ophaling op luchthavens en stations in België en Europa, met persoonlijk onthaal, realtime opvolging van uw vlucht en een gegarandeerde vaste prijs — voor een zorgeloos begin of einde van uw reis.',
       'Pick-up at airports and railway stations across Belgium and Europe, with a personal welcome, real-time flight tracking and a guaranteed fixed price — so your journey begins and ends without a moment\'s stress.',
@@ -60,7 +60,7 @@ module.exports = {
       'Entdecken Sie die schönsten Orte Belgiens — Brüssel, Brügge, Gent, Antwerpen — mit einem Privatchauffeur, der die Region kennt und Sie an vereinbarten Punkten absetzt und wieder abholt (professioneller Fremdenführer optional).'),
     'Canal illuminé au coucher du soleil à Bruges — tour touristique en chauffeur privé Prestigia': L(
       'Verlichte reitje bij zonsondergang in Brugge — toeristische tour met privéchauffeur van Prestigia',
-      'Illuminated canal at sunset in Bruges — sightseeing tour with a Prestigia private chauffeur',
+      'Illuminated canal at sunset in Bruges — private sightseeing tour with a Prestigia chauffeur',
       'Beleuchteter Kanal bei Sonnenuntergang in Brügge — Sightseeing-Tour mit Privatchauffeur von Prestigia'),
     'Vivez l\'exception': L('Beleef het uitzonderlijke', 'Experience the exceptional', 'Erleben Sie das Außergewöhnliche'),
     'Réunions corporate, rendez-vous diplomatiques, congrès, expositions, galas, festivals, sport, mariages, anniversaires et autres — un transfert privé pensé pour chaque grand rendez-vous, en Belgique et en Europe.': L(
@@ -73,7 +73,7 @@ module.exports = {
       'Firmen-Galadinner mit Präsentationsbildschirmen — Privatchauffeur von Prestigia für Ihre Veranstaltungen'),
     'Location de véhicule, esthétique automobile, service sur-mesure, entreprises et plus encore.': L(
       'Voertuigverhuur, autoverzorging, maatwerk, oplossingen voor bedrijven en nog veel meer.',
-      'Vehicle hire, car detailing, bespoke service, corporate solutions and much more.',
+      'Car rental, car detailing, bespoke service, corporate solutions and much more.',
       'Fahrzeugvermietung, Fahrzeugaufbereitung, maßgeschneiderter Service, Lösungen für Unternehmen und vieles mehr.'),
     'Voir tous nos services →': L('Bekijk al onze diensten →', 'View all our services →', 'Alle Leistungen ansehen →'),
 

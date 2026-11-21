@@ -4,16 +4,16 @@ module.exports = { seg: {
   'Nos Services | PRESTIGIA': L('Onze diensten | PRESTIGIA', 'Our Services | PRESTIGIA', 'Unsere Leistungen | PRESTIGIA'),
   'Les services Prestigia à Bruxelles : chauffeur privé, location de véhicules avec ou sans chauffeur, esthétique automobile haut de gamme et prestations entièrement sur-mesure.': L(
     'De diensten van Prestigia in Brussel: privéchauffeur, voertuigverhuur met of zonder chauffeur, hoogwaardige autoverzorging en volledig op maat gemaakte diensten.',
-    'Prestigia services in Brussels: private chauffeur, vehicle hire with or without a chauffeur, high-end car detailing and fully bespoke services.',
+    'Prestigia services in Brussels: private chauffeur, car rental with or without a chauffeur, high-end car detailing and fully bespoke services.',
     'Die Leistungen von Prestigia in Brüssel: Privatchauffeur, Fahrzeugvermietung mit oder ohne Chauffeur, hochwertige Fahrzeugaufbereitung und vollständig maßgeschneiderte Services.'),
   'Chauffeur privé, location de véhicules avec ou sans chauffeur, esthétique automobile et service sur-mesure — l\'offre Prestigia à Bruxelles.': L(
     'Privéchauffeur, voertuigverhuur met of zonder chauffeur, autoverzorging en maatwerk — het aanbod van Prestigia in Brussel.',
-    'Private chauffeur, vehicle hire with or without a chauffeur, car detailing and bespoke service — the Prestigia offer in Brussels.',
+    'Private chauffeur, car rental with or without a chauffeur, car detailing and bespoke service — the Prestigia offer in Brussels.',
     'Privatchauffeur, Fahrzeugvermietung mit oder ohne Chauffeur, Fahrzeugaufbereitung und maßgeschneiderter Service — das Angebot von Prestigia in Brüssel.'),
   'L\'offre Prestigia': L('Het aanbod van Prestigia', 'The Prestigia offer', 'Das Angebot von Prestigia'),
   'Chauffeur privé sur toute la Belgique et l\'Europe, complété par la location de véhicules, l\'esthétique automobile haut de gamme et des prestations entièrement sur-mesure — tout ce dont vous avez besoin, au même standard d\'exigence.': L(
     'Privéchauffeur in heel België en Europa, aangevuld met voertuigverhuur, hoogwaardige autoverzorging en volledig op maat gemaakte diensten — alles wat u nodig hebt, met dezelfde hoge standaard.',
-    'Private chauffeur services throughout Belgium and Europe, complemented by vehicle hire, high-end car detailing and fully bespoke services — everything you need, held to the same exacting standard.',
+    'Private chauffeur services throughout Belgium and Europe, complemented by car rental, high-end car detailing and fully bespoke services — everything you need, held to the same exacting standard.',
     'Privatchauffeur in ganz Belgien und Europa, ergänzt durch Fahrzeugvermietung, hochwertige Fahrzeugaufbereitung und vollständig maßgeschneiderte Services — alles, was Sie brauchen, mit demselben hohen Anspruch.'),
   'Quatre prestations': L('Vier diensten', 'Four services', 'Vier Leistungen'),
   'Choisissez votre service': L('Kies uw dienst', 'Choose your service', 'Wählen Sie Ihren Service'),

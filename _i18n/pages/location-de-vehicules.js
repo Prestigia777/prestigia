@@ -1,7 +1,7 @@
 /* location-de-vehicules.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
-  'Location de Véhicules avec ou sans Chauffeur | PRESTIGIA': L('Voertuigverhuur met of zonder chauffeur | PRESTIGIA', 'Vehicle Hire with or without a Chauffeur | PRESTIGIA', 'Fahrzeugvermietung mit oder ohne Chauffeur | PRESTIGIA'),
+  'Location de Véhicules avec ou sans Chauffeur | PRESTIGIA': L('Voertuigverhuur met of zonder chauffeur | PRESTIGIA', 'Car Rental with or without a Chauffeur | PRESTIGIA', 'Fahrzeugvermietung mit oder ohne Chauffeur | PRESTIGIA'),
   'Louez un véhicule Prestigia avec ou sans chauffeur à Bruxelles : pour une journée, un mariage, un tournage, un week-end ou un séjour complet — un véhicule réservé pour vous.': L(
     'Huur een Prestigia-wagen met of zonder chauffeur in Brussel: voor een dag, een huwelijk, een filmopname, een weekend of een volledig verblijf — een wagen exclusief voor u.',
     'Hire a Prestigia vehicle with or without a chauffeur in Brussels: for a day, a wedding, a film shoot, a weekend or an entire stay — a vehicle reserved just for you.',
@@ -10,7 +10,7 @@ module.exports = { seg: {
     'Een Prestigia-wagen voor u gereserveerd, met of zonder chauffeur, voor een evenement of een verblijf.',
     'A Prestigia vehicle reserved for you, with or without a chauffeur, for an event or a stay.',
     'Ein Prestigia-Fahrzeug für Sie reserviert, mit oder ohne Chauffeur, für eine Veranstaltung oder einen Aufenthalt.'),
-  'Location de véhicules avec ou sans chauffeur': L('Voertuigverhuur met of zonder chauffeur', 'Vehicle hire with or without a chauffeur', 'Fahrzeugvermietung mit oder ohne Chauffeur'),
+  'Location de véhicules avec ou sans chauffeur': L('Voertuigverhuur met of zonder chauffeur', 'Car rental with or without a chauffeur', 'Fahrzeugvermietung mit oder ohne Chauffeur'),
   'Un véhicule Prestigia réservé exclusivement pour vous, conduit par l\'un de nos chauffeurs ou par vous-même, le temps d\'un mariage, d\'un tournage, d\'un week-end ou d\'un séjour complet.': L(
     'Een Prestigia-wagen exclusief voor u, bestuurd door een van onze chauffeurs of door uzelf, voor een huwelijk, een filmopname, een weekend of een volledig verblijf.',
     'A Prestigia vehicle reserved exclusively for you, driven by one of our chauffeurs or by yourself, for a wedding, a film shoot, a weekend or an entire stay.',

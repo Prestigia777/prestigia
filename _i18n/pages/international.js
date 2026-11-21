@@ -1,12 +1,12 @@
 /* international.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
-  'Trajets Internationaux | Chauffeur privé PRESTIGIA': L('Internationale ritten | Privéchauffeur PRESTIGIA', 'International Journeys | Private Chauffeur PRESTIGIA', 'Internationale Fahrten | Privatchauffeur PRESTIGIA'),
+  'Trajets Internationaux | Chauffeur privé PRESTIGIA': L('Internationale ritten | Privéchauffeur PRESTIGIA', 'International Transfers | Private Chauffeur PRESTIGIA', 'Internationale Fahrten | Privatchauffeur PRESTIGIA'),
   'Transferts privés internationaux au départ de Bruxelles vers la France, les Pays-Bas, l\'Allemagne, le Luxembourg et le Royaume-Uni — plus de 15 pays desservis en Europe.': L(
     'Internationale privétransfers vanuit Brussel naar Frankrijk, Nederland, Duitsland, Luxemburg en het Verenigd Koninkrijk — meer dan 15 landen in Europa.',
     'International private transfers from Brussels to France, the Netherlands, Germany, Luxembourg and the United Kingdom — more than 15 countries served across Europe.',
     'Internationale Privattransfers ab Brüssel nach Frankreich, in die Niederlande, nach Deutschland, Luxemburg und Großbritannien — über 15 Länder in Europa.'),
-  'Trajets Internationaux | PRESTIGIA': L('Internationale ritten | PRESTIGIA', 'International Journeys | PRESTIGIA', 'Internationale Fahrten | PRESTIGIA'),
+  'Trajets Internationaux | PRESTIGIA': L('Internationale ritten | PRESTIGIA', 'International Transfers | PRESTIGIA', 'Internationale Fahrten | PRESTIGIA'),
   'Voyagez à travers l\'Europe sans les contraintes de l\'aéroport — chauffeur privé Prestigia, plus de 15 pays desservis.': L(
     'Reis door Europa zonder de beperkingen van de luchthaven — privéchauffeur Prestigia, meer dan 15 landen.',
     'Travel across Europe without the constraints of the airport — Prestigia private chauffeur, more than 15 countries served.',

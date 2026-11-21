@@ -50,7 +50,7 @@ module.exports = {
       'Wij kunnen ook de logies voor uw groepen reserveren. Van enkele reizigers tot een georganiseerde groep: wij passen de wagens aan en coördineren meerdere chauffeurs. Een vaste contactpersoon volgt uw dossiers op en vangt het onverwachte op, en uw aanvragen krijgen voorrang.',
       'We can also book accommodation for your groups. From a handful of travellers to an organised group, we adapt the vehicles and coordinate several chauffeurs. A dedicated contact follows your bookings and handles the unexpected, and your requests are handled as a priority.',
       'Wir können auch die Unterkunft Ihrer Gruppen buchen. Von wenigen Reisenden bis zur organisierten Gruppe passen wir die Fahrzeuge an und koordinieren mehrere Chauffeure. Ein persönlicher Ansprechpartner betreut Ihre Aufträge und kümmert sich um Unvorhergesehenes; Ihre Anfragen werden vorrangig bearbeitet.'),
-    'Transferts aéroport &amp; gare, à l\'arrivée comme au départ': L('Luchthaven- &amp; stationstransfers, bij aankomst en vertrek', 'Airport &amp; station transfers, on arrival and departure', 'Flughafen- &amp; Bahnhofstransfers, bei Ankunft und Abreise'),
+    'Transferts aéroport &amp; gare, à l\'arrivée comme au départ': L('Luchthaven- &amp; stationstransfers, bij aankomst en vertrek', 'Airport &amp; train station transfers, on arrival and departure', 'Flughafen- &amp; Bahnhofstransfers, bei Ankunft und Abreise'),
     'Tours et visites : transport privé ou visite clé en main (billets et réservations par nos soins en option)': L(
       'Tours en bezoeken: privévervoer of kant-en-klaar bezoek (tickets en reserveringen door ons, optioneel)',
       'Tours and visits: private transport or turnkey visit (tickets and bookings handled by us, as an option)',

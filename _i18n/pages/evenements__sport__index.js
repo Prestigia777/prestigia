@@ -2,6 +2,123 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Événements ajoutés le 21/11/2026 -----
+  '29 → 31 janv. 2027': L('29 → 31 jan. 2027', '29 → 31 Jan. 2027', '29. → 31. Jan. 2027'),
+  'Championnats du monde de cyclo-cross': L('WK veldrijden', 'Cyclo-cross World Championships', 'Querfeldein-Weltmeisterschaften'),
+  'Les meilleurs coureurs du monde réunis à Ostende : un rendez-vous exceptionnel en Belgique.': L(
+    'De beste veldrijders ter wereld samen in Oostende: een uitzonderlijke afspraak in België.',
+    'The world\'s best riders gathered in Ostend: an exceptional event in Belgium.',
+    'Die weltbesten Fahrer in Ostende: ein außergewöhnliches Ereignis in Belgien.'),
+  'Ostende': L('Oostende', 'Ostend', 'Ostende'),
+  'Fin février': L('Eind februari', 'Late February', 'Ende Februar'),
+  'Omloop Het Nieuwsblad': K('Omloop Het Nieuwsblad'),
+  'L\'ouverture de la saison des classiques flandriennes, sur les pavés et les monts de Flandre-Orientale.': L(
+    'De opening van het Vlaamse klassiekerseizoen, over de kasseien en hellingen van Oost-Vlaanderen.',
+    'The opening race of the Flemish classics season, over the cobbles and climbs of East Flanders.',
+    'Der Auftakt der flämischen Klassikersaison, über das Kopfsteinpflaster und die Hellinge Ostflanderns.'),
+  'Gand → Ninove': L('Gent → Ninove', 'Ghent → Ninove', 'Gent → Ninove'),
+  'Mars': L('Maart', 'March', 'März'),
+  'Belgian Darts Open': K('Belgian Darts Open'),
+  '· fléchettes, PDC': L('· darts, PDC', '· darts, PDC', '· Darts, PDC'),
+  'Tournoi du circuit européen PDC, avec les meilleurs joueurs de fléchettes du monde.': L(
+    'Toernooi van de PDC European Tour, met de beste darters ter wereld.',
+    'A PDC European Tour event featuring the world\'s best darts players.',
+    'Turnier der PDC European Tour mit den besten Dartspielern der Welt.'),
+  'Oktoberhallen, Wieze': K('Oktoberhallen, Wieze'),
+  'E3 Saxo Classic': K('E3 Saxo Classic'),
+  'Classique flandrienne réputée, souvent vue comme la répétition générale du Tour des Flandres.': L(
+    'Gerenommeerde Vlaamse klassieker, vaak gezien als de generale repetitie voor de Ronde van Vlaanderen.',
+    'A renowned Flemish classic, often seen as the dress rehearsal for the Tour of Flanders.',
+    'Renommierter flämischer Klassiker, oft als Generalprobe für die Flandern-Rundfahrt gesehen.'),
+  'Harelbeke': K('Harelbeke'),
+  'Dwars door Vlaanderen': K('Dwars door Vlaanderen'),
+  'Classique flandrienne de milieu de semaine, quelques jours avant le Tour des Flandres.': L(
+    'Vlaamse midweekklassieker, enkele dagen voor de Ronde van Vlaanderen.',
+    'A midweek Flemish classic, a few days before the Tour of Flanders.',
+    'Flämischer Klassiker unter der Woche, wenige Tage vor der Flandern-Rundfahrt.'),
+  'Waregem': K('Waregem'),
+  'Flèche Wallonne': L('Waalse Pijl', 'La Flèche Wallonne', 'Flèche Wallonne'),
+  'Classique ardennaise, avec sa célèbre arrivée au sommet du mur de Huy.': L(
+    'Ardense klassieker, met de beroemde aankomst boven op de Muur van Hoei.',
+    'An Ardennes classic, with its famous finish at the top of the Mur de Huy.',
+    'Ardennen-Klassiker mit der berühmten Bergankunft an der Mauer von Huy.'),
+  'Huy': L('Hoei', 'Huy', 'Huy'),
+  'Soudal Open': K('Soudal Open'),
+  '· golf, DP World Tour': L('· golf, DP World Tour', '· golf, DP World Tour', '· Golf, DP World Tour'),
+  'Le seul tournoi du circuit européen de golf en Belgique.': L(
+    'Het enige toernooi van het Europese golfcircuit in België.',
+    'The only European golf tour event in Belgium.',
+    'Das einzige Turnier der europäischen Golftour in Belgien.'),
+  'Rinkven, Anvers': L('Rinkven, Antwerpen', 'Rinkven, Antwerp', 'Rinkven, Antwerpen'),
+  'Mai': L('Mei', 'May', 'Mai'),
+  'Finales du championnat belge de hockey': L('Finales van het Belgisch hockeykampioenschap', 'Belgian hockey championship finals', 'Endspiele der belgischen Hockeymeisterschaft'),
+  'Les finales des championnats de Belgique de hockey, messieurs et dames.': L(
+    'De finales van de Belgische hockeykampioenschappen, heren en dames.',
+    'The finals of the Belgian hockey championships, men\'s and women\'s.',
+    'Die Endspiele der belgischen Hockeymeisterschaften der Herren und Damen.'),
+  'Belgique': L('België', 'Belgium', 'Belgien'),
+  'Septembre': L('September', 'September', 'September'),
+  'Flanders Darts Trophy': K('Flanders Darts Trophy'),
+  'Antwerp Expo, Anvers': L('Antwerp Expo, Antwerpen', 'Antwerp Expo, Antwerp', 'Antwerp Expo, Antwerpen'),
+  'Fin octobre': L('Eind oktober', 'Late October', 'Ende Oktober'),
+  'Brussels Airport Marathon': K('Brussels Airport Marathon'),
+  'Le marathon de la capitale, avec un semi-marathon, à travers les quartiers de Bruxelles.': L(
+    'De marathon van de hoofdstad, met een halve marathon, door de wijken van Brussel.',
+    'The capital\'s marathon, with a half marathon, through the neighbourhoods of Brussels.',
+    'Der Marathon der Hauptstadt, mit Halbmarathon, durch die Viertel von Brüssel.'),
+  'Mi-novembre': L('Half november', 'Mid-November', 'Mitte November'),
+  'Six Jours de Gand': L('Zesdaagse van Gent', 'Six Days of Ghent', 'Sechstagerennen von Gent'),
+  'La course sur piste mythique du vélodrome \'t Kuipke, dans une ambiance de fête.': L(
+    'De legendarische baanwedstrijd in de wielerpiste \'t Kuipke, in een feestelijke sfeer.',
+    'The legendary track race at the \'t Kuipke velodrome, in a festive atmosphere.',
+    'Das legendäre Bahnrennen im Velodrom \'t Kuipke, in festlicher Stimmung.'),
+  '\'t Kuipke, Gand': L('\'t Kuipke, Gent', '\'t Kuipke, Ghent', '\'t Kuipke, Gent'),
+  'Les manches de Coupe du monde et de Superprestige, une spécialité belge par excellence : Anvers, Coxyde, Namur, Zonhoven, Hamme…': L(
+    'Wereldbekermanches en Superprestige-wedstrijden, een Belgische specialiteit bij uitstek: Antwerpen, Koksijde, Namen, Zonhoven, Hamme…',
+    'World Cup and Superprestige rounds, a Belgian speciality par excellence: Antwerp, Koksijde, Namur, Zonhoven, Hamme…',
+    'Weltcup- und Superprestige-Rennen, eine belgische Spezialität schlechthin: Antwerpen, Koksijde, Namur, Zonhoven, Hamme…'),
+  // ----- Corrections du 21/11/2026 -----
+  'Transferts privés Prestigia pour les grands événements sportifs de Belgique : Grand Prix de F1 à Spa-Francorchamps, Tour des Flandres, Champions League à Bruges, et plus encore.': L(
+    'Privétransfers van Prestigia voor de grote sportevenementen in België: Formule 1 Grote Prijs in Spa-Francorchamps, Ronde van Vlaanderen, Champions League in Brugge, en nog veel meer.',
+    'Prestigia private transfers for Belgium\'s major sporting events: the F1 Grand Prix at Spa-Francorchamps, the Tour of Flanders, the Champions League in Bruges, and much more.',
+    'Privattransfers von Prestigia zu den großen Sportveranstaltungen Belgiens: Formel-1-Grand-Prix in Spa-Francorchamps, Flandern-Rundfahrt, Champions League in Brügge und vieles mehr.'),
+  'Middelkerke-Wevelgem': K('Middelkerke-Wevelgem'),
+  'Classique cycliste flandrienne (ex-Gand-Wevelgem), entre pavés et bergs, de la côte jusqu\'à Wevelgem.': L(
+    'Vlaamse wielerklassieker (voorheen Gent-Wevelgem) over kasseien en hellingen, van de kust tot in Wevelgem.',
+    'Flemish cycling classic (formerly Gent-Wevelgem), over cobbles and climbs, from the coast to Wevelgem.',
+    'Flämischer Radsport-Klassiker (früher Gent-Wevelgem) über Kopfsteinpflaster und Hellinge, von der Küste bis nach Wevelgem.'),
+  'Matchs à domicile de l\'équipe nationale belge de hockey, parmi les meilleures au monde, dans son nouveau stade.': L(
+    'Thuiswedstrijden van de Belgische hockeyploeg, een van de beste ter wereld, in haar nieuwe stadion.',
+    'Home matches of the Belgian national hockey team, among the best in the world, in its new stadium.',
+    'Heimspiele der belgischen Hockey-Nationalmannschaft, einer der besten der Welt, in ihrem neuen Stadion.'),
+  'Belfius Hockey Arena, Wavre': L('Belfius Hockey Arena, Waver', 'Belfius Hockey Arena, Wavre', 'Belfius Hockey Arena, Wavre'),
+  'Manche du championnat d\'Europe des rallyes historiques, sur les routes étroites autour d\'Ypres.': L(
+    'Manche van het Europees kampioenschap rally voor historische wagens, op de smalle wegen rond Ieper.',
+    'A round of the European Historic Rally Championship, on the narrow roads around Ypres.',
+    'Lauf zur Europameisterschaft für historische Rallyes, auf den schmalen Straßen rund um Ypern.'),
+  'Rendez-vous incontournable de la F1, sur le tracé légendaire des Ardennes belges. Au calendrier en 2027, 2029 et 2031.': L(
+    'Een onmisbare afspraak in de F1, op het legendarische circuit in de Belgische Ardennen. Op de kalender in 2027, 2029 en 2031.',
+    'An unmissable fixture of the F1 season, on the legendary circuit in the Belgian Ardennes. On the calendar in 2027, 2029 and 2031.',
+    'Ein Pflichttermin der Formel 1 auf der legendären Strecke in den belgischen Ardennen. Im Kalender 2027, 2029 und 2031.'),
+  '· UEFA Europa League': K('· UEFA Europa League'),
+  'Matchs à domicile lors des soirées européennes de Ligue Europa ; le stade varie selon les matchs.': L(
+    'Thuiswedstrijden tijdens de Europese Europa League-avonden; het stadion verschilt per wedstrijd.',
+    'Home matches on European Europa League nights; the stadium varies from match to match.',
+    'Heimspiele an den europäischen Europa-League-Abenden; das Stadion wechselt je nach Spiel.'),
+  'Lieu selon le match': L('Locatie afhankelijk van de wedstrijd', 'Venue depends on the match', 'Austragungsort je nach Spiel'),
+  'Royale Union Saint-Gilloise · UEFA Europa League (matchs à domicile)': L(
+    'Royale Union Saint-Gilloise · UEFA Europa League (thuiswedstrijden)',
+    'Royale Union Saint-Gilloise · UEFA Europa League (home matches)',
+    'Royale Union Saint-Gilloise · UEFA Europa League (Heimspiele)'),
+  'L\'Union Saint-Gilloise reçoit l\'Europe en Ligue Europa — lieu et calendrier variables selon les matchs.': L(
+    'Union Saint-Gilloise ontvangt Europa in de Europa League — locatie en kalender verschillen per wedstrijd.',
+    'Union Saint-Gilloise welcomes Europe in the Europa League — venue and schedule vary from match to match.',
+    'Union Saint-Gilloise empfängt Europa in der Europa League — Ort und Termine je nach Spiel.'),
+  'Tournoi de tennis du circuit ATP, en salle, à Bruxelles depuis 2025.': L(
+    'Indoor tennistoernooi van het ATP-circuit, sinds 2025 in Brussel.',
+    'Indoor tennis tournament on the ATP Tour, held in Brussels since 2025.',
+    'Hallen-Tennisturnier der ATP-Tour, seit 2025 in Brüssel.'),
+  'Brussels Expo, Bruxelles': L('Brussels Expo, Brussel', 'Brussels Expo, Brussels', 'Brussels Expo, Brüssel'),
   'Chauffeur privé pour événements sportifs en Belgique | PRESTIGIA': L('Privéchauffeur voor sportevenementen in België | PRESTIGIA', 'Private Chauffeur for Sporting Events in Belgium | PRESTIGIA', 'Privatchauffeur für Sportveranstaltungen in Belgien | PRESTIGIA'),
   'Transferts privés Prestigia pour les grands événements sportifs de Belgique : Grand Prix de F1 à Spa-Francorchamps, Tour des Flandres, Champions League à Bruges et Bruxelles, et plus encore.': L(
     'Privétransfers van Prestigia voor de grote sportevenementen in België: Formule 1 Grote Prijs in Spa-Francorchamps, Ronde van Vlaanderen, Champions League in Brugge en Brussel, en nog veel meer.',

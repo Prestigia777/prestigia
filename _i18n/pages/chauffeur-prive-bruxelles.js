@@ -4,7 +4,7 @@ module.exports = { seg: {
   'Chauffeur Privé à Bruxelles | PRESTIGIA': L('Privéchauffeur in Brussel | PRESTIGIA', 'Private Chauffeur in Brussels | PRESTIGIA', 'Privatchauffeur in Brüssel | PRESTIGIA'),
   'Prestigia, chauffeur privé à Bruxelles : transferts aéroport &amp; gare, voyages ville à ville, international, mise à disposition, événements, espace entreprises et flotte premium.': L(
     'Prestigia, privéchauffeur in Brussel: luchthaven- &amp; stationstransfers, ritten van stad tot stad, internationaal, chauffeur ter beschikking, evenementen, oplossingen voor bedrijven en een premium vloot.',
-    'Prestigia, private chauffeur in Brussels: airport &amp; station transfers, city-to-city travel, international journeys, chauffeur by the hour, events, corporate services and a premium fleet.',
+    'Prestigia, private chauffeur in Brussels: airport &amp; train station transfers, city-to-city transfers, international transfers, chauffeur by the hour, events, corporate services and a premium fleet.',
     'Prestigia, Privatchauffeur in Brüssel: Flughafen- &amp; Bahnhofstransfers, Fahrten von Stadt zu Stadt, internationale Fahrten, Chauffeur auf Stundenbasis, Veranstaltungen, Geschäftskunden und eine Premium-Flotte.'),
   'Toute l\'offre chauffeur privé Prestigia — transferts, mise à disposition, international, entreprises et événements.': L(
     'Het volledige privéchauffeuraanbod van Prestigia — transfers, chauffeur ter beschikking, internationaal, bedrijven en evenementen.',

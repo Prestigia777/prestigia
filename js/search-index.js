@@ -15,7 +15,7 @@ window.PRESTIGIA_SEARCH_INDEX = [
 
   /* ---------- Chauffeur privé ---------- */
   { title: 'Transfert aéroport & gare', url: 'transfert-aeroport-and-gare.html',
-    t: { nl: 'Luchthaven- & stationstransfer', en: 'Airport & station transfers', de: 'Flughafen- & Bahnhofstransfer' }, icon: 'plane', boost: 2,
+    t: { nl: 'Luchthaven- & stationstransfer', en: 'Airport & train station transfers', de: 'Flughafen- & Bahnhofstransfer' }, icon: 'plane', boost: 2,
     keywords: ['transfert aéroport', 'aéroport', 'airport', 'luchthaven', 'Zaventem', 'Brussels Airport', 'Charleroi',
       'vol', 'avion', 'flight', 'vlucht', 'vliegtuig', 'navette', 'shuttle', 'gare', 'station', 'train', 'trein',
       'Bruxelles-Midi', 'Midi', 'Zuid', 'transfert', 'transfer', 'terminal', 'arrivée', 'départ', 'accueil pancarte',
@@ -34,13 +34,13 @@ window.PRESTIGIA_SEARCH_INDEX = [
       /* DE */ 'Stundenbasis', 'stundenweise', 'Stunde', 'ganzer Tag', 'halber Tag', 'zur Verfügung', 'mehrere Stopps'] },
 
   { title: 'Voyages ville à ville', url: 'voyages-ville-a-ville.html',
-    t: { nl: 'Van stad tot stad', en: 'City-to-city travel', de: 'Von Stadt zu Stadt' }, icon: 'route', boost: 1,
+    t: { nl: 'Van stad tot stad', en: 'City-to-city transfers', de: 'Von Stadt zu Stadt' }, icon: 'route', boost: 1,
     keywords: ['ville à ville', 'voyage', 'trajet', 'longue distance', 'city to city', 'intercity', 'stad', 'reis',
       'Liège', 'Luik', 'Namur', 'Namen', 'porte à porte',
       /* DE */ 'Stadt zu Stadt', 'Fernfahrt', 'Langstrecke', 'Reise', 'Lüttich'] },
 
   { title: 'Trajets internationaux', url: 'international.html',
-    t: { nl: 'Internationale ritten', en: 'International journeys', de: 'Internationale Fahrten' }, icon: 'globe', boost: 1,
+    t: { nl: 'Internationale ritten', en: 'International transfers', de: 'Internationale Fahrten' }, icon: 'globe', boost: 1,
     keywords: ['international', 'Europe', 'Europa', 'étranger', 'abroad', 'buitenland', 'frontière', 'Luxembourg',
       'Luxemburg', 'Allemagne', 'Germany', 'Duitsland', 'Pays-Bas', 'Netherlands', 'Nederland', 'France', 'Frankrijk',
       /* DE */ 'Ausland', 'Deutschland', 'Niederlande', 'Frankreich', 'Grenze', 'Luxemburg'] },
@@ -95,7 +95,7 @@ window.PRESTIGIA_SEARCH_INDEX = [
 
   /* ---------- Tours touristiques ---------- */
   { title: 'Tours touristiques en Belgique', url: 'tours-touristiques.html',
-    t: { nl: 'Toeristische tours in België', en: 'Sightseeing tours in Belgium', de: 'Sightseeing-Touren in Belgien' }, icon: 'map', boost: 2,
+    t: { nl: 'Toeristische tours in België', en: 'Private sightseeing tours in Belgium', de: 'Sightseeing-Touren in Belgien' }, icon: 'map', boost: 2,
     keywords: ['tour', 'tours touristiques', 'visite', 'excursion', 'circuit', 'sightseeing', 'rondleiding', 'uitstap',
       'daguitstap', 'tourisme', 'touriste', 'toerisme', 'attraction', 'guide', 'Belgique', 'België', 'Belgium',
       /* DE */ 'Tour', 'Besichtigung', 'Ausflug', 'Tagesausflug', 'Rundfahrt', 'Sehenswürdigkeiten', 'Tourismus', 'Belgien'] },
@@ -173,7 +173,7 @@ window.PRESTIGIA_SEARCH_INDEX = [
       /* DE */ 'Leistungen', 'Dienstleistungen', 'Angebot'] },
 
   { title: 'Location de véhicules avec chauffeur', url: 'location-de-vehicules.html',
-    t: { nl: 'Voertuigverhuur met chauffeur', en: 'Vehicle hire with chauffeur', de: 'Fahrzeugvermietung mit Chauffeur' }, icon: 'key', boost: 1,
+    t: { nl: 'Voertuigverhuur met chauffeur', en: 'Car rental with chauffeur', de: 'Fahrzeugvermietung mit Chauffeur' }, icon: 'key', boost: 1,
     keywords: ['location', 'louer', 'rent', 'rental', 'huren', 'verhuur', 'mariage', 'huwelijk', 'wedding', 'cérémonie',
       'tournage', 'shooting', 'film', 'séjour',
       /* DE */ 'mieten', 'Vermietung', 'Hochzeit', 'Zeremonie', 'Dreh', 'Fotoshooting'] },
@@ -228,11 +228,6 @@ window.PRESTIGIA_SEARCH_INDEX = [
     keywords: ['contact', 'téléphone', 'telefoon', 'phone', 'appeler', 'bellen', 'call', 'WhatsApp', 'mail', 'e-mail',
       'email', 'adresse', 'joindre',
       /* DE */ 'Kontakt', 'Telefon', 'anrufen', 'E-Mail', 'Adresse'] },
-
-  { title: 'Avis clients', url: 'index.html#avis',
-    t: { nl: 'Klantenreviews', en: 'Client reviews', de: 'Kundenbewertungen' }, icon: 'chat', boost: 0,
-    keywords: ['avis', 'reviews', 'review', 'témoignages', 'beoordelingen', 'recensies', 'Google', 'Trustpilot', 'Tripadvisor',
-      /* DE */ 'Bewertungen', 'Erfahrungen', 'Meinungen'] },
 
   { title: 'Mentions légales', url: 'mentions-legales.html',
     t: { nl: 'Wettelijke vermeldingen', en: 'Legal notice', de: 'Impressum' }, icon: 'scale', boost: 0,

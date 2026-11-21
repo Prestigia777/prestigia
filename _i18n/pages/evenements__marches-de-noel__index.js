@@ -98,7 +98,7 @@ const seg = {
   'Envie de visiter plusieurs marchés en une sortie ?': M('Zin om meerdere markten op één uitstap te bezoeken?', 'Fancy visiting several markets in one outing?', 'Lust, mehrere Märkte an einem Ausflug zu besuchen?'),
   'Transfert aller-retour, tournée multi-villes, formule multi-jours ou mise à disposition à la soirée — découvrez nos formules de transport pour vos tours touristiques.': L(
     'Transfer heen en terug, rondrit langs meerdere steden, meerdaagse formule of chauffeur ter beschikking voor de avond — ontdek onze vervoersformules voor uw toeristische tours.',
-    'Return transfer, multi-city tour, multi-day package or a chauffeur at your disposal for the evening — discover our transport options for your sightseeing tours.',
+    'Return transfer, multi-city tour, multi-day package or a chauffeur at your disposal for the evening — discover our transport options for your private sightseeing tours.',
     'Hin- und Rücktransfer, Rundfahrt durch mehrere Städte, mehrtägige Variante oder Chauffeur für den Abend — entdecken Sie unsere Transportvarianten für Ihre Sightseeing-Touren.'),
   'Découvrir nos formules de transport': M('Ontdek onze vervoersformules', 'Discover our transport options', 'Unsere Transportvarianten entdecken'),
   'À proximité': M('In de buurt', 'Nearby', 'In der Nähe'),

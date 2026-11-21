@@ -109,11 +109,12 @@ Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, 
 - Pages services, villes, événements (et leurs sous-pages), tours touristiques (et leurs sous-pages), flotte, devis, contact, mentions légales.
 
 ### Reste à faire avant publication
-- [ ] **Retirer les avis clients fictifs** (`.reviews-grid` sur `index.html`). Ne pas en inventer d'autres : seuls de vrais avis pourront y figurer.
+- [x] **Avis clients fictifs retirés** (section `#avis` de `index.html`, et son entrée dans `js/search-index.js`). Ne pas en inventer d'autres : seuls de vrais avis pourront y figurer.
 - [ ] **Traduire tout le site en NL / EN / DE** (en cours sur la branche `langues`, voir « Langues » ci-dessus). Le sélecteur de langue est **conservé** : l'ancienne consigne de le retirer est annulée.
-- [ ] Créer `sitemap.xml` (URLs absolues `https://prestigia.vip/…`, sans `Prestigia.vip_code_soucre.html`).
-- [ ] Créer `robots.txt` (avec le lien vers le sitemap).
-- [ ] Créer la page `404.html` aux couleurs du site.
-- [ ] Créer la page de politique de confidentialité et la lier depuis le footer de toutes les pages.
+- [x] `sitemap.xml` : généré par `python3 _templates/sitemap.py` (pages indexables, 4 langues, liens hreflang). À relancer après tout ajout ou suppression de page.
+- [x] `robots.txt` (avec le lien vers le sitemap).
+- [x] Page `404.html` en 4 langues (`<base href>` : liens valables à n'importe quelle adresse) ; `_redirects` sert la 404 de la bonne langue sous `/nl/`, `/en/`, `/de/`.
+- [x] Pages `politique-de-confidentialite.html` et `conditions-generales.html` (4 langues, `noindex` comme les mentions légales), liées depuis le pied de page de toutes les pages (`.footer-legal`). Société : Prestigia SRL, BE 1015.973.545, Chaussée Romaine 265, 1800 Vilvorde. Forme juridique : SRL en français, BV en néerlandais. Règles : devis valable 48 h, acompte 50 %, attente comprise aéroport 60 min / gare 20 min / adresse 15 min puis 60 € HTVA/h par tranche de 15 min entamée (15 €), annulation gratuite jusqu'à 24 h avant, annulation à moins de 24 h et no-show dus à 100 %.
+- [x] Mentions légales complètes. Rubrique « Directeur de la publication » retirée (mention du droit français, non obligatoire en Belgique).
 - [ ] Remplacer les liens des réseaux sociaux par les vrais comptes : ils pointent aujourd'hui vers les pages d'accueil génériques de Facebook, Instagram, TikTok et X.
 - [ ] Publier sur **Netlify** : exclure du déploiement `Prestigia.vip_code_soucre.html`, `prestigia-brief-claude-code.md`, `CLAUDE.md`, `.claude/`, `_templates/`, `_archive/`, les `.DS_Store` et les images sources non utilisées. Ensuite, brancher le domaine `prestigia.vip` et vérifier que la clé Google Maps (restreinte à ce domaine) fonctionne.
