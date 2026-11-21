@@ -1,0 +1,4 @@
+# Netlify : page 404 dans la langue de l'adresse demandée (la page 404 française, à la racine, est servie par défaut).
+/nl/*  /nl/404.html  404
+/en/*  /en/404.html  404
+/de/*  /de/404.html  404
