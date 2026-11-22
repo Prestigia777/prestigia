@@ -2,6 +2,8 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour visiter Gand : Gravensteen, cathédrale Saint-Bavon, Graslei, beffroi et plus. Tours sur mesure avec Prestigia.': L('Privéchauffeur om Gent te bezoeken: Gravensteen, Sint-Baafskathedraal, Graslei, Belfort en meer. Tours op maat met Prestigia.', 'Private chauffeur to visit Ghent: the Gravensteen, St Bavo\'s Cathedral, the Graslei, the Belfry and more. Bespoke tours with Prestigia.', 'Privatchauffeur für Gent: Gravensteen, St.-Bavo-Kathedrale, Graslei, Belfried und mehr. Maßgeschneiderte Touren mit Prestigia.'),
   'Attractions touristiques à Gand | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Gent | Privéchauffeur PRESTIGIA', 'Ghent Sightseeing | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten in Gent | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les attractions touristiques de Gand : Gravensteen, Cathédrale Saint-Bavon, Graslei, Beffroi et plus. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om de bezienswaardigheden van Gent te bezoeken: Gravensteen, Sint-Baafskathedraal, Graslei, Belfort en meer. Tours op maat met Prestigia.',

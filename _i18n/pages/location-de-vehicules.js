@@ -1,6 +1,8 @@
 /* location-de-vehicules.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Louez un véhicule Prestigia avec ou sans chauffeur à Bruxelles : journée, mariage, tournage, week-end ou séjour complet. Un véhicule réservé pour vous.': L('Huur een wagen van Prestigia met of zonder chauffeur in Brussel: een dag, huwelijk, filmopname, weekend of volledig verblijf. Alleen voor u.', 'Rent a Prestigia vehicle with or without a chauffeur in Brussels: a day, a wedding, a film shoot, a weekend or a whole stay. Reserved just for you.', 'Mieten Sie ein Prestigia-Fahrzeug mit oder ohne Chauffeur in Brüssel: für einen Tag, Hochzeit, Dreh, Wochenende oder Aufenthalt. Nur für Sie.'),
   'Location de Véhicules avec ou sans Chauffeur | PRESTIGIA': L('Voertuigverhuur met of zonder chauffeur | PRESTIGIA', 'Car Rental with or without a Chauffeur | PRESTIGIA', 'Fahrzeugvermietung mit oder ohne Chauffeur | PRESTIGIA'),
   'Louez un véhicule Prestigia avec ou sans chauffeur à Bruxelles : pour une journée, un mariage, un tournage, un week-end ou un séjour complet — un véhicule réservé pour vous.': L(
     'Huur een Prestigia-wagen met of zonder chauffeur in Brussel: voor een dag, een huwelijk, een filmopname, een weekend of een volledig verblijf — een wagen exclusief voor u.',

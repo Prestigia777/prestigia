@@ -52,7 +52,7 @@ module.exports = { seg: {
     en: '&copy; 2026 Prestigia. All rights reserved.',
     de: '&copy; 2026 Prestigia. Alle Rechte vorbehalten.' },
   'Bruxelles, Belgique': { nl: 'Brussel, België', en: 'Brussels, Belgium', de: 'Brüssel, Belgien' },
-  'Conditions générales': { nl: 'Algemene voorwaarden', en: 'Terms and conditions', de: 'AGB' },
+  'Conditions générales': { nl: 'Algemene voorwaarden', en: 'Terms and conditions', de: 'Allgemeine Geschäftsbedingungen' },
   'Confidentialité': { nl: 'Privacy', en: 'Privacy', de: 'Datenschutz' },
   'Mentions légales': { nl: 'Wettelijke vermeldingen', en: 'Legal notice', de: 'Impressum' },
 

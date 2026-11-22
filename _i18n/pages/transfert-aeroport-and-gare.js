@@ -1,6 +1,8 @@
 /* transfert-aeroport-and-gare.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés vers les aéroports de Zaventem, Charleroi et Liège et les gares belges : suivi de vol, accueil personnalisé, prix fixe garanti.': L('Privétransfers naar de luchthavens van Zaventem, Charleroi en Luik en de Belgische stations: vluchtopvolging, persoonlijk onthaal, vaste prijs.', 'Private transfers to Brussels, Charleroi and Liège airports and Belgian train stations: flight tracking, personal welcome, guaranteed fixed price.', 'Privattransfers zu den Flughäfen Zaventem, Charleroi und Lüttich und zu Belgiens Bahnhöfen: Flugverfolgung, persönlicher Empfang, Festpreis.'),
   'Transfert Aéroport &amp; Gare | Chauffeur privé PRESTIGIA': L('Luchthaven- &amp; stationstransfer | Privéchauffeur PRESTIGIA', 'Airport &amp; Train Station Transfers | PRESTIGIA', 'Flughafen- &amp; Bahnhofstransfer | Privatchauffeur PRESTIGIA'),
   'Transferts privés vers les aéroports belges (Zaventem, Charleroi, Liège) et les gares belges — suivi de vol en temps réel, accueil personnalisé, prix fixe garanti.': L(
     'Privétransfers naar de Belgische luchthavens (Zaventem, Charleroi, Luik) en stations — realtime vluchtopvolging, persoonlijk onthaal, gegarandeerde vaste prijs.',

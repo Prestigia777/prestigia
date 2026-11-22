@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour les galas et soirées de prestige en Belgique : René du cinéma, Ensors, Gouden Schoen, Manager de l\'Année, galas caritatifs…': L('Privéchauffeur voor gala\'s en prestigieuze avonden in België: René du cinéma, Ensors, Gouden Schoen, Manager van het Jaar, liefdadigheidsgala\'s…', 'Private chauffeur for galas and prestige evenings in Belgium: René du cinéma, Ensors, Gouden Schoen, Manager of the Year, charity galas and more.', 'Privatchauffeur für Galas und Prestige-Abende in Belgien: René du cinéma, Ensors, Gouden Schoen, Manager des Jahres, Charity-Galas und mehr.'),
+  'Galas et soirées de prestige | Chauffeur privé PRESTIGIA': L('Gala\'s en prestigeavonden | Privéchauffeur PRESTIGIA', 'Galas and Prestige Evenings | Private Chauffeur PRESTIGIA', 'Galas und Prestige-Abende | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour galas et soirées de prestige en Belgique | PRESTIGIA': L('Privéchauffeur voor gala\'s en prestigieuze avonden in België | PRESTIGIA', 'Private Chauffeur for Galas and Prestige Evenings in Belgium | PRESTIGIA', 'Privatchauffeur für Galas und exklusive Abende in Belgien | PRESTIGIA'),
   'Chauffeur privé et limousine Prestigia pour les galas et soirées de prestige en Belgique : René du cinéma, Ensors, Gouden Schoen, Manager de l\'Année, Belgian Fashion Awards, galas caritatifs et bals.': L(
     'Privéchauffeur en limousine van Prestigia voor gala\'s en prestigieuze avonden in België: René du cinéma, Ensors, Gouden Schoen, Manager van het Jaar, Belgian Fashion Awards, liefdadigheidsgala\'s en bals.',

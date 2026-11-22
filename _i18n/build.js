@@ -100,8 +100,8 @@ function isAsset(u){
   return true;
 }
 function fixPaths(tag){
-  return tag.replace(/\s(href|src|srcset|poster)="([^"]*)"/g, (m, attr, val) => {
-    if(attr === 'srcset') return ' srcset="' + val.split(',').map(part => {
+  return tag.replace(/\s(href|src|srcset|imagesrcset|poster)="([^"]*)"/g, (m, attr, val) => {
+    if(attr === 'srcset' || attr === 'imagesrcset') return ' ' + attr + '="' + val.split(',').map(part => {
       const t = part.trim().split(/\s+/); if(isAsset(t[0])) t[0] = '../' + t[0]; return t.join(' ');
     }).join(', ') + '"';
     return isAsset(val) ? ' ' + attr + '="../' + val + '"' : m;

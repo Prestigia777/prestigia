@@ -26,6 +26,8 @@ module.exports = {
     opt('Plusieurs prestations / à définir', 'Meerdere diensten / te bepalen', 'Several services / to be defined', 'Mehrere Leistungen / noch offen')
   ],
   seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Demandez votre devis pour un transfert privé, une mise à disposition ou un service sur mesure avec Prestigia. Réponse rapide, prix fixe.': L('Vraag uw offerte aan voor een privétransfer, een chauffeur ter beschikking of maatwerk met Prestigia. Snel antwoord, vaste prijs.', 'Request your quote for a private transfer, a chauffeur by the hour or a bespoke service with Prestigia. Quick reply, fixed price.', 'Fordern Sie Ihr Angebot für einen Privattransfer, einen Chauffeur auf Stundenbasis oder einen Maßservice an. Schnelle Antwort, Festpreis.'),
     'Devis Chauffeur Privé | PRESTIGIA': L('Offerte privéchauffeur | PRESTIGIA', 'Get a Quote | Private Chauffeur PRESTIGIA', 'Angebot Privatchauffeur | PRESTIGIA'),
     'Demandez votre devis pour un transfert privé, une mise à disposition ou un service sur-mesure avec Prestigia à Bruxelles. Réponse rapide, prix fixe.': L(
       'Vraag uw offerte aan voor een privétransfer, een chauffeur ter beschikking of een dienst op maat met Prestigia in Brussel. Snel antwoord, vaste prijs.',

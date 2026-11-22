@@ -1,6 +1,8 @@
 /* mise-a-disposition.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur et véhicule à votre disposition à la demi-journée, à la journée ou sur plusieurs jours, à Bruxelles et en Europe, selon votre emploi du temps.': L('Chauffeur en wagen ter beschikking per halve dag, per dag of voor meerdere dagen, in Brussel en Europa, volgens uw agenda.', 'A chauffeur and vehicle at your disposal by the half-day, the day or for several days, in Brussels and across Europe, to fit your schedule.', 'Chauffeur und Fahrzeug zu Ihrer Verfügung, halbtags, ganztags oder mehrere Tage, in Brüssel und Europa, ganz nach Ihrem Terminplan.'),
   'Mise à Disposition | Chauffeur privé PRESTIGIA': L('Chauffeur ter beschikking | Privéchauffeur PRESTIGIA', 'Chauffeur by the Hour | Private Chauffeur PRESTIGIA', 'Chauffeur auf Stundenbasis | Privatchauffeur PRESTIGIA'),
   'Chauffeur et véhicule mis à votre disposition à la demi-journée, la journée ou plusieurs jours — Prestigia s\'adapte à votre emploi du temps à Bruxelles et en Europe.': L(
     'Chauffeur en wagen ter beschikking voor een halve dag, een dag of meerdere dagen — Prestigia past zich aan uw agenda aan, in Brussel en Europa.',

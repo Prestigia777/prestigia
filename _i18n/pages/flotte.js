@@ -1,6 +1,8 @@
 /* flotte.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'La flotte Prestigia : berlines de luxe, vans premium et véhicules de représentation, entretenus avec soin pour vos trajets à Bruxelles et en Europe.': L('De vloot van Prestigia: luxesedans, premium vans en representatieve wagens, zorgvuldig onderhouden voor uw ritten in Brussel en Europa.', 'The Prestigia fleet: luxury saloons, premium vans and executive vehicles, carefully maintained for your journeys in Brussels and across Europe.', 'Die Prestigia-Flotte: Luxuslimousinen, Premium-Vans und Repräsentationsfahrzeuge, sorgfältig gepflegt für Ihre Fahrten in Brüssel und Europa.'),
   'Flotte de véhicules premium | Chauffeur privé PRESTIGIA': L('Vloot van premium wagens | Privéchauffeur PRESTIGIA', 'Premium Vehicle Fleet | Private Chauffeur PRESTIGIA', 'Premium-Fahrzeugflotte | Privatchauffeur PRESTIGIA'),
   'Découvrez la flotte Prestigia : berlines de luxe, vans premium et véhicules de représentation, entretenus avec soin pour chaque déplacement à Bruxelles et en Europe.': L(
     'Ontdek de vloot van Prestigia: luxesedans, premium vans en representatieve wagens, zorgvuldig onderhouden voor elke verplaatsing in Brussel en Europa.',

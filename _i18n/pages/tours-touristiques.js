@@ -3,6 +3,8 @@
    aucun repas inclus. Formule A = Transport privé, formule B = Visite clé en main. */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Tours privés en Belgique avec chauffeur : Bruxelles, Bruges, Gand, Anvers et tourisme de mémoire. Transport privé ou visite clé en main, sur devis.': L('Privétours in België met chauffeur: Brussel, Brugge, Gent, Antwerpen en herinneringstoerisme. Privévervoer of kant-en-klaar bezoek, op offerte.', 'Private tours in Belgium with a chauffeur: Brussels, Bruges, Ghent, Antwerp and remembrance tourism. Private transport or turnkey visit, on quotation.', 'Private Touren in Belgien mit Chauffeur: Brüssel, Brügge, Gent, Antwerpen und Erinnerungstourismus. Privattransport oder Rundum-Besuch, auf Anfrage.'),
   'Tours Touristiques en Belgique | Chauffeur privé PRESTIGIA': L('Toeristische tours in België | Privéchauffeur PRESTIGIA', 'Private Sightseeing Tours in Belgium | PRESTIGIA', 'Sightseeing-Touren in Belgien | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les attractions touristiques de Belgique : Grand-Place et Atomium à Bruxelles, Beffroi de Bruges, Gravensteen à Gand — et les sites historiques des deux guerres mondiales : Ypres, Bastogne, plages du Débarquement en Normandie, Dunkerque, opération Market Garden aux Pays-Bas, Luxembourg. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om de toeristische trekpleisters van België te bezoeken: Grote Markt en Atomium in Brussel, Belfort van Brugge, Gravensteen in Gent — en de historische plaatsen van de twee wereldoorlogen: Ieper, Bastenaken, de landingsstranden in Normandië, Duinkerke, operatie Market Garden in Nederland, Luxemburg. Tours op maat met Prestigia.',

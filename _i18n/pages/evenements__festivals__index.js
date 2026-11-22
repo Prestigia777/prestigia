@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés pour les festivals, concerts et soirées en Belgique : Tomorrowland, Rock Werchter, Pukkelpop, Forest National, AFAS Dome…': L('Privétransfers naar festivals, concerten en feesten in België: Tomorrowland, Rock Werchter, Pukkelpop, Vorst Nationaal, AFAS Dome…', 'Private transfers to festivals, concerts and parties in Belgium: Tomorrowland, Rock Werchter, Pukkelpop, Forest National, AFAS Dome and more.', 'Privattransfers zu Festivals, Konzerten und Partys in Belgien: Tomorrowland, Rock Werchter, Pukkelpop, Forest National, AFAS Dome und mehr.'),
+  'Festivals et concerts | Chauffeur privé PRESTIGIA': L('Festivals en concerten | Privéchauffeur PRESTIGIA', 'Festivals and Concerts | Private Chauffeur PRESTIGIA', 'Festivals und Konzerte | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour festivals et concerts en Belgique | PRESTIGIA': L('Privéchauffeur voor festivals en concerten in België | PRESTIGIA', 'Private Chauffeur for Festivals and Concerts in Belgium | PRESTIGIA', 'Privatchauffeur für Festivals und Konzerte in Belgien | PRESTIGIA'),
   'Transferts privés Prestigia pour les festivals, concerts et grandes soirées de Belgique : Tomorrowland, Rock Werchter, Pukkelpop, AFAS Dome, Forest National, Hangar et plus encore.': L(
     'Privétransfers van Prestigia voor festivals, concerten en grote fuiven in België: Tomorrowland, Rock Werchter, Pukkelpop, AFAS Dome, Vorst Nationaal, Hangar en nog veel meer.',

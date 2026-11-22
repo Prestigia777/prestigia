@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour visiter Anvers : cathédrale Notre-Dame, MAS, quartier des diamants, gare centrale et plus. Tours sur mesure avec Prestigia.': L('Privéchauffeur om Antwerpen te bezoeken: Onze-Lieve-Vrouwekathedraal, MAS, diamantwijk, Centraal Station en meer. Tours op maat met Prestigia.', 'Private chauffeur to visit Antwerp: the Cathedral of Our Lady, the MAS, the diamond district, Central Station and more. Bespoke tours with Prestigia.', 'Privatchauffeur für Antwerpen: Liebfrauenkathedrale, MAS, Diamantenviertel, Hauptbahnhof und mehr. Maßgeschneiderte Touren mit Prestigia.'),
+  'Attractions d\'Anvers | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Antwerpen | Privéchauffeur PRESTIGIA', 'Antwerp Attractions | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten Antwerpen | Privatchauffeur PRESTIGIA'),
   'Attractions touristiques à Anvers | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Antwerpen | Privéchauffeur PRESTIGIA', 'Antwerp Sightseeing | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten in Antwerpen | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les attractions touristiques d\'Anvers : Cathédrale Notre-Dame, MAS, quartier des diamants, gare centrale et plus. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om de bezienswaardigheden van Antwerpen te bezoeken: Onze-Lieve-Vrouwekathedraal, MAS, diamantwijk, Centraal Station en meer. Tours op maat met Prestigia.',

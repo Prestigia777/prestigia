@@ -8,6 +8,26 @@ module.exports = {
       '<span class="hero-word" style="--i:0">Exzellenz</span> <span class="hero-word" style="--i:1">in</span> <span class="hero-word" style="--i:2">Bewegung</span>')]
   ],
   seg: {
+  // ----- Boutons de l'accueil : texte qui dit où mène le lien (22/11/2026) -----
+  'Voir les transferts': L('Bekijk de transfers', 'See our transfers', 'Transfers ansehen'),
+  'Voir la mise à disposition': L('Chauffeur per uur bekijken', 'See hourly chauffeur hire', 'Stundenservice ansehen'),
+  'Voir les tours': L('Bekijk de tours', 'See our tours', 'Touren ansehen'),
+  'Voir les événements': L('Bekijk de evenementen', 'See our events', 'Events ansehen'),
+  // ----- Fiche entreprise (données structurées, 22/11/2026) : valeurs techniques identiques dans toutes les langues -----
+  'Prestigia SRL': L('Prestigia BV', 'Prestigia SRL', 'Prestigia SRL'),
+  'Chauffeur privé et limousine premium à Bruxelles : transferts, mise à disposition, événements, tours privés et location de véhicules, en Belgique et en Europe.': L(
+    'Privéchauffeur en premium limousine in Brussel: transfers, chauffeur ter beschikking, evenementen, privétours en voertuigverhuur, in België en Europa.',
+    'Private chauffeur and premium limousine in Brussels: transfers, chauffeur by the hour, events, private tours and car rental, in Belgium and across Europe.',
+    'Privatchauffeur und Premium-Limousine in Brüssel: Transfers, Chauffeur auf Stundenbasis, Events, private Touren und Fahrzeugvermietung, in Belgien und Europa.'),
+  'BE1015973545': L('BE1015973545', 'BE1015973545', 'BE1015973545'),
+  'Chaussée Romaine 265': L('Romeinse Steenweg 265', 'Romeinse Steenweg 265', 'Romeinse Steenweg 265'),
+  'Vilvorde': L('Vilvoorde', 'Vilvoorde', 'Vilvoorde'),
+  'Europe': L('Europa', 'Europe', 'Europa'),
+  'Monday': L('Monday', 'Monday', 'Monday'), 'Tuesday': L('Tuesday', 'Tuesday', 'Tuesday'), 'Wednesday': L('Wednesday', 'Wednesday', 'Wednesday'),
+  'Thursday': L('Thursday', 'Thursday', 'Thursday'), 'Friday': L('Friday', 'Friday', 'Friday'), 'Saturday': L('Saturday', 'Saturday', 'Saturday'), 'Sunday': L('Sunday', 'Sunday', 'Sunday'),
+  'fr': L('fr', 'fr', 'fr'), 'nl': L('nl', 'nl', 'nl'), 'de': L('de', 'de', 'de'),
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Prestigia, chauffeur privé et limousine premium à Bruxelles : transferts aéroport, mise à disposition et service sur mesure, en Belgique et en Europe.': L('Prestigia, privéchauffeur en premium limousine in Brussel: luchthaventransfers, chauffeur ter beschikking en maatwerk, in België en Europa.', 'Prestigia, private chauffeur and premium limousine in Brussels: airport transfers, chauffeur by the hour and bespoke service, in Belgium and Europe.', 'Prestigia, Privatchauffeur und Premium-Limousine in Brüssel: Flughafentransfers, Chauffeur auf Stundenbasis und Maßservice, in Belgien und Europa.'),
     // ----- En-tête -----
     'Chauffeur privé à Bruxelles | PRESTIGIA': L('Privéchauffeur in Brussel | PRESTIGIA', 'Private Chauffeur in Brussels | PRESTIGIA', 'Privatchauffeur in Brüssel | PRESTIGIA'),
     'Prestigia, chauffeur privé et limousine premium à Bruxelles : transferts aéroport, mise à disposition et service sur-mesure pour particuliers et entreprises, en Belgique et partout en Europe.': L(

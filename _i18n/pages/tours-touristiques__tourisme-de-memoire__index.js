@@ -2,6 +2,8 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 const seg = {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé vers les sites des deux guerres mondiales : Ypres, Bastogne, Dunkerque, plages du Débarquement, Market Garden. Tours sur mesure.': L('Privéchauffeur naar de sites van beide wereldoorlogen: Ieper, Bastenaken, Duinkerke, de landingsstranden, Market Garden. Tours op maat.', 'Private chauffeur to the sites of both World Wars: Ypres, Bastogne, Dunkirk, the D-Day beaches, Market Garden. Bespoke tours.', 'Privatchauffeur zu den Stätten beider Weltkriege: Ypern, Bastogne, Dünkirchen, Landungsstrände, Market Garden. Maßgeschneiderte Touren.'),
   'Tourisme de mémoire en Belgique | Chauffeur privé PRESTIGIA': L('Herinneringstoerisme in België | Privéchauffeur PRESTIGIA', 'Remembrance Tourism in Belgium | Private Chauffeur PRESTIGIA', 'Erinnerungstourismus in Belgien | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les sites historiques de la Première et Seconde Guerre mondiale : Ypres, Bastogne, Luxembourg, Dunkerque, plages du Débarquement en Normandie, opération Market Garden aux Pays-Bas.': L(
     'Privéchauffeur om de historische plaatsen van de Eerste en Tweede Wereldoorlog te bezoeken: Ieper, Bastenaken, Luxemburg, Duinkerke, de landingsstranden in Normandië, operatie Market Garden in Nederland.',

@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés pour les événements art et culture en Belgique : Brafa, Carnaval de Binche, Doudou de Mons, Film Fest Gent, Bright Brussels…': L('Privétransfers naar kunst- en cultuurevenementen in België: Brafa, Carnaval van Binche, Doudou in Bergen, Film Fest Gent, Bright Brussels…', 'Private transfers to art and culture events in Belgium: Brafa, Binche Carnival, the Doudou in Mons, Film Fest Gent, Bright Brussels and more.', 'Privattransfers zu Kunst- und Kulturevents in Belgien: Brafa, Karneval von Binche, Doudou in Mons, Film Fest Gent, Bright Brussels und mehr.'),
+  'Événements art et culture | Chauffeur privé PRESTIGIA': L('Kunst- en cultuurevenementen | Privéchauffeur PRESTIGIA', 'Art and Culture Events | Private Chauffeur PRESTIGIA', 'Kunst- und Kulturevents | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour événements Art &amp; Culture en Belgique | PRESTIGIA': L('Privéchauffeur voor kunst- en cultuurevenementen in België | PRESTIGIA', 'Private Chauffeur for Art &amp; Culture Events in Belgium | PRESTIGIA', 'Privatchauffeur für Kunst- und Kulturveranstaltungen in Belgien | PRESTIGIA'),
   'Transferts privés Prestigia pour les grands événements Art &amp; Culture de Belgique : Brafa, Carnaval de Binche, Doudou de Mons, Film Fest Gent, Fêtes de Wallonie, Bright Brussels et plus encore.': L(
     'Privétransfers van Prestigia voor de grote kunst- en cultuurevenementen in België: Brafa, Carnaval van Binche, Doudou van Bergen, Film Fest Gent, Fêtes de Wallonie, Bright Brussels en nog veel meer.',

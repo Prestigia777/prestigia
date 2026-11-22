@@ -2,6 +2,8 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Autres villes de Belgique | Chauffeur privé PRESTIGIA': L('Andere Belgische steden | Privéchauffeur PRESTIGIA', 'Other Belgian Cities | Private Chauffeur PRESTIGIA', 'Weitere Städte in Belgien | Privatchauffeur PRESTIGIA'),
   'Autres attractions touristiques de Belgique | Chauffeur privé PRESTIGIA': L('Andere bezienswaardigheden in België | Privéchauffeur PRESTIGIA', 'More Sightseeing in Belgium | Private Chauffeur PRESTIGIA', 'Weitere Sehenswürdigkeiten in Belgien | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter Dinant, Namur, Durbuy, les Grottes de Han, Waterloo, Tournai, Mons, Louvain et Spa. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om Dinant, Namen, Durbuy, de Grotten van Han, Waterloo, Doornik, Bergen, Leuven en Spa te bezoeken. Tours op maat met Prestigia.',

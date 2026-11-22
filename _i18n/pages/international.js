@@ -1,6 +1,8 @@
 /* international.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés de Bruxelles vers la France, les Pays-Bas, l\'Allemagne, le Luxembourg et le Royaume-Uni : plus de 15 pays desservis en Europe.': L('Privétransfers vanuit Brussel naar Frankrijk, Nederland, Duitsland, Luxemburg en het Verenigd Koninkrijk: meer dan 15 landen in Europa.', 'Private transfers from Brussels to France, the Netherlands, Germany, Luxembourg and the UK: more than 15 countries served across Europe.', 'Privattransfers ab Brüssel nach Frankreich, in die Niederlande, nach Deutschland, Luxemburg und Großbritannien: über 15 Länder in Europa.'),
   'Trajets Internationaux | Chauffeur privé PRESTIGIA': L('Internationale ritten | Privéchauffeur PRESTIGIA', 'International Transfers | Private Chauffeur PRESTIGIA', 'Internationale Fahrten | Privatchauffeur PRESTIGIA'),
   'Transferts privés internationaux au départ de Bruxelles vers la France, les Pays-Bas, l\'Allemagne, le Luxembourg et le Royaume-Uni — plus de 15 pays desservis en Europe.': L(
     'Internationale privétransfers vanuit Brussel naar Frankrijk, Nederland, Duitsland, Luxemburg en het Verenigd Koninkrijk — meer dan 15 landen in Europa.',

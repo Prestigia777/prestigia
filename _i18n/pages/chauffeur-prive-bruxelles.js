@@ -1,6 +1,8 @@
 /* chauffeur-prive-bruxelles.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé à Bruxelles : transferts aéroport et gare, trajets en Belgique et en Europe, mise à disposition, événements et service pour entreprises.': L('Privéchauffeur in Brussel: luchthaven- en stationstransfers, ritten in België en Europa, chauffeur ter beschikking, evenementen en zakelijke service.', 'Private chauffeur in Brussels: airport and train station transfers, journeys across Belgium and Europe, chauffeur by the hour, events, corporate service.', 'Privatchauffeur in Brüssel: Flughafen- und Bahnhofstransfers, Fahrten in Belgien und Europa, Chauffeur auf Stundenbasis, Events und Firmenservice.'),
   'Chauffeur Privé à Bruxelles | PRESTIGIA': L('Privéchauffeur in Brussel | PRESTIGIA', 'Private Chauffeur in Brussels | PRESTIGIA', 'Privatchauffeur in Brüssel | PRESTIGIA'),
   'Prestigia, chauffeur privé à Bruxelles : transferts aéroport &amp; gare, voyages ville à ville, international, mise à disposition, événements, espace entreprises et flotte premium.': L(
     'Prestigia, privéchauffeur in Brussel: luchthaven- &amp; stationstransfers, ritten van stad tot stad, internationaal, chauffeur ter beschikking, evenementen, oplossingen voor bedrijven en een premium vloot.',

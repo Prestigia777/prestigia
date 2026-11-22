@@ -1,6 +1,8 @@
 /* services.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Les services Prestigia : chauffeur privé, location de véhicules avec ou sans chauffeur, esthétique automobile et services sur mesure, à Bruxelles.': L('De diensten van Prestigia: privéchauffeur, voertuigverhuur met of zonder chauffeur, autoverzorging en maatwerk, in Brussel.', 'Prestigia services: private chauffeur, car rental with or without a chauffeur, car detailing and bespoke services, in Brussels.', 'Die Leistungen von Prestigia: Privatchauffeur, Fahrzeugvermietung mit oder ohne Chauffeur, Fahrzeugaufbereitung und Maßservice, in Brüssel.'),
   'Nos Services | PRESTIGIA': L('Onze diensten | PRESTIGIA', 'Our Services | PRESTIGIA', 'Unsere Leistungen | PRESTIGIA'),
   'Les services Prestigia à Bruxelles : chauffeur privé, location de véhicules avec ou sans chauffeur, esthétique automobile haut de gamme et prestations entièrement sur-mesure.': L(
     'De diensten van Prestigia in Brussel: privéchauffeur, voertuigverhuur met of zonder chauffeur, hoogwaardige autoverzorging en volledig op maat gemaakte diensten.',

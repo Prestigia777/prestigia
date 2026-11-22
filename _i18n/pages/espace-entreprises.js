@@ -5,6 +5,8 @@ module.exports = {
     ["mailto:info@prestigia.vip?subject=%5BPrioritaire%5D%20Demande%20professionnelle%20%E2%80%94%20Entreprise", L("mailto:info@prestigia.vip?subject=%5BPrioritair%5D%20Zakelijke%20aanvraag%20%E2%80%94%20Bedrijf", "mailto:info@prestigia.vip?subject=%5BPriority%5D%20Business%20request%20%E2%80%94%20Company", "mailto:info@prestigia.vip?subject=%5BPriorit%C3%A4t%5D%20Gesch%C3%A4ftsanfrage%20%E2%80%94%20Unternehmen")]
   ],
   seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Prestigia gère les déplacements de vos invités, salariés et dirigeants à Bruxelles et en Europe : tout sur facture, suivi en temps réel, transparence.': L('Prestigia regelt de verplaatsingen van uw gasten, medewerkers en leidinggevenden in Brussel en Europa: op factuur, realtime opvolging, transparant.', 'Prestigia handles travel for your guests, staff and executives in Brussels and across Europe: everything invoiced, real-time tracking, full transparency.', 'Prestigia organisiert die Fahrten Ihrer Gäste, Mitarbeiter und Führungskräfte in Brüssel und Europa: per Rechnung, Echtzeit-Updates, transparent.'),
     'Espace Entreprises | Chauffeur privé PRESTIGIA': L('Voor bedrijven | Privéchauffeur PRESTIGIA', 'Corporate Clients | Private Chauffeur PRESTIGIA', 'Geschäftskunden | Privatchauffeur PRESTIGIA'),
     'Prestigia gère les déplacements de vos invités, salariés, dirigeants et responsables, à Bruxelles et en Europe : tout sur facture, suivi en temps réel et transparence totale.': L(
       'Prestigia organiseert de verplaatsingen van uw gasten, medewerkers, bestuurders en verantwoordelijken, in Brussel en Europa: alles op factuur, realtime opvolging en volledige transparantie.',

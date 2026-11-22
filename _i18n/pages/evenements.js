@@ -1,6 +1,8 @@
 /* evenements.html (+ mois et libellés de calendrier communs aux sous-pages Événements) */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés Prestigia pour les grands événements de Belgique et d\'Europe : sport, salons, art, festivals, concerts et galas.': L('Privétransfers van Prestigia naar de grote evenementen in België en Europa: sport, beurzen, kunst, festivals, concerten en gala\'s.', 'Prestigia private transfers to major events in Belgium and Europe: sport, trade fairs, art, festivals, concerts and galas.', 'Privattransfers von Prestigia zu großen Events in Belgien und Europa: Sport, Messen, Kunst, Festivals, Konzerte und Galas.'),
   'Événements | Chauffeur privé PRESTIGIA': L('Evenementen | Privéchauffeur PRESTIGIA', 'Events | Private Chauffeur PRESTIGIA', 'Veranstaltungen | Privatchauffeur PRESTIGIA'),
   'Prestigia vous accompagne pour les grands événements de Belgique et d\'Europe : sport, salons, art, festivals, concerts et galas prestige — transferts privés dédiés.': L(
     'Prestigia begeleidt u naar de grote evenementen in België en Europa: sport, beurzen, kunst, festivals, concerten en prestigieuze gala\'s — met privétransfers op maat.',

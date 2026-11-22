@@ -1,6 +1,8 @@
 /* amsterdam.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transfert privé Bruxelles-Amsterdam avec Prestigia : prix fixe, porte-à-porte, chauffeur bilingue, pour vos affaires ou une visite des Pays-Bas.': L('Privétransfer Brussel-Amsterdam met Prestigia: vaste prijs, van deur tot deur, tweetalige chauffeur, voor zaken of een bezoek aan Nederland.', 'Private Brussels-Amsterdam transfer with Prestigia: fixed price, door to door, bilingual chauffeur, for business or a visit to the Netherlands.', 'Privattransfer Brüssel-Amsterdam mit Prestigia: Festpreis, von Tür zu Tür, zweisprachiger Chauffeur, für Geschäftsreisen oder Besuche.'),
   'Chauffeur Privé Bruxelles → Amsterdam | PRESTIGIA': L('Privéchauffeur Brussel → Amsterdam | PRESTIGIA', 'Private Chauffeur Brussels → Amsterdam | PRESTIGIA', 'Privatchauffeur Brüssel → Amsterdam | PRESTIGIA'),
   'Transfert privé Bruxelles-Amsterdam avec Prestigia : prix fixe, porte-à-porte, chauffeur bilingue. Idéal pour affaires ou visite des Pays-Bas.': L(
     'Privétransfer Brussel-Amsterdam met Prestigia: vaste prijs, van deur tot deur, tweetalige chauffeur. Ideaal voor zaken of een bezoek aan Nederland.',

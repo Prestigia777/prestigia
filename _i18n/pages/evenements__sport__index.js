@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Transferts privés pour les grands événements sportifs de Belgique : Grand Prix de F1 à Spa, Tour des Flandres, Champions League à Bruges et plus.': L('Privétransfers naar de grote sportevenementen in België: Formule 1 in Spa, Ronde van Vlaanderen, Champions League in Brugge en meer.', 'Private transfers to Belgium\'s major sporting events: the F1 Grand Prix at Spa, the Tour of Flanders, the Champions League in Bruges and more.', 'Privattransfers zu Belgiens großen Sportevents: Formel-1-Grand-Prix in Spa, Flandern-Rundfahrt, Champions League in Brügge und mehr.'),
+  'Événements sportifs | Chauffeur privé PRESTIGIA': L('Sportevenementen | Privéchauffeur PRESTIGIA', 'Sporting Events | Private Chauffeur PRESTIGIA', 'Sportveranstaltungen | Privatchauffeur PRESTIGIA'),
   // ----- Événements ajoutés le 21/11/2026 -----
   '29 → 31 janv. 2027': L('29 → 31 jan. 2027', '29 → 31 Jan. 2027', '29. → 31. Jan. 2027'),
   'Championnats du monde de cyclo-cross': L('WK veldrijden', 'Cyclo-cross World Championships', 'Querfeldein-Weltmeisterschaften'),

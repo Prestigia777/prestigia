@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour visiter Bruges : Markt, Béguinage, canaux, basilique du Saint-Sang et plus. Tours sur mesure avec Prestigia.': L('Privéchauffeur om Brugge te bezoeken: Markt, Begijnhof, reien, Heilig-Bloedbasiliek en meer. Tours op maat met Prestigia.', 'Private chauffeur to visit Bruges: the Markt, the Beguinage, the canals, the Basilica of the Holy Blood and more. Bespoke tours with Prestigia.', 'Privatchauffeur für Brügge: Markt, Beginenhof, Grachten, Heilig-Blut-Basilika und mehr. Maßgeschneiderte Touren mit Prestigia.'),
+  'Attractions de Bruges | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Brugge | Privéchauffeur PRESTIGIA', 'Bruges Attractions | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten Brügge | Privatchauffeur PRESTIGIA'),
   'Attractions touristiques à Bruges | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Brugge | Privéchauffeur PRESTIGIA', 'Bruges Sightseeing | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten in Brügge | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les attractions touristiques de Bruges : Markt, Béguinage, canaux, Basilique du Saint-Sang et plus. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om de bezienswaardigheden van Brugge te bezoeken: Markt, Begijnhof, reien, Heilig-Bloedbasiliek en meer. Tours op maat met Prestigia.',

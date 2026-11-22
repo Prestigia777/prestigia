@@ -5,6 +5,8 @@ module.exports = {
     ["mailto:info@prestigia.vip?subject=%5BPrioritaire%5D%20Demande%20professionnelle%20%E2%80%94%20Agence%20de%20voyage", L("mailto:info@prestigia.vip?subject=%5BPrioritair%5D%20Zakelijke%20aanvraag%20%E2%80%94%20Reisbureau", "mailto:info@prestigia.vip?subject=%5BPriority%5D%20Business%20request%20%E2%80%94%20Travel%20agency", "mailto:info@prestigia.vip?subject=%5BPriorit%C3%A4t%5D%20Gesch%C3%A4ftsanfrage%20%E2%80%94%20Reiseb%C3%BCro")]
   ],
   seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Agences de voyage : Prestigia prend en charge vos voyageurs en Belgique et pays voisins, petits et grands groupes. Facturé à l\'agence, suivi en temps réel.': L('Reisbureaus: Prestigia vervoert uw reizigers in België en de buurlanden, kleine en grote groepen. Gefactureerd aan het bureau, realtime opvolging.', 'Travel agencies: Prestigia looks after your travellers in Belgium and neighbouring countries, small or large groups. Invoiced to you, tracked in real time.', 'Reisebüros: Prestigia betreut Ihre Reisenden in Belgien und Nachbarländern, kleine und große Gruppen. Rechnung ans Reisebüro, Echtzeit-Updates.'),
     'Espace Agences de voyage | Chauffeur privé PRESTIGIA': L('Voor reisbureaus | Privéchauffeur PRESTIGIA', 'Travel Agencies | Private Chauffeur PRESTIGIA', 'Reisebüros | Privatchauffeur PRESTIGIA'),
     'Agences de voyage : Prestigia prend en charge vos voyageurs en Belgique et dans les pays voisins, en petits et grands groupes. Tout facturé à l\'agence, suivi en temps réel, transparence totale.': L(
       'Reisbureaus: Prestigia ontfermt zich over uw reizigers in België en de buurlanden, in kleine en grote groepen. Alles gefactureerd aan het bureau, realtime opvolging, volledige transparantie.',

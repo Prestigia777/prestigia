@@ -11,6 +11,8 @@ const dates = ['Week-ends, 13 nov. → 20 déc.', 'Mi-nov. → début janv.', '2
   '27 nov. → 20 déc.', '3 déc. → 3 janv.', '3-7, 10-14 et 17-21 déc.', '4 → 13 déc.', '5 → 31 déc.', '13 nov. → 30 déc.', '18 nov. → 30 déc.', '20 nov. → 23 déc.', '27 nov. → 27 déc.'];
 const M = (nl, en, de) => L(nl, en, de);
 const seg = {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour les marchés de Noël de Bruxelles, Bruges, Liège, Gand, Anvers et des villes voisines, sans souci de parking ni de route de nuit.': L('Privéchauffeur naar de kerstmarkten van Brussel, Brugge, Luik, Gent, Antwerpen en steden in de buurt, zonder parkeerzorgen of rijden in het donker.', 'Private chauffeur to the Christmas markets of Brussels, Bruges, Liège, Ghent, Antwerp and nearby cities, with no parking or night-driving worries.', 'Privatchauffeur zu den Weihnachtsmärkten in Brüssel, Brügge, Lüttich, Gent, Antwerpen und Nachbarstädten, ohne Parkplatzsuche und Nachtfahrt.'),
   'Marchés de Noël en Belgique | Chauffeur privé PRESTIGIA': L('Kerstmarkten in België | Privéchauffeur PRESTIGIA', 'Christmas Markets in Belgium | Private Chauffeur PRESTIGIA', 'Weihnachtsmärkte in Belgien | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé Prestigia pour visiter les marchés de Noël de Belgique — Bruxelles, Bruges, Liège, Gand, Anvers — et des villes voisines comme Aix-la-Chapelle. Transferts confortables, sans stress de parking ni de conduite de nuit.': L(
     'Privéchauffeur van Prestigia om de kerstmarkten van België te bezoeken — Brussel, Brugge, Luik, Gent, Antwerpen — en van steden in de buurt zoals Aken. Comfortabele transfers, zonder parkeerstress of nachtelijk rijden.',

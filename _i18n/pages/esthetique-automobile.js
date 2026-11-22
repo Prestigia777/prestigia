@@ -1,6 +1,8 @@
 /* esthetique-automobile.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Esthétique automobile, PPF, covering, entretien et contrôle technique partout en Belgique, réalisés par nos partenaires, avec enlèvement à domicile.': L('Autoverzorging, PPF, wrapping, onderhoud en technische keuring in heel België, uitgevoerd door onze partners, met ophaling aan huis.', 'Car detailing, PPF, wrapping, servicing and MOT inspection across Belgium, carried out by our partners, with home pick-up and delivery.', 'Fahrzeugaufbereitung, Lackschutz, Folierung, Wartung und TÜV in ganz Belgien, durch unsere Partner, mit Abholung und Rückgabe zu Hause.'),
   'Esthétique &amp; Services Automobiles | PRESTIGIA': L('Autoverzorging &amp; autodiensten | PRESTIGIA', 'Car Detailing &amp; Vehicle Services | PRESTIGIA', 'Fahrzeugaufbereitung &amp; -service | PRESTIGIA'),
   'Esthétique automobile, protection PPF, covering, entretien mécanique et passage au contrôle technique partout en Belgique, avec enlèvement et livraison de votre véhicule à domicile, et passage prioritaire chez nos partenaires.': L(
     'Autoverzorging, PPF-bescherming, car wrapping, mechanisch onderhoud en technische keuring in heel België, met ophaling en terugbezorging van uw wagen aan huis en voorrang bij onze partners.',

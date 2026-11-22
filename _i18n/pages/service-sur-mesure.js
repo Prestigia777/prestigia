@@ -1,6 +1,8 @@
 /* service-sur-mesure.html */
 const L = (nl, en, de) => ({ nl, en, de });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Service sur mesure Prestigia : tout type de demande, même hors transport. Réservations, livraisons urgentes, surprises, voyages : nous l\'organisons.': L('Maatwerk van Prestigia: elke aanvraag, ook buiten vervoer. Reservaties, dringende leveringen, verrassingen, reizen: wij regelen het.', 'Prestigia bespoke service: any request, even beyond transport. Bookings, urgent deliveries, surprises, trips: we arrange it for you.', 'Maßgeschneiderter Service von Prestigia: jede Anfrage, auch ohne Fahrt. Reservierungen, Eillieferungen, Überraschungen, Reisen: wir regeln es.'),
   'Service Sur-Mesure | PRESTIGIA': L('Maatwerk | PRESTIGIA', 'Bespoke Service | PRESTIGIA', 'Maßgeschneiderter Service | PRESTIGIA'),
   'Service sur mesure Prestigia : tout type de demande, même hors transport. Réservations, livraisons urgentes, accompagnement, surprises, voyages sur plusieurs jours : dites-nous ce qu\'il vous faut, nous l\'organisons.': L(
     'Maatwerk van Prestigia: elk soort aanvraag, ook buiten vervoer. Reserveringen, dringende leveringen, begeleiding, verrassingen, meerdaagse reizen: vertel ons wat u nodig hebt, wij organiseren het.',

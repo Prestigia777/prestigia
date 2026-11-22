@@ -2,6 +2,9 @@
 const L = (nl, en, de) => ({ nl, en, de });
 const K = (s) => ({ nl: s, en: s, de: s });
 module.exports = { seg: {
+  // ----- Textes Google raccourcis (22/11/2026) -----
+  'Chauffeur privé pour visiter Bruxelles : Grand-Place, Atomium, Manneken Pis, Mini-Europe, musée Magritte et plus. Tours sur mesure avec Prestigia.': L('Privéchauffeur om Brussel te bezoeken: Grote Markt, Atomium, Manneken Pis, Mini-Europa, Magrittemuseum en meer. Tours op maat met Prestigia.', 'Private chauffeur to visit Brussels: the Grand-Place, Atomium, Manneken Pis, Mini-Europe, the Magritte Museum and more. Bespoke tours with Prestigia.', 'Privatchauffeur für Brüssel: Grand-Place, Atomium, Manneken Pis, Mini-Europe, Magritte-Museum und mehr. Maßgeschneiderte Touren mit Prestigia.'),
+  'Attractions de Bruxelles | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Brussel | Privéchauffeur PRESTIGIA', 'Brussels Attractions | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten Brüssel | Privatchauffeur PRESTIGIA'),
   'Attractions touristiques à Bruxelles | Chauffeur privé PRESTIGIA': L('Bezienswaardigheden in Brussel | Privéchauffeur PRESTIGIA', 'Brussels Sightseeing | Private Chauffeur PRESTIGIA', 'Sehenswürdigkeiten in Brüssel | Privatchauffeur PRESTIGIA'),
   'Chauffeur privé pour visiter les attractions touristiques de Bruxelles : Grand-Place, Atomium, Manneken Pis, Mini-Europe, Musée Magritte et plus. Tours sur-mesure avec Prestigia.': L(
     'Privéchauffeur om de bezienswaardigheden van Brussel te bezoeken: Grote Markt, Atomium, Manneken Pis, Mini-Europa, Magrittemuseum en meer. Tours op maat met Prestigia.',
