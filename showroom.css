@@ -879,13 +879,23 @@
   content:'';position:absolute;inset:-10px -26px;z-index:-1;pointer-events:none;
   border-radius:28px;background:rgba(255,255,255,0.55);filter:blur(12px);
 }
-/* Phrase : elle passe sur le toit sombre de la voiture, un seul voile très léger et uniforme
-   (large flou, faible opacité : pas de tache visible) */
+/* Un seul voile clair derrière tout le bloc PRESTIGIA + tagline + phrase (qui passe sur la carrosserie noire).
+   Porté par la phrase et étendu vers le haut jusqu'à la signature : dégradé elliptique sans flou,
+   plateau régulier au centre et retour à 0 exactement au bord de l'ellipse (ni contour ni tache).
+   La signature et la tagline passent au-dessus de ce calque. */
+.showroom .hero :is(.brand-title, .tagline){position:relative;z-index:1}
 .showroom .hero .lead::before{
-  content:'';position:absolute;inset:-14px -40px;z-index:-1;pointer-events:none;
-  border-radius:40px;
-  background:rgba(255,255,255,0.32);
-  filter:blur(22px);
+  content:'';position:absolute;z-index:-1;pointer-events:none;
+  top:-128px;bottom:-84px;left:-110px;right:-110px;
+  background:radial-gradient(ellipse closest-side at 50% 50%,
+    color-mix(in srgb, var(--surface) 72%, transparent) 0%,
+    color-mix(in srgb, var(--surface) 68%, transparent) 50%,
+    color-mix(in srgb, var(--surface) 45%, transparent) 75%,
+    color-mix(in srgb, var(--surface) 16%, transparent) 90%,
+    transparent 100%);
+}
+@media(max-width:680px){
+  .showroom .hero .lead::before{top:-112px;bottom:-76px;left:-40px;right:-40px}
 }
 
 /* Accroche */
