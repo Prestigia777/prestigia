@@ -69,10 +69,10 @@ module.exports = {
       'Een chauffeur en een wagen voor uw hele dag — shoppen, zakelijke afspraken, familiebezoeken, meerdere stops zonder tijdsdruk.',
       'A chauffeur and vehicle for as long as your day requires — shopping, business meetings, family visits, multiple stops with no time constraints.',
       'Chauffeur und Fahrzeug für Ihren ganzen Tag — Shopping, Geschäftstermine, Familienbesuche, mehrere Stopps ohne Zeitdruck.'),
-    'Flotte Prestigia et chauffeurs en tenue prêts pour une journée de mise à disposition': L(
-      'Vloot en chauffeurs van Prestigia in uniform, klaar voor een dag ter beschikking',
-      'Prestigia fleet and uniformed chauffeurs ready for a full day at your disposal',
-      'Prestigia-Flotte und Chauffeure in Uniform, bereit für einen Tag zu Ihrer Verfügung'),
+    'Mercedes Classe S noire garée devant un mur de briques, prête pour une journée de mise à disposition avec chauffeur': L(
+      'Zwarte Mercedes S-Klasse geparkeerd voor een bakstenen muur, klaar voor een dag chauffeur ter beschikking',
+      'Black Mercedes S-Class parked in front of a brick wall, ready for a full day of chauffeur service at your disposal',
+      'Schwarze Mercedes S-Klasse vor einer Backsteinmauer geparkt, bereit für einen Tag mit Chauffeur zu Ihrer Verfügung'),
     'La Belgique autrement': L('België anders beleven', 'Belgium, differently', 'Belgien einmal anders'),
     'Découvrez les lieux incontournables de Belgique — Bruxelles, Bruges, Gand, Anvers — conduit par un chauffeur privé qui connaît la région, avec dépose et reprise aux points convenus (guide professionnel en option).': L(
       'Ontdek de mooiste plekken van België — Brussel, Brugge, Gent, Antwerpen — met een privéchauffeur die de regio kent en u afzet en weer ophaalt op de afgesproken plaatsen (professionele gids optioneel).',
