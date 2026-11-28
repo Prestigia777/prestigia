@@ -117,5 +117,27 @@ Toute page dont on modifie les styles doit charger `styles.css?v=AAAAMMJJ[-n]`, 
 - [x] Page `404.html` en 4 langues (`<base href>` : liens valables à n'importe quelle adresse) ; `_redirects` sert la 404 de la bonne langue sous `/nl/`, `/en/`, `/de/`.
 - [x] Pages `politique-de-confidentialite.html` et `conditions-generales.html` (4 langues, `noindex` comme les mentions légales), liées depuis le pied de page de toutes les pages (`.footer-legal`). Société : Prestigia SRL, BE 1015.973.545, Chaussée Romaine 265, 1800 Vilvorde. Forme juridique : SRL en français, BV en néerlandais. Règles : devis valable 48 h, acompte 50 %, attente comprise aéroport 60 min / gare 20 min / adresse 15 min puis 60 € HTVA/h par tranche de 15 min entamée (15 €), annulation gratuite jusqu'à 24 h avant, annulation à moins de 24 h et no-show dus à 100 %.
 - [x] Mentions légales complètes. Rubrique « Directeur de la publication » retirée (mention du droit français, non obligatoire en Belgique).
+- [x] Recherche de l'accueil, étape 1 (28/11/2026) : `js/hero-search.js` comprend les phrases en FR/NL/EN/DE (petits mots ignorés ; date, heure, personnes et trajet « de X à Y » repérés) et propose un « devis pré-rempli » du service de la page trouvée. `devis.html` accepte `from`, `to`, `date` (AAAA-MM-JJ), `heure` (HH:MM), `passagers`, `demande` (phrase d'origine, mise dans le message).
+- [ ] Recherche de l'accueil, étape 2 (après la mise en ligne) : quand le moteur local n'est pas sûr, demander à une IA (fonction Netlify appelant Claude, clé API Anthropic à créer) ; emplacement marqué « ÉTAPE 2 » dans `js/hero-search.js`.
 - [ ] Remplacer les liens des réseaux sociaux par les vrais comptes : ils pointent aujourd'hui vers les pages d'accueil génériques de Facebook, Instagram, TikTok et X.
 - [ ] Publier sur **Netlify** : exclure du déploiement `Prestigia.vip_code_soucre.html`, `prestigia-brief-claude-code.md`, `CLAUDE.md`, `.claude/`, `_templates/`, `_archive/`, les `.DS_Store` et les images sources non utilisées. Ensuite, brancher le domaine `prestigia.vip` et vérifier que la clé Google Maps (restreinte à ce domaine) fonctionne.
+
+### Fiche Google Business Profile (créée le 25/11/2026)
+
+En cours de validation par Google (jusqu'à 5 jours), pas encore visible publiquement. Pas de modification du site liée à cette fiche pour l'instant.
+
+- Nom : Prestigia. Catégorie principale : Service de chauffeur privé.
+- Type : entreprise sans local ouvert au public (zone de service), adresse non affichée.
+- Zones desservies : Bruxelles, Belgique, Gand et d'autres villes, dont Lille (France).
+- Horaires : 24 h/24, 7 j/7.
+- Téléphone provisoire : 0470 09 17 15 ; WhatsApp : `https://wa.me/32470091715`.
+- Services : titres personnalisés (transfert aéroport, transfert gare du Midi, mise à disposition de chauffeur, etc.).
+- Description : transferts Brussels Airport et Charleroi, gares, trajets ville à ville, voyages internationaux, mise à disposition, tours privés, mariages et événements.
+- Site web : pas encore ajouté (à faire quand le nouveau site sera en ligne).
+- Photos : pas encore ajoutées (à faire après le tournage).
+- La société exploite aussi une autre marque (site de transferts économiques vers les aéroports), avec sa propre fiche Google et un autre numéro : ne jamais mélanger les deux (nom, téléphone, photos, catégories, liens).
+
+#### À faire plus tard
+- [ ] Remplacer le numéro 0470 par le 02 (+32 2 886 12 40) sur la… *(consigne reçue coupée : préciser où — fiche Google, site, ou les deux)*.
+- [ ] Ajouter le site web à la fiche une fois `prestigia.vip` en ligne.
+- [ ] Ajouter les photos après le tournage.
