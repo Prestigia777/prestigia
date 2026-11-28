@@ -46,7 +46,7 @@ module.exports = {
       'Limousine service, airport transfers and chauffeur hire in Belgium — for discerning clients across&nbsp;Europe.',
       'Limousinenservice, Flughafentransfers und Chauffeur zu Ihrer Verfügung in Belgien — für anspruchsvolle Kunden in ganz&nbsp;Europa.'),
     'Rechercher sur le site': L('Zoeken op de site', 'Search the site', 'Website durchsuchen'),
-    'Que recherchez-vous ? Aéroport, mariage, Bruges…': L('Wat zoekt u? Luchthaven, huwelijk, Brugge…', 'What are you looking for? Airport, wedding, Bruges…', 'Wonach suchen Sie? Flughafen, Hochzeit, Brügge…'),
+    'Ex. : aéroport demain 6 h, 3 personnes': L('Bv.: luchthaven morgen 6 uur, 3 personen', 'E.g. airport tomorrow 6am, 3 people', 'Z. B.: Flughafen morgen 6 Uhr, 3 Personen'),
     'Rechercher': L('Zoeken', 'Search', 'Suchen'),
     'Suggestions': L('Suggesties', 'Suggestions', 'Vorschläge'),
     'Aucun résultat, demandez-nous directement': L('Geen resultaat? Vraag het ons gerust rechtstreeks', 'No results? Simply ask us directly', 'Keine Ergebnisse? Fragen Sie uns einfach direkt'),

@@ -1059,3 +1059,51 @@
       var(--surface) 100%),
     linear-gradient(180deg, rgba(255,255,255,.86) 0%, rgba(255,255,255,.66) 28%, rgba(255,255,255,.36) 52%, rgba(255,255,255,.16) 78%, rgba(255,255,255,.06) 100%);
 }
+
+/* =====================================================================
+   Confort sur téléphone (28/11/2026)
+   ===================================================================== */
+/* 1. Champs en 16 px sur mobile : en dessous, l'iPhone zoome la page dès qu'on touche un champ. */
+@media(max-width:680px){
+  .showroom input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),
+  .showroom select,
+  .showroom textarea,
+  .showroom .form-field :is(input, select, textarea),
+  .showroom .pro-contact-form .form-field :is(input, textarea){font-size:16px}
+}
+/* 2. Cartes « piliers » : une par ligne sur téléphone (deux colonnes = 2-3 mots par ligne). */
+@media(max-width:560px){
+  .showroom .pillars-grid{grid-template-columns:1fr}
+}
+/* 4. Zones tactiles d'au moins 44 px : bouton du menu, croix de fermeture, liens du pied de page. */
+@media(max-width:960px){
+  .showroom .burger{min-width:44px;min-height:44px;align-items:center;justify-content:center;padding:10px}
+}
+.showroom .mobile-nav-close{width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:0;top:20px;right:18px;line-height:1}
+@media(max-width:680px){
+  .showroom .footer-col a{padding:7px 0;margin-bottom:4px}
+  .showroom .footer-legal a{display:inline-block;padding:8px 0}
+}
+/* 5. Bandes des services et de la flotte (Chauffeur privé) : sur téléphone, plus d'animation CSS (masque + translation,
+   la flotte ne s'affichait pas sur iPhone) mais une bande à défilement natif : un script la fait glisser en continu,
+   comme sur ordinateur, et on peut la faire glisser au doigt. */
+@media(max-width:680px){
+  .showroom :is(.services-marquee, .fleet-marquee){overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-mask-image:none;mask-image:none}
+  .showroom :is(.services-marquee, .fleet-marquee)::-webkit-scrollbar{display:none}
+  .showroom :is(.services-marquee-track, .fleet-marquee-track){animation:none;transform:none}
+  .showroom .fleet-marquee-card{background:#1a1a1a}
+}
+/* Carte-itinéraire des tours : pleine largeur exacte sur petit écran (la marge de -16 px dépassait de 6 px, la page bougeait sur le côté). */
+@media(max-width:480px){
+  .showroom .itin-map{margin:0 -10px}
+}
+/* Titres longs (ex. « Allgemeine Geschäftsbedingungen ») : césure plutôt que de dépasser de l'écran. */
+@media(max-width:680px){
+  .showroom :is(.contact-head, .form-head, .legal-head) h1{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+}
+/* Recherche de l'accueil : raccourci « devis pré-rempli » et ligne de détails (date, heure, personnes) sous le titre */
+.showroom .hero-search-text{display:flex;flex-direction:column;min-width:0}
+.showroom .hero-search-sub{font-size:12.5px;font-weight:400;color:var(--text-muted);margin-top:2px}
+.showroom .hero-search-shortcut .hero-search-ico{background:var(--accent-gradient);color:#FFFFFF}
+.showroom .hero-search-shortcut + .hero-search-option:not(.hero-search-shortcut){margin-top:6px;position:relative}
+.showroom .hero-search-shortcut + .hero-search-option:not(.hero-search-shortcut)::before{content:"";position:absolute;left:14px;right:14px;top:-4px;border-top:1px solid var(--line)}
