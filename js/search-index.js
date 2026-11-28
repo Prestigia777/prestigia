@@ -8,6 +8,8 @@
    Les url sont relatives : depuis /en/, 'devis.html' mène à /en/devis.html.
    Un mot-clé qui commence par « = » ne compte que comme expression entière : '=Grand Prix' répond à
    « Grand Prix » (ou « grand p… ») mais pas à « prix » seul, qui doit mener au devis.
+   Le moteur (js/hero-search.js) comprend aussi les phrases : petits mots ignorés, date, heure, personnes et trajet
+   repérés, et raccourci vers le devis pré-rempli du service de la page trouvée.
    Icônes disponibles : plane, car, clock, route, globe, briefcase, star, map, key,
                         sparkle, doc, phone, grid, pin, scale, chat
    ===================================================================== */
@@ -50,6 +52,12 @@ window.PRESTIGIA_SEARCH_INDEX = [
     keywords: ['entreprise', 'société', 'business', 'corporate', 'bedrijf', 'company', 'compte entreprise',
       'facturation', 'facture', 'invoice', 'factuur', 'séminaire', 'seminar', 'délégation', 'collaborateurs', 'B2B',
       /* DE */ 'Unternehmen', 'Firma', 'Geschäftskunden', 'Rechnung', 'Seminar', 'Delegation', 'Mitarbeiter'] },
+
+  { title: 'Espace Agences de voyage', url: 'espace-agences-de-voyage.html',
+    t: { nl: 'Reisbureaus', en: 'Travel agencies', de: 'Reisebüros' }, icon: 'briefcase', boost: 1,
+    keywords: ['agence de voyage', 'agence', 'agences', 'tour-opérateur', 'tour operator', 'DMC', 'réceptif', 'groupe', 'voyageurs',
+      'clients', 'dossier', 'reisbureau', 'reisagent', 'travel agency', 'travel agent', 'groupe de touristes', 'B2B',
+      /* DE */ 'Reisebüro', 'Reiseveranstalter', 'Reisegruppe', 'Gruppenreise'] },
 
   /* ---------- Événements ---------- */
   { title: 'Événements', url: 'evenements.html',
@@ -102,24 +110,24 @@ window.PRESTIGIA_SEARCH_INDEX = [
 
   { title: 'Tour de Bruges', url: 'tours-touristiques/bruges/index.html',
     t: { nl: 'Tour door Brugge', en: 'Bruges tour', de: 'Tour durch Brügge' }, icon: 'map', boost: 1,
-    keywords: ['Bruges', 'Brugge', 'visite Bruges', 'canaux', 'béguinage', 'Beffroi', 'Minnewater', 'tour', 'excursion',
+    keywords: ['Bruges', 'Brugge', 'visite Bruges', 'canaux', 'béguinage', 'Beffroi', 'Minnewater', 'tour', 'excursion', 'visite', 'sightseeing', 'rondleiding', 'Besichtigung',
       /* DE */ 'Brügge', 'Kanäle', 'Beginenhof', 'Belfried'] },
 
   { title: 'Tour de Gand', url: 'tours-touristiques/gand/index.html',
     t: { nl: 'Tour door Gent', en: 'Ghent tour', de: 'Tour durch Gent' }, icon: 'map', boost: 1,
-    keywords: ['Gand', 'Gent', 'Ghent', 'visite Gand', 'Gravensteen', 'Saint-Bavon', 'Graslei', 'tour', 'excursion',
+    keywords: ['Gand', 'Gent', 'Ghent', 'visite Gand', 'Gravensteen', 'Saint-Bavon', 'Graslei', 'tour', 'excursion', 'visite', 'sightseeing', 'rondleiding', 'Besichtigung',
       /* DE */ 'Gent', 'Genter'] },
 
   { title: 'Tour d\'Anvers', url: 'tours-touristiques/anvers/index.html',
     t: { nl: 'Tour door Antwerpen', en: 'Antwerp tour', de: 'Tour durch Antwerpen' }, icon: 'map', boost: 1,
     keywords: ['Anvers', 'Antwerpen', 'Antwerp', 'visite Anvers', 'Grote Markt', 'cathédrale', 'MAS', 'diamant',
-      'tour', 'excursion',
+      'tour', 'excursion', 'visite', 'sightseeing', 'rondleiding', 'Besichtigung',
       /* DE */ 'Antwerpen', 'Kathedrale', 'Diamanten'] },
 
   { title: 'Tour de Bruxelles', url: 'tours-touristiques/bruxelles/index.html',
     t: { nl: 'Tour door Brussel', en: 'Brussels tour', de: 'Tour durch Brüssel' }, icon: 'map', boost: 1,
     keywords: ['visite Bruxelles', 'Brussels sightseeing', 'Grand-Place', 'Grote Markt', 'Atomium', 'Manneken-Pis',
-      'Sablon', 'Bruxelles', 'Brussel', 'tour', 'excursion',
+      'Sablon', 'Bruxelles', 'Brussel', 'tour', 'excursion', 'visite', 'sightseeing', 'rondleiding', 'Besichtigung',
       /* DE */ 'Brüssel', 'Grand-Place', 'Besichtigung Brüssel'] },
 
   { title: 'Autres villes de Belgique', url: 'tours-touristiques/autres-villes/index.html',
@@ -181,7 +189,7 @@ window.PRESTIGIA_SEARCH_INDEX = [
   { title: 'Esthétique automobile', url: 'esthetique-automobile.html',
     t: { nl: 'Autoverzorging', en: 'Car detailing', de: 'Fahrzeugaufbereitung' }, icon: 'sparkle', boost: 1,
     keywords: ['esthétique', 'nettoyage', 'lavage', 'detailing', 'polish', 'entretien', 'cleaning', 'car wash',
-      'poetsen', 'reiniging', 'carrosserie',
+      'poetsen', 'reiniging', 'carrosserie', 'voiture', 'véhicule', 'auto', 'wagen', 'car',
       /* DE */ 'Aufbereitung', 'Reinigung', 'Autowäsche', 'Politur', 'Pflege', 'Karosserie'] },
 
   { title: 'Service sur-mesure', url: 'service-sur-mesure.html',
